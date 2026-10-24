@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en" data-theme="indigo">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="color-scheme" content="light dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src https://upload.wikimedia.org data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <title>Hakone 2026 — 15–17 November Field Guide</title>
+  <style>
+    :root { color-scheme: light dark; --accent: #9f3526; --accent-strong: #74261d; --accent-soft: #f7e7df; --paper: #fffdf9; --surface: #f7f3eb; --ink: #292622; --muted: #69625a; --line: #ded5ca; --shadow: 0 18px 48px rgba(54, 38, 25, .12); --radius: 1rem; }
+    :root[data-theme="forest"] { --accent: #2f6c50; --accent-strong: #204b38; --accent-soft: #e1f0e7; --paper: #fcfdf9; --surface: #f0f5ed; --ink: #263029; --muted: #5d695f; --line: #d3ddd3; }
+    :root[data-theme="indigo"] { --accent: #485aa8; --accent-strong: #334180; --accent-soft: #e8ebfb; --paper: #fcfcff; --surface: #f1f2f9; --ink: #272a38; --muted: #626678; --line: #d8daea; }
+    :root[data-theme="slate"] { --accent: #3e6474; --accent-strong: #294957; --accent-soft: #e2eef2; --paper: #fcfdfd; --surface: #eff4f5; --ink: #252d31; --muted: #606b70; --line: #d4dee1; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--surface); color: var(--ink); font: 1rem/1.68 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; text-rendering: optimizeLegibility; }
+    a { color: var(--accent-strong); text-decoration-thickness: .09em; text-underline-offset: .16em; }
+    a:hover { color: var(--accent); }
+    a:focus-visible, summary:focus-visible, .table-wrap:focus-visible { outline: .2rem solid var(--accent); outline-offset: .2rem; border-radius: .25rem; }
+    .skip-link { position: fixed; left: 1rem; top: -5rem; z-index: 10; padding: .7rem 1rem; color: white; background: var(--accent-strong); border-radius: .4rem; }
+    .skip-link:focus { top: 1rem; }
+    .page-header { background: var(--paper); border-bottom: 1px solid var(--line); }
+    .header-inner { width: min(76rem, calc(100% - 2rem)); margin: auto; padding: clamp(2rem, 6vw, 5rem) 0 2rem; }
+    .eyebrow { margin: 0 0 .55rem; color: var(--accent-strong); font-size: .78rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { max-width: 22ch; margin: 0; font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif; font-size: clamp(2.2rem, 7vw, 4.8rem); line-height: 1.03; letter-spacing: -.035em; text-wrap: balance; }
+    .description { max-width: 66ch; margin: 1.2rem 0 0; color: var(--muted); font-size: clamp(1.05rem, 2.2vw, 1.25rem); }
+    .meta-list { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.2rem 0 0; padding: 0; list-style: none; }
+    .meta-list li { padding: .3rem .65rem; background: var(--accent-soft); border-radius: 99rem; color: var(--accent-strong); font-size: .85rem; font-weight: 650; }
+    .hero-image { width: min(76rem, calc(100% - 2rem)); margin: 0 auto; transform: translateY(1.4rem); }
+    .hero-image img { display: block; width: 100%; max-height: 34rem; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); background: var(--line); }
+    .hero-image figcaption, .section-image figcaption { margin: .45rem .3rem 0; color: var(--muted); font-size: .75rem; }
+    .section-enrichment { margin: 1.2rem 0 2rem; background: var(--surface); border: 1px solid var(--line); border-radius: .8rem; overflow: hidden; }
+    .section-image { margin: 0; }
+    .section-image img { display: block; width: 100%; max-height: 24rem; object-fit: cover; }
+    .section-image figcaption { padding: .35rem .75rem; }
+    .explore-links { margin: 0; padding: .75rem 1rem; font-size: .86rem; }
+    .explore-links a { overflow-wrap: anywhere; }
+    .layout { display: grid; grid-template-columns: minmax(12rem, 16rem) minmax(0, 48rem); gap: clamp(2rem, 5vw, 5rem); width: min(76rem, calc(100% - 2rem)); margin: 0 auto; padding: 4rem 0 5rem; }
+    .toc { align-self: start; position: sticky; top: 1rem; max-height: calc(100vh - 2rem); overflow: auto; padding: 1rem; border-left: .18rem solid var(--accent); color: var(--muted); }
+    .toc h2 { margin: 0 0 .65rem; color: var(--ink); font: 750 .78rem/1.2 ui-sans-serif, system-ui, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+    .toc ol { margin: 0; padding: 0; list-style: none; }
+    .toc li { margin: .42rem 0; line-height: 1.3; }
+    .toc .toc-level-3 { padding-left: .85rem; font-size: .88rem; }
+    .toc a { color: inherit; text-decoration: none; }
+    .toc a:hover { color: var(--accent-strong); text-decoration: underline; }
+    .mobile-toc { display: none; margin-bottom: 1.5rem; padding: .8rem 1rem; background: var(--accent-soft); border-radius: .7rem; }
+    .mobile-toc summary { color: var(--accent-strong); cursor: pointer; font-weight: 750; }
+    .mobile-toc ol { padding-left: 1.3rem; }
+    main { min-width: 0; }
+    .prose { background: var(--paper); padding: clamp(1.25rem, 4vw, 3rem); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 8px 30px rgba(54, 38, 25, .06); }
+    .prose > :first-child { margin-top: 0; }
+    .prose > :last-child { margin-bottom: 0; }
+    .prose h2, .prose h3, .prose h4 { color: var(--ink); font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif; line-height: 1.18; text-wrap: balance; scroll-margin-top: 1rem; }
+    .prose h2 { margin: 3.3rem 0 1rem; padding-top: .7rem; border-top: .12rem solid var(--line); font-size: clamp(1.65rem, 4vw, 2.3rem); letter-spacing: -.025em; }
+    .prose h3 { margin: 2.4rem 0 .75rem; font-size: clamp(1.3rem, 3vw, 1.65rem); }
+    .prose h4 { margin: 1.8rem 0 .6rem; font-size: 1.15rem; }
+    .prose p, .prose li { max-width: 72ch; }
+    .prose p { margin: 1rem 0; }
+    .prose ul, .prose ol { padding-left: 1.45rem; }
+    .prose li + li { margin-top: .42rem; }
+    .prose strong { color: var(--ink); }
+    .prose blockquote { margin: 1.5rem 0; padding: .85rem 1.1rem; background: var(--accent-soft); border-left: .28rem solid var(--accent); border-radius: .2rem .7rem .7rem .2rem; }
+    .prose blockquote > :first-child { margin-top: 0; }
+    .prose blockquote > :last-child { margin-bottom: 0; }
+    .prose code { padding: .12rem .3rem; background: var(--surface); border: 1px solid var(--line); border-radius: .3rem; font-size: .9em; }
+    .prose pre { max-width: 100%; overflow: auto; padding: 1rem; background: #202427; color: #f5f2eb; border-radius: .7rem; }
+    .prose pre code { padding: 0; background: transparent; border: 0; }
+    .table-wrap { max-width: 100%; margin: 1.5rem 0; overflow-x: auto; border: 1px solid var(--line); border-radius: .75rem; }
+    table { width: 100%; min-width: 38rem; border-collapse: collapse; font-size: .92rem; line-height: 1.48; }
+    th, td { padding: .72rem .8rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { background: var(--accent-soft); color: var(--accent-strong); font-weight: 750; }
+    tr:last-child td { border-bottom: 0; }
+    tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface) 55%, transparent); }
+    .map-link { display: inline-block; margin: .08rem 0; padding: .12rem .48rem; background: var(--accent-soft); border-radius: 99rem; font-weight: 650; text-decoration: none; }
+    .map-link::before { content: "↗ "; }
+    .publication-note { margin-top: 1.5rem; padding: .9rem 1rem; color: var(--muted); background: var(--surface); border-radius: .65rem; font-size: .82rem; }
+    .publication-note p { margin: .2rem 0; }
+    @media (max-width: 52rem) {
+      .layout { display: block; padding-top: 3rem; }
+      .toc { display: none; }
+      .mobile-toc { display: block; }
+      .prose { padding: 1.15rem; border-radius: .8rem; }
+      .hero-image { transform: translateY(1rem); }
+      .hero-image img { max-height: 24rem; border-radius: .8rem; }
+      h1 { font-size: clamp(2rem, 11vw, 3.3rem); }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media print {
+      :root { color-scheme: light; }
+      body { background: white; color: black; font-size: 10.5pt; }
+      .skip-link, .toc, .mobile-toc, .hero-image, .section-image { display: none; }
+      .header-inner, .layout { width: 100%; padding: 0; }
+      .layout { display: block; }
+      .page-header { border: 0; margin-bottom: 1.5rem; }
+      .prose { padding: 0; border: 0; box-shadow: none; }
+      a { color: black; text-decoration: underline; overflow-wrap: anywhere; }
+      h2, h3, table, blockquote { break-inside: avoid; }
+      .table-wrap { overflow: visible; }
+      table { min-width: 0; font-size: 8.5pt; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="page-header">
+    <div class="header-inner">
+      <p class="eyebrow">Published knowledge-base view</p>
+      <h1>Hakone — 15–17 November 2026</h1>
+      
+      <ul class="meta-list"><li>Created 2026-10-20</li><li>Updated 2026-10-20</li><li>Canonical source: Markdown</li></ul>
+    </div>
+  </header>
+  <div class="layout">
+    <nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li class="toc-level-2"><a href="#hakone-booked-transport-sights-and-day-outline">Hakone: booked transport, sights and day outline</a></li><li class="toc-level-3"><a href="#confirmed-tickets-and-station-by-station-arrival">Confirmed tickets and station-by-station arrival</a></li><li class="toc-level-3"><a href="#three-day-activity-outline-intentionally-flexible">Three-day activity outline — intentionally flexible</a></li><li class="toc-level-3"><a href="#key-places-to-save-on-google-maps">Key places to save on Google Maps</a></li><li class="toc-level-3"><a href="#hakone-yuryo-17-nov-confirmed">Hakone Yuryo — 17 Nov, confirmed</a></li><li class="toc-level-3"><a href="#gora-park-craft-house-bracelets-and-keyrings-optional-unbooked">Gora Park Craft House — bracelets and keyrings (optional, unbooked)</a></li><li class="toc-level-3"><a href="#ryokan-mealbath-details-protect-the-included-value">Ryokan meal/bath details — protect the included value</a></li><li class="toc-level-3"><a href="#what-is-still-open">What is still open</a></li><li class="toc-level-2"><a href="#other-researched-scenic-anchors">Other researched scenic anchors</a></li><li class="toc-level-3"><a href="#additional-hakone-map-anchors-original-18-oct-research">Additional Hakone map anchors — original 18 Oct research</a></li><li class="toc-level-2"><a href="#flexible-google-maps-searches">Flexible Google Maps searches</a></li></ol></nav>
+    <main id="content">
+      <details class="mobile-toc"><summary>On this page</summary><ol><li class="toc-level-2"><a href="#hakone-booked-transport-sights-and-day-outline">Hakone: booked transport, sights and day outline</a></li><li class="toc-level-3"><a href="#confirmed-tickets-and-station-by-station-arrival">Confirmed tickets and station-by-station arrival</a></li><li class="toc-level-3"><a href="#three-day-activity-outline-intentionally-flexible">Three-day activity outline — intentionally flexible</a></li><li class="toc-level-3"><a href="#key-places-to-save-on-google-maps">Key places to save on Google Maps</a></li><li class="toc-level-3"><a href="#hakone-yuryo-17-nov-confirmed">Hakone Yuryo — 17 Nov, confirmed</a></li><li class="toc-level-3"><a href="#gora-park-craft-house-bracelets-and-keyrings-optional-unbooked">Gora Park Craft House — bracelets and keyrings (optional, unbooked)</a></li><li class="toc-level-3"><a href="#ryokan-mealbath-details-protect-the-included-value">Ryokan meal/bath details — protect the included value</a></li><li class="toc-level-3"><a href="#what-is-still-open">What is still open</a></li><li class="toc-level-2"><a href="#other-researched-scenic-anchors">Other researched scenic anchors</a></li><li class="toc-level-3"><a href="#additional-hakone-map-anchors-original-18-oct-research">Additional Hakone map anchors — original 18 Oct research</a></li><li class="toc-level-2"><a href="#flexible-google-maps-searches">Flexible Google Maps searches</a></li></ol></details>
+      <article class="prose">
+<h2 id="hakone-booked-transport-sights-and-day-outline">Hakone: booked transport, sights and day outline</h2>
+<p><strong>Stay:</strong> <strong>15–17 Nov (Sun–Tue), Tokinoyu Setsugetsuka, Gora</strong>, two adults, breakfast + dinner included for <strong>both nights</strong>. <strong>Carry luggage personally throughout the trip; no baggage forwarding.</strong> The plan favors a relaxed, scenic experience, not completing every attraction. <strong>Selected</strong> means traveller wants to visit; <strong>tentative</strong> means not booked or finalised.</p>
+<h3 id="confirmed-tickets-and-station-by-station-arrival">Confirmed tickets and station-by-station arrival</h3>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Date / details</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Paid, confirmed</strong> — 3-day Hakone Freepass, Shinjuku origin</td>
+<td><strong>15–17 Nov</strong>, two adults, digital e-tickets (one per smartphone)</td>
+<td><a href="https://www.hakonenavi.jp/international/en/discount_passes/free_pass/" target="_blank" rel="noopener noreferrer">Official Pass Info</a></td>
+</tr>
+<tr>
+<td><strong>Paid, confirmed</strong> — outward Romancecar supplement</td>
+<td><strong>Sun 15 Nov, Hakone No. 13</strong>, <strong>11:00 Shinjuku → 12:25 Hakone-Yumoto</strong>, two seats; Freepass supplies the basic rail fare</td>
+<td><a href="https://www.odakyu.jp/english/romancecar/" target="_blank" rel="noopener noreferrer">Odakyu Romancecar</a></td>
+</tr>
+</tbody>
+</table>
+</div><p><strong>15 Nov route:</strong> remm Roppongi → Toei Oedo Line (Suica) to Shinjuku → find the Odakyu platforms → <strong>11:00 booked Romancecar → Hakone-Yumoto 12:25</strong> → mountain train <strong>uphill</strong> (about 35–40 minutes) to Chokoku-no-Mori/Open-Air Museum if practical, then Gora ryokan. Leave Roppongi around 09:45 with transfer margin. The museum is <strong>not booked</strong>; avoid missing hotel dinner. <strong>Yuryo is booked for 17 Nov</strong>, not the arrival day.</p>
+<p><strong>Freepass includes:</strong> one <strong>Shinjuku↔Odawara Odakyu round trip</strong> (basic fare); unlimited designated local Hakone Tozan trains, <strong>Gora→Sounzan cable car</strong>, <strong>Sounzan→Owakudani→Togendai ropeway</strong>, <strong>Lake Ashi sightseeing cruise</strong> and specified buses, plus attraction discounts. <strong>Romancecar express-seat surcharge is separate</strong> and is already paid <strong>outbound only</strong>; <strong>17 Nov</strong> use ordinary Odakyu trains back to Shinjuku with no Romancecar surcharge. Suica covers Roppongi→Shinjuku and Tokyo-city legs, not necessarily the mountain pass services. <a href="https://www.hakonenavi.jp/international/en/discount_passes/free_pass/" target="_blank" rel="noopener noreferrer">Official pass guide</a>.</p>
+<p><strong>Digital use:</strong> <strong>Share pass</strong> with spouse in Klook; each adult activates a separate ticket <strong>15 Nov</strong>, then shows/scans the <strong>live QR</strong> on their own phone at gates, vehicles and discount counters. <strong>Internet is required; screenshots are not valid.</strong> Do not exit between Shinjuku and Odawara on the covered outbound/return Odakyu trip; the round-trip privilege ends if exiting mid-route. Voucher is already attached to the Klook email.</p>
+<h3 id="three-day-activity-outline-intentionally-flexible">Three-day activity outline — intentionally flexible</h3>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Priority / likely sequence</th>
+<th>Booking and timing caveats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sun 15 Nov — arrival</strong></td>
+<td><strong>Preferred, unbooked:</strong> Open-Air Museum near Chokoku-no-Mori after the 12:25 Yumoto arrival, then Gora check-in, included dinner and free baths.</td>
+<td>Allow 90–120 minutes at museum, but skip if connections or dinner seating make it impractical. Yuryo is <strong>not</strong> on this day.</td>
+</tr>
+</tbody>
+</table>
+</div><p>| <strong>Tue 17 Nov — return</strong> | Breakfast, <strong>check out ~09:15–09:30</strong>, short Gora Park and optional brief Craft House walk-in, collect suitcases, descend to Yumoto for storage and shuttle; <strong>Yuryo Kikyo room booked 13:00–15:00</strong>. Ordinary Odakyu train back to Tokyo afterward. | Reach Yuryo <strong>before 13:00</strong>; do not let crafts delay it. Suitcase collection at Yumoto storage <strong>by 18:00</strong>. |</p>
+<p><strong>Admission distinction — don't infer attractions are free from Klook marketing:</strong> <strong>Gora Park is free</strong> with Freepass (regular adult ¥650; for two, saves ¥1,300). <strong>Open-Air Museum admission is NOT included:</strong> ¥2,000 at counter / ¥1,900 with Freepass / ¥1,800 via <a href="https://www.hakone-oam.or.jp/en/webticket/" target="_blank" rel="noopener noreferrer">museum online ticket</a>. Traveller saw <strong>~S$13/adult at Klook</strong>, preferred for simplicity if buying; <strong>hold off until the day is decided</strong>. Official hours and ticket pricing may change. <a href="https://www.hakonenavi.jp/international/en/discount_passes/free_pass2" target="_blank" rel="noopener noreferrer">Freepass discount facilities</a>.</p>
+<h3 id="key-places-to-save-on-google-maps">Key places to save on Google Maps</h3>
+<ul>
+<li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Hakone+Open+Air+Museum" target="_blank" rel="noopener noreferrer" class="map-link">Hakone Open-Air Museum / 彫刻の森美術館</a></strong> — outdoor sculptures with mountain backdrop, roughly a 10–15-min walk from the Gora hotel or one train stop from Gora; <strong>15 Nov afternoon preferred if transfers/check-in allow</strong>; unbooked. Large-luggage storage possible at New Gallery information desk. <a href="https://www.hakone-oam.or.jp/en/" target="_blank" rel="noopener noreferrer">Official museum</a> · <a href="https://www.hakone-oam.or.jp/en/webticket/" target="_blank" rel="noopener noreferrer">Online ticket</a>.</li>
+<li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Hakone+Gora+Park" target="_blank" rel="noopener noreferrer" class="map-link">Hakone Gora Park / 箱根強羅公園</a></strong> — <strong>selected</strong>, gardens near hotel, entrance <strong>free via Freepass</strong>; consider short visit on 17 Nov or another open window.</li>
+<li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Hakone+Craft+House+Gora+Park" target="_blank" rel="noopener noreferrer" class="map-link">Hakone Craft House / 箱根クラフトハウス</a></strong> — <strong>appealing optional couple's souvenir workshop inside free-entry Gora Park</strong>, favoring <strong>bracelets or keyrings</strong> over pottery. <a href="https://www.crafthouse-reserve.com/en/hakone/vintage/" target="_blank" rel="noopener noreferrer">Vintage Beads reservation</a> · <a href="https://www.crafthouse-reserve.com/en/hakone/laser/" target="_blank" rel="noopener noreferrer">Laser Engraving / personalized keyring reservation</a>. Both are <strong>paid separately and unbooked</strong>.</li>
+<li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=cu-mo+Hakone+Sounzan" target="_blank" rel="noopener noreferrer" class="map-link">cu-mo Hakone at Sounzan</a></strong> — scenic station café/footbath; optional <strong>10–20 minutes</strong> while transferring from cable car to ropeway.</li>
+<li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Owakudani+Earth+Valley" target="_blank" rel="noopener noreferrer" class="map-link">Owakudani Earth Valley / ちきゅうの谷</a></strong> — newer volcano viewing terrace/glass lookout, on the main 16 Nov ropeway route; weather and volcanic safety notices apply.</li>
+</ul>
+<h3 id="hakone-yuryo-17-nov-confirmed">Hakone Yuryo — 17 Nov, confirmed</h3>
+<p><strong>ACCEPTED reservation, two adults: Tue 17 November 2026, 13:00–15:00, Kikyo private outdoor bath room</strong>, 120 minutes, room capacity four. <strong>Payment at venue</strong>.</p>
+<p><strong>Freepass discount:</strong> Yuryo's <a href="https://www.hakoneyuryo.jp/news/" target="_blank" rel="noopener noreferrer">notices</a> and <a href="https://www.hakonenavi.jp/spot/886" target="_blank" rel="noopener noreferrer">Hakone Navi listing</a> advertise <strong>¥600 off a 120-minute private room</strong> for pass holders. <strong>Not yet applied or guaranteed to this Kikyo booking</strong>. Show a <em>live</em> Hakone Freepass at the reception desk and ask before paying; potential ¥11,800 if granted, else ¥12,400. The reservation service asks for a card hold but says payment is at the venue.</p>
+<p><strong>Morning-to-onsen logistics:</strong> Aim to check out of the Gora ryokan about <strong>09:15–09:30</strong> (formal checkout is <strong>11:00</strong>), ask it to hold suitcases while you make a <em>brief</em> Gora Park visit, then collect bags about 11:00 and take the Tozan train <strong>downhill</strong> to Yumoto (~35–40 minutes plus waiting). Hotel <em>post-checkout</em> luggage hold is <strong>not independently confirmed</strong>; ask at check-in. At Yumoto use <a href="https://www.hakonenavi.jp/international/en/travel_center_hakoneyumoto" target="_blank" rel="noopener noreferrer">Odakyu Sightseeing Service Center temporary storage</a> (size/ID/fee restrictions apply; <strong>retrieve by 18:00</strong>), then <a href="https://hakoneyuryo.jp/english/access/" target="_blank" rel="noopener noreferrer">Yuryo's free shuttle</a> (~3 minutes, roughly every 10–15 minutes). Aim to reach reception <strong>by 12:40–12:45</strong>. Return to the station after the bath, collect suitcases and take ordinary Odakyu back to Shinjuku.</p>
+<p><strong>Important TableCheck venue conditions:</strong> No swimsuits or bathing wrapped in towels. <strong>If not there within 15 minutes without notifying the venue, booking may be cancelled</strong>; being late does not extend usage. Towels/amenities included. Yukata rental for Ichi/Ni room classes (if relevant) is optional ¥100/item. Public bathhouse <strong>not included</strong> (weekday adult ¥1,000 additional). Same-day room changes cannot be accommodated without cancelling/rebooking; don't assume flexible modification. <strong>Within one hour of reservation / no-show: 100% cancellation fee</strong>. Reservations solely for photography in private baths are generally prohibited. Review your booking's exact conditions before modifying.</p>
+<p><strong>Why Tuesday:</strong> no rush for the 15 Nov ryokan dinner; it is on the natural return route. The ryokan offers <strong>three free, non-reservable private natural-spring outdoor baths</strong>, so extra Yuryo is a special two-hour experience rather than a requirement.</p>
+<h3 id="gora-park-craft-house-bracelets-and-keyrings-optional-unbooked">Gora Park Craft House — bracelets and keyrings (optional, unbooked)</h3>
+<p><strong>Gora Park entry is free with Hakone Freepass</strong>, but workshops are paid separately. Two <strong>different</strong> activities fit the preferred keepsakes:</p>
+<ul>
+<li><strong><a href="https://www.crafthouse-reserve.com/en/hakone/vintage/" target="_blank" rel="noopener noreferrer">Vintage Beads Workshop — bracelet/accessory making</a></strong>: from <strong>¥3,080 per person</strong>, ~30 min check-in + ~60 min making. <strong>Bracelets have an additional cost above the base price</strong>, as do some charms/beads; finished accessories typically go home the same day. The no-surcharge base offering is a brooch/dreamcatcher strap, <strong>not necessarily a bracelet or keyring</strong>.</li>
+<li><strong><a href="https://www.crafthouse-reserve.com/en/hakone/laser/" target="_blank" rel="noopener noreferrer">Laser Engraving Workshop — personalized keyring</a></strong>: <strong>from ¥2,420 per person</strong>, <strong>keyring included at base price</strong>, roughly 30 min reception/selection + 30 min machining. Other items add fees; same-day keepsake.</li>
+<li><strong>Reservation rule:</strong> <a href="https://www.crafthouse.org/en/faq.html" target="_blank" rel="noopener noreferrer">Official Craft House FAQ</a>. <strong>Walk-ins possible if space exists</strong>, but reserved guests take priority. The <strong>17 Nov 13:00 onsen is fixed</strong>, so only start a class if you can finish, collect hotel luggage, descend to Yumoto and arrive at Yuryo by ~12:45. Otherwise skip the workshop. Booking is optional, not required.</li>
+</ul>
+<h3 id="ryokan-mealbath-details-protect-the-included-value">Ryokan meal/bath details — protect the included value</h3>
+<p><strong>Tokinoyu Setsugetsuka (Gora), 15–17 Nov, 2 adults, 36 m² non-smoking room, two single beds; large bed request not guaranteed.</strong> Booking's per-night <strong>two-meal plan</strong> means <strong>dinner 15 Nov, breakfast + dinner 16 Nov, breakfast 17 Nov for both guests</strong>. Check-in usually <strong>15:00</strong>, checkout <strong>11:00</strong>.</p>
+<ul>
+<li><strong>Dinner:</strong> ordinarily <strong>17:15</strong> or <strong>19:45</strong> seating, assigned by hotel on arrival / availability. <strong>Do not assume late dinner</strong>, plan to return by ~17:00 on 16 Nov unless later sitting is confirmed. Kaiseki or Japanese beef shabu-shabu/sushi set, choice usually in order of check-in.</li>
+<li><strong>Breakfast:</strong> usually from <strong>07:00</strong>, Japanese style, subject to date-specific adjustment.</li>
+<li><strong>Baths:</strong> in-room open-air bathtub uses <strong>ordinary heated water</strong>, while the property also has natural-spring communal baths and <strong>three free, no-reservation private open-air hot-spring baths</strong>, available when vacant. Enjoy these during the ryokan stay as included value; <strong>the separate 17 Nov Yuryo bath is already booked</strong>.</li>
+<li><strong>Allergies:</strong> hotel changed its food-allergy approach on <strong>1 July 2025</strong>, offers a reduced-allergen menu for listed ingredients; confirm with hotel if applicable. <a href="https://hakonetrip.odakyu-global.com/stay/setsugetsuka/" target="_blank" rel="noopener noreferrer">Hotel overview</a>.</li>
+</ul>
+<h3 id="what-is-still-open">What is still open</h3>
+<ul>
+<li>
+<p><strong>15 Nov:</strong> Open-Air Museum admission <strong>unbooked</strong>; official <a href="https://www.hakone-oam.or.jp/en/webticket/" target="_blank" rel="noopener noreferrer">advance tickets</a> vs Klook (~S$13/adult seen by traveller). Prioritize hotel check-in and dinner if delayed.</p>
+</li>
+<li>
+<p><strong>17 Nov:</strong> <strong>Yuryo 13:00 is already booked</strong>. Gora Park free with Freepass; Craft House walk-in optional and <strong>must yield to 13:00 bath</strong>. Show Freepass and request ¥600 discount before onsite payment.</p>
+</li>
+<li>
+<p><strong>For all days:</strong> each traveller uses their own phone with the live Klook Freepass QR (internet required, no screenshots); carry all luggage, <strong>no hotel-to-hotel forwarding</strong>.</p>
+</li>
+</ul>
+<p>Source: Hakone 18 Oct research record. Its earlier onsen date suggestions are <strong>superseded</strong> by the accepted 20 Oct booking.</p>
+<h2 id="other-researched-scenic-anchors">Other researched scenic anchors</h2>
+<h3 id="additional-hakone-map-anchors-original-18-oct-research">Additional Hakone map anchors — original 18 Oct research</h3>
+<p><strong>Save these 3 Google Maps anchors (not a required sequence):</strong></p>
+<ul>
+<li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Hakone%20Museum%20of%20Art%20Gora%20Kanagawa" target="_blank" rel="noopener noreferrer" class="map-link">Hakone Museum of Art — Shinsenkyo moss/maple garden</a></strong> — The most directly seasonal Gora stop: 200+ maples against a moss garden. Renovation closure is <strong>scheduled through 29 Oct 2026</strong>; partial pre-opening is <strong>planned from 30 Oct</strong> with main galleries not fully reopening until Dec. Recheck the reopened garden shortly before visiting. Check garden access close to visit.</li>
+<li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Hakone%20Open%20Air%20Museum%20Ninotaira" target="_blank" rel="noopener noreferrer" class="map-link">Hakone Open-Air Museum</a></strong> — Mountain-backed sculpture gardens and footbath; an outdoorsy art experience close to Gora (9:00–17:00).</li>
+<li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Owakudani%20Hakone" target="_blank" rel="noopener noreferrer" class="map-link">Owakudani</a></strong> — Distinctive steaming volcanic valley and ropeway scenery; choose only if weather/operations are favourable.</li>
+</ul>
+<p><strong>Video preview:</strong> <a href="https://www.youtube.com/results?search_query=Hakone%20Gora%20November%20autumn%20Open%20Air%20Museum%20Lake%20Ashi%202025%20walking%20tour" target="_blank" rel="noopener noreferrer">YouTube search</a> · <strong>Verification:</strong> <a href="https://moaart.or.jp/hakone/en/topinfo/20260119/" target="_blank" rel="noopener noreferrer">source 1</a>, <a href="https://moaart.or.jp/hakone/en/seasons/detail/" target="_blank" rel="noopener noreferrer">source 2</a>, <a href="https://www.hakone-oam.or.jp/en/" target="_blank" rel="noopener noreferrer">source 3</a></p>
+<h2 id="flexible-google-maps-searches">Flexible Google Maps searches</h2>
+<ul>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=%E7%AE%B1%E6%A0%B9%20%E7%B4%85%E8%91%89" target="_blank" rel="noopener noreferrer" class="map-link">箱根 紅葉 — autumn leaves</a> — seasonal maple spots, conditions dependent.</li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=%E7%AE%B1%E6%A0%B9%20%E5%B1%95%E6%9C%9B%E5%8F%B0" target="_blank" rel="noopener noreferrer" class="map-link">箱根 展望台 — viewpoints</a> — check lake and mountain visibility.</li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%BC%B7%E7%BE%85%20%E3%82%AB%E3%83%95%E3%82%A7" target="_blank" rel="noopener noreferrer" class="map-link">強羅 カフェ — Gora cafés</a> — short rest or spontaneous snack.</li>
+<li><a href="https://www.google.com/maps/search/?api=1&amp;query=%E7%AE%B1%E6%A0%B9%20%E3%81%8A%E5%9C%9F%E7%94%A3" target="_blank" rel="noopener noreferrer" class="map-link">箱根 お土産 — local souvenirs</a> — modest gifts and craft browsing.</li>
+</ul>
+
+        <footer class="publication-note">
+          <p>This is an automatically prepared public-safe adaptation of a private Markdown guide.</p>
+          <p>Source hash 283f582168ab · Publisher 29a3d7dfcf26 · Model openrouter/google/gemini-3.1-flash-lite</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+  <script type="application/json" id="publication-metadata">{
+  "sourcePath": "knowledge-base/managed/2026-10-20--japan-hakone-field-guide.md",
+  "sourceHash": "283f582168ab5cca5cc3ecd02ee7b93d1cb16b1159689933be79e23fca29c06e",
+  "sourceRevision": "89fe5eac9f66d31c9194da9769a800aae3facc34",
+  "publisherHash": "29a3d7dfcf261b073b541ce918f3fdd790068e9aad4969e09618466d29cd652f",
+  "model": "openrouter/google/gemini-3.1-flash-lite",
+  "generatedAt": "2026-10-24T07:07:11.949Z",
+  "usage": {
+    "input": null,
+    "output": null,
+    "reasoning": null,
+    "cacheRead": null,
+    "cacheWrite": null,
+    "cost": null
+  },
+  "privacy": {
+    "version": 1,
+    "reviewed": true,
+    "title": null,
+    "description": null,
+    "edits": [
+      {
+        "line": 4,
+        "text": ""
+      },
+      {
+        "line": 14,
+        "text": "| **Paid, confirmed** — 3-day Hakone Freepass, Shinjuku origin | **15–17 Nov**, two adults, digital e-tickets (one per smartphone) | [Official Pass Info](https://www.hakonenavi.jp/international/en/discount_passes/free_pass/) |"
+      },
+      {
+        "line": 15,
+        "text": "| **Paid, confirmed** — outward Romancecar supplement | **Sun 15 Nov, Hakone No. 13**, **11:00 Shinjuku → 12:25 Hakone-Yumoto**, two seats; Freepass supplies the basic rail fare | [Odakyu Romancecar](https://www.odakyu.jp/english/romancecar/) |"
+      },
+      {
+        "line": 16,
+        "text": ""
+      },
+      {
+        "line": 46,
+        "text": "**ACCEPTED reservation, two adults: Tue 17 November 2026, 13:00–15:00, Kikyo private outdoor bath room**, 120 minutes, room capacity four. **Payment at venue**."
+      }
+    ]
+  },
+  "enhancement": {
+    "theme": "indigo",
+    "heroImage": null,
+    "sections": []
+  }
+}</script>
+</body>
+</html>
