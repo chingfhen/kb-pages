@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="slate">
+<html lang="en" data-theme="maple">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +13,7 @@
     :root[data-theme="indigo"] { --accent: #485aa8; --accent-strong: #334180; --accent-soft: #e8ebfb; --paper: #fcfcff; --surface: #f1f2f9; --ink: #272a38; --muted: #626678; --line: #d8daea; }
     :root[data-theme="slate"] { --accent: #3e6474; --accent-strong: #294957; --accent-soft: #e2eef2; --paper: #fcfdfd; --surface: #eff4f5; --ink: #252d31; --muted: #606b70; --line: #d4dee1; }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-wrap: anywhere; }
     body { margin: 0; background: var(--surface); color: var(--ink); font: 1rem/1.68 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; text-rendering: optimizeLegibility; }
     a { color: var(--accent-strong); text-decoration-thickness: .09em; text-underline-offset: .16em; }
     a:hover { color: var(--accent); }
@@ -67,8 +67,12 @@
     .prose pre { max-width: 100%; overflow: auto; padding: 1rem; background: #202427; color: #f5f2eb; border-radius: .7rem; }
     .prose pre code { padding: 0; background: transparent; border: 0; }
     .table-wrap { max-width: 100%; margin: 1.5rem 0; overflow-x: auto; border: 1px solid var(--line); border-radius: .75rem; }
-    table { width: 100%; min-width: 38rem; border-collapse: collapse; font-size: .92rem; line-height: 1.48; }
+    table { width: 100%; border-collapse: collapse; font-size: .92rem; line-height: 1.48; }
+    table:has(th:nth-child(4)) { min-width: 32rem; }
+    caption { padding: .7rem .8rem; text-align: left; font-weight: 750; }
     th, td { padding: .72rem .8rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th, td { overflow-wrap: normal; word-break: normal; }
+    th a, td a, th code, td code { overflow-wrap: anywhere; }
     th { background: var(--accent-soft); color: var(--accent-strong); font-weight: 750; }
     tr:last-child td { border-bottom: 0; }
     tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface) 55%, transparent); }
@@ -76,6 +80,23 @@
     .map-link::before { content: "↗ "; }
     .publication-note { margin-top: 1.5rem; padding: .9rem 1rem; color: var(--muted); background: var(--surface); border-radius: .65rem; font-size: .82rem; }
     .publication-note p { margin: .2rem 0; }
+    .component + .component { margin-top: 2rem; }
+    .prose > .component:first-child > h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+    .component-orientation { font-size: 1.12rem; }
+    .fact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap: .8rem; margin: 1.2rem 0; }
+    .fact-grid > div { padding: .8rem; background: var(--surface); border: 1px solid var(--line); border-radius: .6rem; }
+    .fact-grid dt { font-weight: 750; }
+    .fact-grid dd { margin: .3rem 0 0; }
+    .item-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; list-style: none; padding: 0 !important; }
+    .item-cards > li, .step-list > li { padding: 1rem; background: var(--surface); border: 1px solid var(--line); border-radius: .6rem; }
+    .item-cards h3, .step-list h3 { margin: 0 0 .5rem; font-size: 1.2rem; }
+    .component-caution { padding: .9rem 1rem; border-left: .3rem solid var(--accent); background: var(--accent-soft); }
+    .component-caution h2 { margin-top: 0; border: 0; }
+    .condition { margin: 1.2rem 0; padding: .8rem 1rem; border-left: .25rem solid var(--accent); background: var(--accent-soft); }
+    .condition p { margin: .2rem 0; }
+    .relationship { margin: 1rem 0; padding: 1rem; background: var(--surface); border: 1px solid var(--line); border-radius: .6rem; }
+    .relationship-nodes { display: flex; flex-wrap: wrap; gap: 1rem; list-style-position: inside; }
+    .relationship figcaption, .figure-caption { color: var(--muted); font-size: .9rem; }
     @media (max-width: 52rem) {
       .layout { display: block; padding-top: 3rem; }
       .toc { display: none; }
@@ -113,16 +134,16 @@
   </header>
   <div class="layout">
     <nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li class="toc-level-2"><a href="#two-selected-seasonal-evenings-part-of-the-itinerary">Two selected seasonal evenings — part of the itinerary</a></li><li class="toc-level-3"><a href="#saturday-14-nov-koishikawa-korakuen-night-garden-18001930">Saturday 14 Nov — Koishikawa Korakuen night garden (~18:00–19:30)</a></li><li class="toc-level-3"><a href="#thursday-19-nov-yebisu-garden-place-christmas-17302000">Thursday 19 Nov — Yebisu Garden Place Christmas (~17:30–20:00)</a></li><li class="toc-level-2"><a href="#full-day-excursions">Full-day excursions</a></li><li class="toc-level-3"><a href="#mt-takao-9510">Mt Takao — 9.5/10</a></li><li class="toc-level-3"><a href="#kamakura-enoshima-9010">Kamakura / Enoshima — 9.0/10</a></li><li class="toc-level-2"><a href="#tokyo-neighbourhoods-select-dont-complete-them-all">Tokyo neighbourhoods — select, don&#39;t complete them all</a></li><li class="toc-level-3"><a href="#ebisu-9410">Ebisu — 9.4/10</a></li><li class="toc-level-3"><a href="#shinjuku-9310">Shinjuku — 9.3/10</a></li><li class="toc-level-3"><a href="#shibuya-with-optional-harajuku-omotesando-9210">Shibuya (with optional Harajuku / Omotesando) — 9.2/10</a></li><li class="toc-level-3"><a href="#ueno-okachimachi-8910">Ueno / Okachimachi — 8.9/10</a></li><li class="toc-level-3"><a href="#roppongi-9010">Roppongi — 9.0/10</a></li><li class="toc-level-3"><a href="#asakusa-kappabashi-8810">Asakusa / Kappabashi — 8.8/10</a></li><li class="toc-level-3"><a href="#marunouchi-yurakucho-hibiya-8710">Marunouchi / Yurakucho / Hibiya — 8.7/10</a></li><li class="toc-level-2"><a href="#seasonal-opportunities-and-reality-check-specific-to-1221-nov-2026">Seasonal opportunities and reality check (specific to 12–21 Nov 2026)</a></li><li class="toc-level-2"><a href="#google-maps-discovery-toolkit">Google Maps discovery toolkit</a></li></ol></nav>
-    <main id="content">
+    <main id="content" tabindex="-1">
       <details class="mobile-toc"><summary>On this page</summary><ol><li class="toc-level-2"><a href="#two-selected-seasonal-evenings-part-of-the-itinerary">Two selected seasonal evenings — part of the itinerary</a></li><li class="toc-level-3"><a href="#saturday-14-nov-koishikawa-korakuen-night-garden-18001930">Saturday 14 Nov — Koishikawa Korakuen night garden (~18:00–19:30)</a></li><li class="toc-level-3"><a href="#thursday-19-nov-yebisu-garden-place-christmas-17302000">Thursday 19 Nov — Yebisu Garden Place Christmas (~17:30–20:00)</a></li><li class="toc-level-2"><a href="#full-day-excursions">Full-day excursions</a></li><li class="toc-level-3"><a href="#mt-takao-9510">Mt Takao — 9.5/10</a></li><li class="toc-level-3"><a href="#kamakura-enoshima-9010">Kamakura / Enoshima — 9.0/10</a></li><li class="toc-level-2"><a href="#tokyo-neighbourhoods-select-dont-complete-them-all">Tokyo neighbourhoods — select, don&#39;t complete them all</a></li><li class="toc-level-3"><a href="#ebisu-9410">Ebisu — 9.4/10</a></li><li class="toc-level-3"><a href="#shinjuku-9310">Shinjuku — 9.3/10</a></li><li class="toc-level-3"><a href="#shibuya-with-optional-harajuku-omotesando-9210">Shibuya (with optional Harajuku / Omotesando) — 9.2/10</a></li><li class="toc-level-3"><a href="#ueno-okachimachi-8910">Ueno / Okachimachi — 8.9/10</a></li><li class="toc-level-3"><a href="#roppongi-9010">Roppongi — 9.0/10</a></li><li class="toc-level-3"><a href="#asakusa-kappabashi-8810">Asakusa / Kappabashi — 8.8/10</a></li><li class="toc-level-3"><a href="#marunouchi-yurakucho-hibiya-8710">Marunouchi / Yurakucho / Hibiya — 8.7/10</a></li><li class="toc-level-2"><a href="#seasonal-opportunities-and-reality-check-specific-to-1221-nov-2026">Seasonal opportunities and reality check (specific to 12–21 Nov 2026)</a></li><li class="toc-level-2"><a href="#google-maps-discovery-toolkit">Google Maps discovery toolkit</a></li></ol></details>
       <article class="prose">
-<p>Research menu except two explicitly selected seasonal evening stops (below). Area scores below are subjective fit ratings, not Google review scores. For each area select 2–3 specific Google Maps anchors, then explore food, bars and shops spontaneously. Historic, nature, sake/izakaya, romantic views, Christmas lights and useful affordable shopping are priorities.</p>
-<p>Preferred second-half choices: Kamakura/Enoshima (provisionally 18 Nov), one day planned for shopping including GU (provisionally 19 Nov), and Mt Takao (provisionally 20 Nov). Newly selected: Koishikawa evening 14 Nov and Ebisu evening 19 Nov after shopping. Day-trip dates can change based on weather and energy; none has timed sightseeing bookings. Keep other activities and most evenings flexible. Current Roppongi hotel base is 12–15 Nov; hotel near Asakusabashi 17–21 Nov.</p>
+<p><strong>Research menu except two explicitly selected seasonal evening stops (below).</strong> Area scores below are <strong>subjective fit ratings</strong>, not Google review scores. For each area select 2–3 specific Google Maps anchors, then explore food, bars and shops spontaneously. Historic, nature, sake/izakaya, romantic views, Christmas lights and useful affordable shopping are priorities.</p>
+<p><strong>Updated 24 Oct:</strong> <strong>18 Nov</strong> Kamakura + Enoshima preferred (weather-flexible). <strong>19 Nov</strong> <strong>Shibuya Crossing + SHIBUYA SKY + flexible shopping/GU</strong>, then selected <strong>Ebisu Garden Place</strong> evening; <strong>SKY not booked</strong> (check timed sales around <strong>5 Nov</strong> for 19 Nov). <strong>20 Nov is now deliberately relaxed</strong>: Yanaka + Nezu default, Kagurazaka/Asakusa/Ueno alternatives, <strong>Mt Takao optional only</strong> and not booked. <strong>14 Nov</strong> Koishikawa night garden on a flexible-date voucher. Roppongi hotel 12–15 Nov, ICI Asakusabashi 17–21 Nov.</p>
 <h2 id="two-selected-seasonal-evenings-part-of-the-itinerary">Two selected seasonal evenings — part of the itinerary</h2>
-<p>These are the only two new seasonal must-visit choices agreed on 24 October. Their proposed dates organise the trip, but neither ticket nor venue requires a fixed time-slot reservation. They do not replace any pre-existing bookings.</p>
+<p>These are the <strong>only two new seasonal must-visit choices</strong> agreed on <strong>24 October</strong>. Their proposed dates organise the trip, but <strong>neither ticket nor venue requires a fixed time-slot reservation</strong>. They do not replace any pre-existing bookings or the fixed plan for the 19 Nov shopping day.</p>
 <h3 id="saturday-14-nov-koishikawa-korakuen-night-garden-18001930">Saturday 14 Nov — Koishikawa Korakuen night garden (~18:00–19:30)</h3>
 <ul>
-<li>Experience: illuminated Edo-era landscape garden, water reflections/bridges, autumn-themed lighting and projections. Advance tickets are valid 13–24 Nov 2026, 18:00–21:00, last admission 20:00. <a href="https://www.kkday.com/en/product/195630" target="_blank" rel="noopener noreferrer">KKday product/redemption rules</a> · <a href="https://www.tokyo-park.or.jp/park/koishikawakorakuen/news/2026/2026_url.html" target="_blank" rel="noopener noreferrer">official garden announcement</a>.</li>
+<li><strong>Experience:</strong> illuminated Edo-era landscape garden, water reflections/bridges, autumn-themed lighting and projections. <strong>Advance tickets are held on a flexible-date voucher</strong>; confirm the correct e-vouchers for your party in KKday before travel. Valid <strong>13–24 Nov 2026</strong>, <strong>18:00–21:00, last admission 20:00</strong>. <a href="https://www.kkday.com/en/product/195630" target="_blank" rel="noopener noreferrer">KKday product/redemption rules</a> · <a href="https://www.tokyo-park.or.jp/park/koishikawakorakuen/news/2026/2026_url.html" target="_blank" rel="noopener noreferrer">official garden announcement</a>.</li>
 <li><strong>Route:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Koishikawa+Korakuen+Garden+West+Gate" target="_blank" rel="noopener noreferrer" class="map-link">Koishikawa Korakuen <strong>West Gate</strong></a> is the night entrance (not East Gate). Iidabashi Station is a practical rail access point. Arrive around 17:45–18:00; allow 60–90 min. On site, show the voucher and complete the KKday <strong>Swipe to Redeem with staff</strong>, not beforehand.</li>
 <li><strong>Afterwards (optional, not a third seasonal commitment):</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Hyogo+Yokocho+Kagurazaka" target="_blank" rel="noopener noreferrer" class="map-link">Kagurazaka / Hyogo Yokocho</a> for historic alleys and dinner; skip if you prefer an early night. <strong>No separate Kagurazaka booking.</strong></li>
 <li><strong>Flexible-date fallback:</strong> If Saturday crowds/weather interfere, move Koishikawa to a free Tokyo evening before 21 Nov; ticket remains valid to 24 Nov. Don't collide with the 15–17 Nov Hakone block or other paid bookings.</li>
@@ -130,13 +151,13 @@
 <h3 id="thursday-19-nov-yebisu-garden-place-christmas-17302000">Thursday 19 Nov — Yebisu Garden Place Christmas (~17:30–20:00)</h3>
 <ul>
 <li><strong>Experience:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Yebisu+Garden+Place+Center+Plaza" target="_blank" rel="noopener noreferrer" class="map-link">Yebisu Garden Place Center Plaza Baccarat chandelier</a>, <a href="https://www.google.com/maps/search/?api=1&amp;query=Yebisu+Garden+Place+Clock+Plaza" target="_blank" rel="noopener noreferrer" class="map-link">Clock Plaza Christmas tree and market</a>, and <a href="https://www.google.com/maps/search/?api=1&amp;query=Yebisu+Garden+Place+Tower+Sky+Lounge+38F" target="_blank" rel="noopener noreferrer" class="map-link">Garden Place Tower 38F SKY LOUNGE</a> (optional free indoor skyline view). About <strong>2–3 hours</strong> if including food or a view; no admission ticket required for outdoor displays.</li>
-<li><strong>How it fits:</strong> Evening after the <strong>wife-chosen GU/shopping day</strong>; particularly convenient if she chooses Shibuya. Treat <strong>17:30 arrival as a target</strong>, not a rigid constraint on her shopping. If the day's shopping ends elsewhere, relocate the Ebisu evening to <strong>18 or 20 Nov</strong> after the selected day trip, rather than dropping it.</li>
+<li><strong>How it fits:</strong> Evening after the <strong>shopping day</strong>; particularly convenient if the shopping finishes in Shibuya. Treat <strong>17:30 arrival as a target</strong>, not a rigid constraint on the day's shopping. If the day's shopping ends elsewhere, relocate the Ebisu evening to <strong>18 or 20 Nov</strong> after the selected day trip, rather than dropping it.</li>
 <li><strong>2026 timing:</strong> Baccarat chandelier <strong>14 Nov 2026–11 Jan 2027</strong>, typically <strong>11:00–23:00</strong> (only 14 Nov starts 17:00); tree/illuminations from <strong>14 Nov</strong> with lights until <strong>23:00</strong>; <strong>Clock Plaza Christmas market 14 Nov–25 Dec, weekdays 17:00–20:00</strong>, weekend 12:00–20:00. The <strong>Château Plaza</strong> second market does <em>not</em> begin until <strong>27 Nov</strong>, after departure. Weather may close the market. <a href="https://event.gardenplace.jp/special/2026christmas/" target="_blank" rel="noopener noreferrer">Official Christmas programme</a> · <a href="https://gardenplace.jp/event/detail/1095" target="_blank" rel="noopener noreferrer">Official Baccarat event</a>.</li>
 <li><strong>Optional afterwards:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Ebisu+Yokocho+Tokyo" target="_blank" rel="noopener noreferrer" class="map-link">Ebisu Yokocho</a> for dinner/drinks if there's energy. No need to commit additional districts or special events.</li>
 </ul>
 <h2 id="full-day-excursions">Full-day excursions</h2>
 <h3 id="mt-takao-9510">Mt Takao — 9.5/10</h3>
-<p><strong>Why go:</strong> Accessible mountain nature, foliage, possible Fuji view. <strong>Time:</strong> Full-day weather-flexible excursion. <strong>Status:</strong> Traveller has selected Mt Takao as a preferred destination; <strong>20 Nov is provisional and weather-flexible</strong>. Rating = subjective fit for this trip, not a public review score.</p>
+<p><strong>Why go:</strong> Accessible mountain nature, foliage, possible Fuji view. <strong>Time:</strong> 6–9h door-to-door from Asakusabashi if visiting. <strong>Status:</strong> <strong>Optional only as of 24 Oct; no booking identified</strong>. <strong>20 Nov defaults to Yanaka+Nezu or another easy Tokyo day.</strong> The <strong>9.5/10</strong> headline above rates scenic attraction, <strong>not fit for final full day</strong> (rated 8.3/10 for that day). A separate day-by-day field guide covers 20 Nov options, effort and the optional cable-car/Trail 1 route.</p>
 <p><strong>Save these 3 Google Maps anchors (not a required sequence):</strong></p>
 <ul>
 <li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Kiyotaki%20Station%20Mount%20Takao" target="_blank" rel="noopener noreferrer" class="map-link">Kiyotaki Station / Takao cable car</a></strong> — Easy mountainside access; the ride itself offers forest views, avoiding the steep first climb. Adult ¥490 one-way / ¥980 return per operator.</li>
@@ -146,7 +167,7 @@
 <p><strong>Extras / cautions:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Keio%20Takaosan%20Onsen%20Gokurakuyu" target="_blank" rel="noopener noreferrer" class="map-link">Keio Takaosan Onsen Gokurakuyu</a> and <a href="https://www.google.com/maps/search/?api=1&amp;query=Takao%20599%20Museum" target="_blank" rel="noopener noreferrer" class="map-link">Takao 599 Museum</a> near the station. The official Autumn Leaves Festival runs <strong>24 Oct–13 Dec 2026</strong>. Foliage and cable-car queues can be strong in November; prefer a weekday and verify last descent.</p>
 <p><strong>Video preview:</strong> <a href="https://www.youtube.com/results?search_query=Mount%20Takao%20November%20autumn%20foliage%20cable%20car%20Yakuoin%20summit%20hike%204K" target="_blank" rel="noopener noreferrer">YouTube search</a> · <strong>Verification:</strong> <a href="https://www.gotokyo.org/en/spot/ev074/index.html" target="_blank" rel="noopener noreferrer">source 1</a>, <a href="https://www.takaotozan.co.jp/timeprice/index.php" target="_blank" rel="noopener noreferrer">source 2</a>, <a href="https://www.japan-guide.com/e/e3029.html" target="_blank" rel="noopener noreferrer">source 3</a></p>
 <h3 id="kamakura-enoshima-9010">Kamakura / Enoshima — 9.0/10</h3>
-<p><strong>Why go:</strong> Temples, Enoden coastal train and seaside. <strong>Time:</strong> Full day if including Enoshima. <strong>Status:</strong> Traveller has selected Kamakura/Enoshima as a preferred destination; <strong>18 Nov is provisional</strong>; keep the day weather-flexible. Rating = subjective fit for this trip, not a public review score.</p>
+<p><strong>Why go:</strong> Temples, Enoden coastal train and seaside. <strong>Time:</strong> Full day if including island. <strong>Status:</strong> Preferred <strong>18 Nov</strong>, weather-flexible, no excursion tickets booked. A separate practical guide covers the Kamakura → Hase → Enoshima route with return. Rating here is subjective destination fit.</p>
 <p><strong>Save these 3 Google Maps anchors (not a required sequence):</strong></p>
 <ul>
 <li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Hasedera%20Temple%20Kamakura" target="_blank" rel="noopener noreferrer" class="map-link">Hasedera Temple (Hase cluster)</a></strong> — Hillside temple, landscaped grounds and Kamakura coastal viewpoints; the strongest blend of temple and nature.</li>
@@ -157,7 +178,7 @@
 <p><strong>Video preview:</strong> <a href="https://www.youtube.com/results?search_query=Kamakura%20Enoshima%20Enoden%20Hasedera%20Great%20Buddha%20Yoridokoro%20day%20trip" target="_blank" rel="noopener noreferrer">YouTube search</a> · <strong>Verification:</strong> <a href="https://www.japan-guide.com/e/e3101.html" target="_blank" rel="noopener noreferrer">source 1</a>, <a href="https://visitkanagawa.jp/destination/cafe-yoridokoro/2104" target="_blank" rel="noopener noreferrer">source 2</a>, <a href="https://www.enoden.co.jp/en/tourism/ticket/noriorikun/" target="_blank" rel="noopener noreferrer">source 3</a></p>
 <h2 id="tokyo-neighbourhoods-select-dont-complete-them-all">Tokyo neighbourhoods — select, don't complete them all</h2>
 <h3 id="ebisu-9410">Ebisu — 9.4/10</h3>
-<p><strong>Why go:</strong> Romantic lights, free view, izakaya and cocktails. <strong>Time:</strong> Evening (2–3 h). <strong>Status:</strong> <strong>Yebisu Garden Place selected for Thu 19 Nov ~17:30–20:00</strong> after wife-led shopping; day/time can move if shopping logistics demand it. Extra bars are optional. Rating = subjective fit for this trip, not a public review score.</p>
+<p><strong>Why go:</strong> Romantic lights, free view, izakaya and cocktails. <strong>Time:</strong> Evening 2–3h. <strong>Status:</strong> Selected <strong>19 Nov ~17:30–20:00</strong> following the <strong>Shibuya Crossing / SKY / shopping</strong> day; actual timing flexes around paid SKY entry and shopping. Rating is subjective fit.</p>
 <p><strong>Save these 3 Google Maps anchors (not a required sequence):</strong></p>
 <ul>
 <li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Yebisu%20Garden%20Place%20Tower%20Sky%20Lounge%2038F" target="_blank" rel="noopener noreferrer" class="map-link">Yebisu Garden Place + 38F SKY LOUNGE</a></strong> — Free indoor skyline view, not an open-air roof, plus beautiful Garden Place plazas. Baccarat ETERNAL LIGHTS chandelier starts <strong>14 Nov 2026</strong> (11:00–23:00; opening day from 17:00).</li>
@@ -177,7 +198,7 @@
 <p><strong>Extras / cautions:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Shinjuku%20Gyoen%20National%20Garden" target="_blank" rel="noopener noreferrer" class="map-link">Shinjuku Gyoen</a> for garden time (¥500; generally 9:00–16:30 in November; 1–15 Nov chrysanthemum exhibition); <a href="https://www.google.com/maps/search/?api=1&amp;query=Tokyo%20Metropolitan%20Government%20Building%20South%20Observatory" target="_blank" rel="noopener noreferrer" class="map-link">Tokyo Metropolitan Government Observatory</a> for another <strong>free indoor</strong> high view; <a href="https://www.google.com/maps/search/?api=1&amp;query=Isetan%20Shinjuku%20food%20basement" target="_blank" rel="noopener noreferrer" class="map-link">Isetan Shinjuku depachika</a> for food gifts; <a href="https://www.google.com/maps/search/?api=1&amp;query=Hands%20Shinjuku%20Takashimaya%20Times%20Square" target="_blank" rel="noopener noreferrer" class="map-link">Hands Shinjuku</a> for practical Japanese goods. <strong>Cover charge:</strong> often ¥500–1,500 each, separate from drinks; cash is prudent, and do not follow street touts.</p>
 <p><strong>Video preview:</strong> <a href="https://www.youtube.com/results?search_query=Shinjuku%20Omoide%20Yokocho%20Golden%20Gai%20BEAMS%20JAPAN%20night%20walking%20tour" target="_blank" rel="noopener noreferrer">YouTube search</a> · <strong>Verification:</strong> <a href="https://golden-gai.tokyo/en/introduction/" target="_blank" rel="noopener noreferrer">source 1</a>, <a href="https://www.beams.co.jp/shop/j/" target="_blank" rel="noopener noreferrer">source 2</a>, <a href="https://www.english.metro.tokyo.lg.jp/w/000-101-000542" target="_blank" rel="noopener noreferrer">source 3</a>, <a href="https://www.env.go.jp/en/press/press_02866.html" target="_blank" rel="noopener noreferrer">source 4</a></p>
 <h3 id="shibuya-with-optional-harajuku-omotesando-9210">Shibuya (with optional Harajuku / Omotesando) — 9.2/10</h3>
-<p><strong>Why go:</strong> GU shopping, youthful energy, rooftops and sake. <strong>Time:</strong> Half-day to evening. <strong>Status:</strong> High interest; keep Harajuku as separate adjacent extension. Rating = subjective fit for this trip, not a public review score.</p>
+<p><strong>Why go:</strong> <strong>Shibuya Crossing + SHIBUYA SKY</strong> as the requested highlights, GU shopping, rooftops and sake. <strong>Time:</strong> <strong>19 Nov</strong> daytime before Ebisu. <strong>Status:</strong> Crossing and SKY desired; <strong>SKY not booked</strong> (two-week advance timed ticket window); Harajuku optional. Practical Shibuya → Ebisu routing and ticket notes are in the separate day-by-day field guide.</p>
 <p><strong>Save these 3 Google Maps anchors (not a required sequence):</strong></p>
 <ul>
 <li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=GU%20Shibuya%20Udagawacho%2032-13" target="_blank" rel="noopener noreferrer" class="map-link">GU Shibuya flagship (large store)</a></strong> — Confirmed official GU branch with both men's and women's collections; a deliberate affordable-fashion shopping stop.</li>
@@ -227,12 +248,12 @@
 <p><strong>Extras / cautions:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Hibiya%20Park%20Tokyo" target="_blank" rel="noopener noreferrer" class="map-link">Hibiya Park</a> holds <strong>Hibiya Art Park 2026, 13–29 Nov</strong>, an art-in-the-park event open into evening. <a href="https://www.google.com/maps/search/?api=1&amp;query=Ginza%20Mitsukoshi%20Food%20Basement" target="_blank" rel="noopener noreferrer" class="map-link">Ginza Mitsukoshi depachika</a> for gift food; skip high-end boutiques unless you change your mind.</p>
 <p><strong>Video preview:</strong> <a href="https://www.youtube.com/results?search_query=Marunouchi%20illumination%20Yurakucho%20gado%20shita%20Hibiya%20Tokyo%20night%20walking" target="_blank" rel="noopener noreferrer">YouTube search</a> · <strong>Verification:</strong> <a href="https://artetokyo.jp/en/programs/marunouchi_illumination_2026/" target="_blank" rel="noopener noreferrer">source 1</a>, <a href="https://www.hibiya.tokyo-midtown.com/jp/event/7587/" target="_blank" rel="noopener noreferrer">source 2</a>, <a href="https://www.tokyo-park.or.jp/special/flowerandlight/hibiya2026autumn/en/index.html" target="_blank" rel="noopener noreferrer">source 3</a></p>
 <h2 id="seasonal-opportunities-and-reality-check-specific-to-1221-nov-2026">Seasonal opportunities and reality check (specific to 12–21 Nov 2026)</h2>
-<div class="table-wrap" tabindex="0"><table>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
 <thead>
 <tr>
-<th>Event/location</th>
-<th>Officially verified timing</th>
-<th>Fit / action</th>
+<th scope="col">Event/location</th>
+<th scope="col">Officially verified timing</th>
+<th scope="col">Fit / action</th>
 </tr>
 </thead>
 <tbody>
@@ -249,7 +270,7 @@
 <tr>
 <td><strong>Ebisu Garden Place Baccarat / Christmas</strong></td>
 <td>Chandelier <strong>14 Nov–11 Jan</strong>, first day from 17:00; Clock Plaza market weekdays 17:00–20:00</td>
-<td><strong>SELECTED: Thu 19 Nov ~17:30–20:00</strong> after wife-led shopping, free public lights and Christmas market; optional free indoor 38F view. <a href="https://gardenplace.jp/event/detail/1095" target="_blank" rel="noopener noreferrer">Official event</a>.</td>
+<td><strong>SELECTED: Thu 19 Nov ~17:30–20:00</strong> after the shopping day; free public lights and Christmas market; optional free indoor 38F view. <a href="https://gardenplace.jp/event/detail/1095" target="_blank" rel="noopener noreferrer">Official event</a>.</td>
 </tr>
 <tr>
 <td><strong>Marunouchi illumination</strong></td>
@@ -300,13 +321,14 @@
 </table>
 </div><p><strong>Autumn foliage backup pool (not additional commitments):</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Koishikawa+Korakuen" target="_blank" rel="noopener noreferrer" class="map-link">Koishikawa Korakuen</a>, <a href="https://www.google.com/maps/search/?api=1&amp;query=Shinjuku+Gyoen" target="_blank" rel="noopener noreferrer" class="map-link">Shinjuku Gyoen</a>, <a href="https://www.google.com/maps/search/?api=1&amp;query=Meiji+Jingu+Gaien+Icho+Namiki" target="_blank" rel="noopener noreferrer" class="map-link">Meiji Jingu Gaien ginkgo avenue</a>, <a href="https://www.google.com/maps/search/?api=1&amp;query=Kitanomaru+Park+Tokyo" target="_blank" rel="noopener noreferrer" class="map-link">Kitanomaru Garden</a>, and <a href="https://www.google.com/maps/search/?api=1&amp;query=Rikugien+Gardens" target="_blank" rel="noopener noreferrer" class="map-link">Rikugien</a> are possible Tokyo walks but mid-November foliage is <strong>not guaranteed</strong> (many low-elevation sites peak later). <a href="https://www.google.com/maps/search/?api=1&amp;query=Yoyogi+Park" target="_blank" rel="noopener noreferrer" class="map-link">Yoyogi Park</a> and <a href="https://www.google.com/maps/search/?api=1&amp;query=Inokashira+Park" target="_blank" rel="noopener noreferrer" class="map-link">Inokashira Park</a> are pleasant free parks without stronger priority over your existing destinations. <strong>Nikko, Nagatoro, Mt Mitake and Lake Okutama</strong> are competing excursions with added transit/commitment; do not expand the itinerary automatically.</p>
 <p><strong>Useful drinking and food notes:</strong> Yakisoba and okonomiyaki are casual dishes worth trying spontaneously; sake is a priority worth trying at a specialist bar. In Golden Gai, a <strong>cover charge/otōshi</strong> is a per-person seating fee or served appetiser charged in addition to drinks (commonly ¥500–1,500; venue-dependent) — check menus first, bring cash, ask before photos, do not bring outside food/drinks into tiny bars, and do not accept tout-led bar recommendations. A <em>chūhai/cha-wari</em> may involve shochu mixed with tea, but do not rely on ambiguous video-transcribed terms such as &quot;katame&quot; as instructions for drink strength. <a href="https://golden-gai.tokyo/en/introduction/" target="_blank" rel="noopener noreferrer">Golden Gai official etiquette</a>.</p>
+<p><strong>Status checks before locking activities:</strong> <strong>Koishikawa 14 Nov and Ebisu 19 Nov are selected itinerary stops</strong>; verify the number of KKday e-vouchers and confirm actual event hours before travel. GU shops and independent bar opening hours can change; recheck the precise Maps listing on arrival. SHIBUYA SKY sunset sells out and the open roof is weather-dependent. The Hakone Museum of Art has a <strong>partial</strong> autumn reopening (its main building full reopening is planned for Dec 2026). Enoden pass savings depend on actual rides. Sake tasting menus/prices and free viewing access should be reconfirmed.</p>
 <h2 id="google-maps-discovery-toolkit">Google Maps discovery toolkit</h2>
 <p>Use <strong>English concept → Japanese search phrase</strong>, then centre Google Maps on your current location and choose “Search this area.” Japanese terms can surface useful local listings missed by English searches. Compare actual hours, route and current reviews. Searches are for discovery, not endorsements. Combine city and keyword, e.g. <code>六本木 居酒屋</code>, <code>恵比寿 日本酒バー</code>, <code>川越 芋スイーツ</code>, <code>浅草 和雑貨</code>.</p>
-<div class="table-wrap" tabindex="0"><table>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
 <thead>
 <tr>
-<th>Looking for</th>
-<th>Japanese Google Maps search</th>
+<th scope="col">Looking for</th>
+<th scope="col">Japanese Google Maps search</th>
 </tr>
 </thead>
 <tbody>
@@ -392,22 +414,22 @@
 </tr>
 </tbody>
 </table>
-</div><p>Where the guides differ: Kawagoe has fixed rental windows; Hakone has a planned private bath on 17 Nov; those fixed commitments supersede any generic suggested area routes. The seasonal event research above was checked 18 Oct 2026 and should be reconfirmed before buying tickets (e.g., Rikugien night event and Tokyo Midtown Christmas begin after departure).</p>
+</div><p><strong>Where the guides differ:</strong> Kawagoe has a fixed 10:00 kimono rental and a 16:30 return; Hakone has a paid 13:00 private bath on 17 Nov; those fixed commitments supersede any generic suggested area routes. The seasonal event research above was checked <strong>18 Oct 2026</strong> and should be reconfirmed before buying tickets (e.g., <strong>Rikugien night event and Tokyo Midtown Christmas begin after departure</strong>).</p>
 
         <footer class="publication-note">
           <p>This is an automatically prepared public-safe adaptation of a private Markdown guide.</p>
-          <p>Source hash c20d216d195a · Publisher 29a3d7dfcf26 · Model openrouter/google/gemini-3.1-flash-lite</p>
+          <p>Source hash 6d3000f4ba49 · Publisher 628855336918 · Model openrouter/deepseek/deepseek-v4.1-flash-1017#max</p>
         </footer>
       </article>
     </main>
   </div>
   <script type="application/json" id="publication-metadata">{
   "sourcePath": "knowledge-base/managed/2026-10-20--japan-tokyo-discovery-and-seasonal-guide.md",
-  "sourceHash": "c20d216d195a797aed942006d8fa6e22e7dfbd5ddbb80331b7d05d3a8cda6a3d",
-  "sourceRevision": "00a24fbb3c0d6e0713138d6db3a8fc13e2465159",
-  "publisherHash": "29a3d7dfcf261b073b541ce918f3fdd790068e9aad4969e09618466d29cd652f",
-  "model": "openrouter/google/gemini-3.1-flash-lite",
-  "generatedAt": "2026-10-24T14:13:34.600Z",
+  "sourceHash": "6d3000f4ba49b05d1f7eb2b3660dd36ad13c1c3f3e174619e51f29fd8dc46444",
+  "sourceRevision": "6bd644aff40f444ad0ec05916524136d55282e03",
+  "publisherHash": "628855336918e632a42b3fefc636d5a775117a3c48493ca27eb6e615e5446457",
+  "model": "openrouter/deepseek/deepseek-v4.1-flash-1017#max",
+  "generatedAt": "2026-10-25T16:50:07.558Z",
   "usage": {
     "input": null,
     "output": null,
@@ -424,28 +446,56 @@
     "edits": [
       {
         "line": 4,
-        "text": "Research menu except two explicitly selected seasonal evening stops (below). Area scores below are subjective fit ratings, not Google review scores. For each area select 2–3 specific Google Maps anchors, then explore food, bars and shops spontaneously. Historic, nature, sake/izakaya, romantic views, Christmas lights and useful affordable shopping are priorities."
+        "text": "**Research menu except two explicitly selected seasonal evening stops (below).** Area scores below are **subjective fit ratings**, not Google review scores. For each area select 2–3 specific Google Maps anchors, then explore food, bars and shops spontaneously. Historic, nature, sake/izakaya, romantic views, Christmas lights and useful affordable shopping are priorities."
       },
       {
         "line": 6,
-        "text": "Preferred second-half choices: Kamakura/Enoshima (provisionally 18 Nov), one day planned for shopping including GU (provisionally 19 Nov), and Mt Takao (provisionally 20 Nov). Newly selected: Koishikawa evening 14 Nov and Ebisu evening 19 Nov after shopping. Day-trip dates can change based on weather and energy; none has timed sightseeing bookings. Keep other activities and most evenings flexible. Current Roppongi hotel base is 12–15 Nov; hotel near Asakusabashi 17–21 Nov."
+        "text": "**Updated 24 Oct:** **18 Nov** Kamakura + Enoshima preferred (weather-flexible). **19 Nov** **Shibuya Crossing + SHIBUYA SKY + flexible shopping/GU**, then selected **Ebisu Garden Place** evening; **SKY not booked** (check timed sales around **5 Nov** for 19 Nov). **20 Nov is now deliberately relaxed**: Yanaka + Nezu default, Kagurazaka/Asakusa/Ueno alternatives, **Mt Takao optional only** and not booked. **14 Nov** Koishikawa night garden on a flexible-date voucher. Roppongi hotel 12–15 Nov, ICI Asakusabashi 17–21 Nov."
       },
       {
         "line": 10,
-        "text": "These are the only two new seasonal must-visit choices agreed on 24 October. Their proposed dates organise the trip, but neither ticket nor venue requires a fixed time-slot reservation. They do not replace any pre-existing bookings."
+        "text": "These are the **only two new seasonal must-visit choices** agreed on **24 October**. Their proposed dates organise the trip, but **neither ticket nor venue requires a fixed time-slot reservation**. They do not replace any pre-existing bookings or the fixed plan for the 19 Nov shopping day."
       },
       {
         "line": 14,
-        "text": "- Experience: illuminated Edo-era landscape garden, water reflections/bridges, autumn-themed lighting and projections. Advance tickets are valid 13–24 Nov 2026, 18:00–21:00, last admission 20:00. [KKday product/redemption rules](https://www.kkday.com/en/product/195630) · [official garden announcement](https://www.tokyo-park.or.jp/park/koishikawakorakuen/news/2026/2026_url.html)."
+        "text": "- **Experience:** illuminated Edo-era landscape garden, water reflections/bridges, autumn-themed lighting and projections. **Advance tickets are held on a flexible-date voucher**; confirm the correct e-vouchers for your party in KKday before travel. Valid **13–24 Nov 2026**, **18:00–21:00, last admission 20:00**. [KKday product/redemption rules](https://www.kkday.com/en/product/195630) · [official garden announcement](https://www.tokyo-park.or.jp/park/koishikawakorakuen/news/2026/2026_url.html)."
+      },
+      {
+        "line": 22,
+        "text": "- **How it fits:** Evening after the **shopping day**; particularly convenient if the shopping finishes in Shibuya. Treat **17:30 arrival as a target**, not a rigid constraint on the day's shopping. If the day's shopping ends elsewhere, relocate the Ebisu evening to **18 or 20 Nov** after the selected day trip, rather than dropping it."
+      },
+      {
+        "line": 30,
+        "text": "**Why go:** Accessible mountain nature, foliage, possible Fuji view. **Time:** 6–9h door-to-door from Asakusabashi if visiting. **Status:** **Optional only as of 24 Oct; no booking identified**. **20 Nov defaults to Yanaka+Nezu or another easy Tokyo day.** The **9.5/10** headline above rates scenic attraction, **not fit for final full day** (rated 8.3/10 for that day). A separate day-by-day field guide covers 20 Nov options, effort and the optional cable-car/Trail 1 route."
+      },
+      {
+        "line": 43,
+        "text": "**Why go:** Temples, Enoden coastal train and seaside. **Time:** Full day if including island. **Status:** Preferred **18 Nov**, weather-flexible, no excursion tickets booked. A separate practical guide covers the Kamakura → Hase → Enoshima route with return. Rating here is subjective destination fit."
+      },
+      {
+        "line": 58,
+        "text": "**Why go:** Romantic lights, free view, izakaya and cocktails. **Time:** Evening 2–3h. **Status:** Selected **19 Nov ~17:30–20:00** following the **Shibuya Crossing / SKY / shopping** day; actual timing flexes around paid SKY entry and shopping. Rating is subjective fit."
+      },
+      {
+        "line": 84,
+        "text": "**Why go:** **Shibuya Crossing + SHIBUYA SKY** as the requested highlights, GU shopping, rooftops and sake. **Time:** **19 Nov** daytime before Ebisu. **Status:** Crossing and SKY desired; **SKY not booked** (two-week advance timed ticket window); Harajuku optional. Practical Shibuya → Ebisu routing and ticket notes are in the separate day-by-day field guide."
+      },
+      {
+        "line": 153,
+        "text": "| **Ebisu Garden Place Baccarat / Christmas** | Chandelier **14 Nov–11 Jan**, first day from 17:00; Clock Plaza market weekdays 17:00–20:00 | **SELECTED: Thu 19 Nov ~17:30–20:00** after the shopping day; free public lights and Christmas market; optional free indoor 38F view. [Official event](https://gardenplace.jp/event/detail/1095). |"
+      },
+      {
+        "line": 168,
+        "text": "**Status checks before locking activities:** **Koishikawa 14 Nov and Ebisu 19 Nov are selected itinerary stops**; verify the number of KKday e-vouchers and confirm actual event hours before travel. GU shops and independent bar opening hours can change; recheck the precise Maps listing on arrival. SHIBUYA SKY sunset sells out and the open roof is weather-dependent. The Hakone Museum of Art has a **partial** autumn reopening (its main building full reopening is planned for Dec 2026). Enoden pass savings depend on actual rides. Sake tasting menus/prices and free viewing access should be reconfirmed."
       },
       {
         "line": 197,
-        "text": "Where the guides differ: Kawagoe has fixed rental windows; Hakone has a planned private bath on 17 Nov; those fixed commitments supersede any generic suggested area routes. The seasonal event research above was checked 18 Oct 2026 and should be reconfirmed before buying tickets (e.g., Rikugien night event and Tokyo Midtown Christmas begin after departure)."
+        "text": "**Where the guides differ:** Kawagoe has a fixed 10:00 kimono rental and a 16:30 return; Hakone has a paid 13:00 private bath on 17 Nov; those fixed commitments supersede any generic suggested area routes. The seasonal event research above was checked **18 Oct 2026** and should be reconfirmed before buying tickets (e.g., **Rikugien night event and Tokyo Midtown Christmas begin after departure**)."
       }
     ]
   },
   "enhancement": {
-    "theme": "slate",
+    "theme": "maple",
     "heroImage": null,
     "sections": []
   }

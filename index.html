@@ -1,9 +1,27 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta name="description" content="Practical guides for choosing, learning, following a procedure and looking up details.">
 <title>KB Guides</title><style>
-:root { color-scheme: light dark; } body { max-width: 48rem; margin: 4rem auto; padding: 0 1.5rem; font: 1.1rem/1.6 system-ui,sans-serif; }
-h1 { letter-spacing: -.04em; } li { margin: .8rem 0; } a { color: #1673ae; } a:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
-</style></head><body><main><h1>KB Guides</h1><p>Automatically prepared public travel and reference guides.</p><ul><li><a href="2026-10-16--japan-autumn-trip-2026-bookings-and-planning.html">Japan Autumn Trip 2026 — Itinerary Overview</a></li>
-<li><a href="2026-10-20--japan-hakone-field-guide.html">Hakone 2026 — 15–17 November Field Guide</a></li>
-<li><a href="2026-10-20--japan-kawagoe-day-guide.html">Kawagoe — 13 November 2026 Day Guide</a></li>
-<li><a href="2026-10-20--japan-tokyo-discovery-and-seasonal-guide.html">Japan 2026 — Tokyo, Mt Takao, Kamakura and Seasonal Discovery</a></li></ul></main></body></html>
+:root { color-scheme: light; --ink: #252d31; --muted: #4c5b63; --accent: #294957; }
+* { box-sizing: border-box; } body { margin: 0; background: #eff4f5; color: var(--ink); font: 1.05rem/1.65 system-ui,sans-serif; overflow-wrap: anywhere; }
+main { max-width: 76rem; margin: auto; padding: clamp(1.25rem, 5vw, 4rem); }
+header { max-width: 44rem; margin-bottom: 2.5rem; }
+h1 { font: 700 clamp(2.5rem, 8vw, 4.5rem)/1.1 Georgia,serif; letter-spacing: -.04em; margin: 0 0 1rem; }
+header p { color: var(--muted); }
+.guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: 1.25rem; padding: 0; list-style: none; }
+.guide-grid > li { min-width: 0; }
+.guide-card { height: 100%; display: flex; flex-direction: column; padding: 1.5rem; border: 1px solid #c7d4da; border-radius: 1rem; background: #fcfdfd; box-shadow: 0 6px 22px #2949570a; }
+.guide-card h2 { font-size: 1.35rem; line-height: 1.35; margin: 0; }
+.guide-card p { color: var(--muted); margin: 1rem 0; }
+.card-action { margin-top: auto; color: var(--accent); font-size: .9rem; font-weight: 700; }
+a { color: var(--accent); text-decoration-thickness: .08em; text-underline-offset: .18em; }
+a:hover { text-decoration-thickness: .14em; } a:focus-visible { outline: 3px solid #294957; outline-offset: 5px; border-radius: .15rem; }
+.guide-card:focus-within { border-color: var(--accent); }
+.empty { padding: 1.5rem; border: 1px solid #c7d4da; border-radius: 1rem; background: #fcfdfd; }
+</style></head><body><main><header><h1>KB Guides</h1><p>Practical guides for choosing, learning, following a procedure and looking up details.</p></header><ul class="guide-grid"><li><article class="guide-card"><h2><a href="2026-10-16--japan-autumn-trip-2026-bookings-and-planning.html" aria-describedby="preview-0">Japan Autumn Trip 2026 — Itinerary Overview and Booking Proof</a></h2><p id="preview-0">Start here: booked flights and accommodation, confirmed activities and proof, flexible schedule, decisions and links to field guides.</p><span class="card-action" aria-hidden="true">Read guide →</span></article></li>
+<li><article class="guide-card"><h2><a href="2026-10-20--japan-hakone-field-guide.html" aria-describedby="preview-1">Hakone 2026 — 15–17 November Field Guide</a></h2><p id="preview-1">Hakone 2026 field guide covering Romancecar and Freepass, a Gora ryokan, onsen, scenic loop, museums and crafts.</p><span class="card-action" aria-hidden="true">Read guide →</span></article></li>
+<li><article class="guide-card"><h2><a href="2026-10-20--japan-kawagoe-day-guide.html" aria-describedby="preview-2">Kawagoe — 13 November 2026 Day Guide</a></h2><p id="preview-2">Kawagoe kimono day guide: Wargo rental, Suica route and buses, five old-town stops, local food and Google Maps keywords.</p><span class="card-action" aria-hidden="true">Read guide →</span></article></li>
+<li><article class="guide-card"><h2><a href="2026-10-20--japan-tokyo-discovery-and-seasonal-guide.html" aria-describedby="preview-3">Japan 2026 — Tokyo, Mt Takao, Kamakura and Seasonal Discovery</a></h2><p id="preview-3">Explained area anchors with subjective ratings and Google Maps links, Tokyo neighbourhoods, two flexible day trips, seasonal events and Japanese search keywords.</p><span class="card-action" aria-hidden="true">Read guide →</span></article></li>
+<li><article class="guide-card"><h2><a href="2026-10-24--kamakura-enoshima-day-guide.html" aria-describedby="preview-4">Kamakura and Enoshima — 18 November 2026 Flexible Day Guide</a></h2><p id="preview-4">On-the-day route from Asakusabashi to Kamakura&#x27;s Hase temples and coastal Enoden train, then Enoshima Island and return, with significance and weather exits.</p><span class="card-action" aria-hidden="true">Read guide →</span></article></li>
+<li><article class="guide-card"><h2><a href="2026-10-24--tokyo-day-by-day-flexible-field-guide.html" aria-describedby="preview-5">Tokyo November 2026 — Practical Flexible Day Guide</a></h2><p id="preview-5">On-the-day routes for 12, 14, 17, 19, 20 and 21 Nov: arrival, Shibuya/Ebisu, gentle final full day versus Takao, nightlife and Narita.</p><span class="card-action" aria-hidden="true">Read guide →</span></article></li></ul></main></body></html>

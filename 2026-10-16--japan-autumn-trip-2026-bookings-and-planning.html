@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Public itinerary summary for Japan travel, covering verified bookings and planned excursions.">
+  <meta name="description" content="Start here: booked flights and accommodation, confirmed activities and proof, flexible schedule, decisions and links to field guides.">
   <meta name="color-scheme" content="light dark">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src https://upload.wikimedia.org data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
-  <title>Japan Autumn Trip 2026 — Itinerary Overview</title>
+  <title>Japan Autumn Trip 2026 — Itinerary Overview and Booking Proof</title>
   <style>
     :root { color-scheme: light dark; --accent: #9f3526; --accent-strong: #74261d; --accent-soft: #f7e7df; --paper: #fffdf9; --surface: #f7f3eb; --ink: #292622; --muted: #69625a; --line: #ded5ca; --shadow: 0 18px 48px rgba(54, 38, 25, .12); --radius: 1rem; }
     :root[data-theme="forest"] { --accent: #2f6c50; --accent-strong: #204b38; --accent-soft: #e1f0e7; --paper: #fcfdf9; --surface: #f0f5ed; --ink: #263029; --muted: #5d695f; --line: #d3ddd3; }
     :root[data-theme="indigo"] { --accent: #485aa8; --accent-strong: #334180; --accent-soft: #e8ebfb; --paper: #fcfcff; --surface: #f1f2f9; --ink: #272a38; --muted: #626678; --line: #d8daea; }
     :root[data-theme="slate"] { --accent: #3e6474; --accent-strong: #294957; --accent-soft: #e2eef2; --paper: #fcfdfd; --surface: #eff4f5; --ink: #252d31; --muted: #606b70; --line: #d4dee1; }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-wrap: anywhere; }
     body { margin: 0; background: var(--surface); color: var(--ink); font: 1rem/1.68 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; text-rendering: optimizeLegibility; }
     a { color: var(--accent-strong); text-decoration-thickness: .09em; text-underline-offset: .16em; }
     a:hover { color: var(--accent); }
@@ -67,8 +67,12 @@
     .prose pre { max-width: 100%; overflow: auto; padding: 1rem; background: #202427; color: #f5f2eb; border-radius: .7rem; }
     .prose pre code { padding: 0; background: transparent; border: 0; }
     .table-wrap { max-width: 100%; margin: 1.5rem 0; overflow-x: auto; border: 1px solid var(--line); border-radius: .75rem; }
-    table { width: 100%; min-width: 38rem; border-collapse: collapse; font-size: .92rem; line-height: 1.48; }
+    table { width: 100%; border-collapse: collapse; font-size: .92rem; line-height: 1.48; }
+    table:has(th:nth-child(4)) { min-width: 32rem; }
+    caption { padding: .7rem .8rem; text-align: left; font-weight: 750; }
     th, td { padding: .72rem .8rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th, td { overflow-wrap: normal; word-break: normal; }
+    th a, td a, th code, td code { overflow-wrap: anywhere; }
     th { background: var(--accent-soft); color: var(--accent-strong); font-weight: 750; }
     tr:last-child td { border-bottom: 0; }
     tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface) 55%, transparent); }
@@ -76,6 +80,23 @@
     .map-link::before { content: "↗ "; }
     .publication-note { margin-top: 1.5rem; padding: .9rem 1rem; color: var(--muted); background: var(--surface); border-radius: .65rem; font-size: .82rem; }
     .publication-note p { margin: .2rem 0; }
+    .component + .component { margin-top: 2rem; }
+    .prose > .component:first-child > h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+    .component-orientation { font-size: 1.12rem; }
+    .fact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap: .8rem; margin: 1.2rem 0; }
+    .fact-grid > div { padding: .8rem; background: var(--surface); border: 1px solid var(--line); border-radius: .6rem; }
+    .fact-grid dt { font-weight: 750; }
+    .fact-grid dd { margin: .3rem 0 0; }
+    .item-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; list-style: none; padding: 0 !important; }
+    .item-cards > li, .step-list > li { padding: 1rem; background: var(--surface); border: 1px solid var(--line); border-radius: .6rem; }
+    .item-cards h3, .step-list h3 { margin: 0 0 .5rem; font-size: 1.2rem; }
+    .component-caution { padding: .9rem 1rem; border-left: .3rem solid var(--accent); background: var(--accent-soft); }
+    .component-caution h2 { margin-top: 0; border: 0; }
+    .condition { margin: 1.2rem 0; padding: .8rem 1rem; border-left: .25rem solid var(--accent); background: var(--accent-soft); }
+    .condition p { margin: .2rem 0; }
+    .relationship { margin: 1rem 0; padding: 1rem; background: var(--surface); border: 1px solid var(--line); border-radius: .6rem; }
+    .relationship-nodes { display: flex; flex-wrap: wrap; gap: 1rem; list-style-position: inside; }
+    .relationship figcaption, .figure-caption { color: var(--muted); font-size: .9rem; }
     @media (max-width: 52rem) {
       .layout { display: block; padding-top: 3rem; }
       .toc { display: none; }
@@ -106,23 +127,25 @@
   <header class="page-header">
     <div class="header-inner">
       <p class="eyebrow">Published knowledge-base view</p>
-      <h1>Japan Autumn Trip 2026 — Itinerary Overview</h1>
-      <p class="description">Public itinerary summary for Japan travel, covering verified bookings and planned excursions.</p>
+      <h1>Japan autumn trip 2026 — overview</h1>
+      <p class="description">Start here: booked flights and accommodation, confirmed activities and proof, flexible schedule, decisions and links to field guides.</p>
       <ul class="meta-list"><li>Created 2026-10-16</li><li>Updated 2026-10-24</li><li>Canonical source: Markdown</li></ul>
     </div>
-  </header><figure class="hero-image"><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Hakone_%E2%80%93_Japan_%284118914353%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="Autumn foliage in Hakone" width="1600" height="2287" loading="lazy" decoding="async" referrerpolicy="no-referrer"><figcaption>Photo: William Cho · <a href="https://commons.wikimedia.org/wiki/File:Hakone_%E2%80%93_Japan_(4118914353).jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener noreferrer">CC BY-SA 2.0</a></figcaption></figure>
+  </header>
   <div class="layout">
     <nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li class="toc-level-2"><a href="#open-the-right-guide">Open the right guide</a></li><li class="toc-level-2"><a href="#working-dates-only-supplier-bookings-are-fixed">Working dates — only supplier bookings are fixed</a></li><li class="toc-level-2"><a href="#verified-accommodation-9-of-9-nights">Verified accommodation — 9 of 9 nights</a></li><li class="toc-level-2"><a href="#confirmed-activity-bookings-with-proof">Confirmed activity bookings — with proof</a></li><li class="toc-level-2"><a href="#flight-verification-latest-usable-itinerary">Flight verification — latest usable itinerary</a></li><li class="toc-level-2"><a href="#only-the-decisions-still-worth-making">Only the decisions still worth making</a></li><li class="toc-level-2"><a href="#evidence-accuracy-and-updates">Evidence, accuracy and updates</a></li></ol></nav>
-    <main id="content">
+    <main id="content" tabindex="-1">
       <details class="mobile-toc"><summary>On this page</summary><ol><li class="toc-level-2"><a href="#open-the-right-guide">Open the right guide</a></li><li class="toc-level-2"><a href="#working-dates-only-supplier-bookings-are-fixed">Working dates — only supplier bookings are fixed</a></li><li class="toc-level-2"><a href="#verified-accommodation-9-of-9-nights">Verified accommodation — 9 of 9 nights</a></li><li class="toc-level-2"><a href="#confirmed-activity-bookings-with-proof">Confirmed activity bookings — with proof</a></li><li class="toc-level-2"><a href="#flight-verification-latest-usable-itinerary">Flight verification — latest usable itinerary</a></li><li class="toc-level-2"><a href="#only-the-decisions-still-worth-making">Only the decisions still worth making</a></li><li class="toc-level-2"><a href="#evidence-accuracy-and-updates">Evidence, accuracy and updates</a></li></ol></details>
       <article class="prose">
-<p><strong>This document is the canonical <em>booking overview</em> and proof index.</strong> Practical area guides are separate so you can use them on the day without re-reading every reservation. “Confirmed” means supported by the booking evidence linked below as checked or reported, <strong>not</strong> a live airline, rail or attraction status guarantee.</p>
-<h2 id="open-the-right-guide">Open the right guide</h2>
-<div class="table-wrap" tabindex="0"><table>
+<p><strong>Travel in Japan: 12–21 November 2026 (9 hotel nights), two adults; flights leave Singapore/Bangkok late 11 November; Singapore return arrives 22 November.</strong> Three nights Roppongi → two nights Hakone/Gora → four nights Asakusabashi. The itinerary includes a flexible Hakone day on <strong>Monday 16 Nov</strong>: the day and two park stops are settled, while exact stops within the shortlisted parks remain flexible.</p>
+<p><strong>This document is the canonical <em>booking overview</em> and status index.</strong> Practical area guides are separate so you can use them on the day without re-reading every reservation. “Confirmed” here means an item was recorded as booked, <strong>not</strong> a live airline, rail or attraction status guarantee.</p>
+<h2 id="open-the-right-guide">Open the right guide</h2><aside class="section-enrichment" aria-label="Additional exploration resources"><p class="explore-links"><strong>Explore further (publisher-added):</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Kamakura%20Great%20Buddha%20Japan" target="_blank" rel="noopener noreferrer">Search on Google Maps</a></p></aside>
+<p><strong>Open on each day:</strong> Tokyo guide for <strong>12, 14, 17, 19, 20 and 21 Nov</strong> · Kawagoe guide for <strong>13 Nov</strong> · Hakone guide for <strong>15–17 Nov</strong> · Kamakura/Enoshima guide for <strong>18 Nov</strong>. The larger Tokyo discovery catalogue is optional, not a list to complete.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
 <thead>
 <tr>
-<th>Guide</th>
-<th>What it contains</th>
+<th scope="col">Guide</th>
+<th scope="col">What it contains</th>
 </tr>
 </thead>
 <tbody>
@@ -132,21 +155,29 @@
 </tr>
 <tr>
 <td>Kawagoe, Friday 13 Nov</td>
-<td><strong>10:00 confirmed couple kimono</strong>, Suica routes, explained five-stop old town walk, buses, food and map searches</td>
+<td><strong>10:00 confirmed kimono rental for two</strong>, Suica routes, explained five-stop old town walk, buses, food and map searches</td>
 </tr>
 <tr>
-<td>Tokyo, Kamakura/Enoshima, Mt Takao and seasonal discovery</td>
-<td><strong>Selected Koishikawa night garden (14 Nov) and Ebisu Christmas lights/market (19 Nov)</strong>, area anchors, wife’s shopping day, event dates and Maps keywords</td>
+<td>Tokyo practical daily routes — 12/14/17/19/20/21 Nov</td>
+<td>Airport transfer, Shibuya SKY/Ebisu, easy 20 Nov vs Mt Takao, nightlife, Narita departure</td>
+</tr>
+<tr>
+<td>Kamakura + Enoshima — Wed 18 Nov</td>
+<td>JR/Enoden transport, temple/coast route, meanings, weather fallback and return</td>
+</tr>
+<tr>
+<td>Tokyo neighbourhood and seasonal catalogue</td>
+<td>Additional options, significance and Google Maps search terms; optional browse material</td>
 </tr>
 </tbody>
 </table>
 </div><h2 id="working-dates-only-supplier-bookings-are-fixed">Working dates — only supplier bookings are fixed</h2>
-<div class="table-wrap" tabindex="0"><table>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
 <thead>
 <tr>
-<th>Date</th>
-<th>Intended day</th>
-<th>Planning status</th>
+<th scope="col">Date</th>
+<th scope="col">Intended day</th>
+<th scope="col">Planning status</th>
 </tr>
 </thead>
 <tbody>
@@ -157,8 +188,8 @@
 </tr>
 <tr>
 <td><strong>12 Nov Thu</strong></td>
-<td>Meet at Narita in morning; Roppongi hotel; easy first day/lights</td>
-<td><strong>Hotel booked</strong>; visits flexible</td>
+<td>Narita T1 → remm Roppongi; flexible Tokyo Midtown, Roppongi Hills, Keyakizaka lights</td>
+<td>Hotel booked; airport transfer and walkable 2–3-stop menu provided</td>
 </tr>
 <tr>
 <td><strong>13 Nov Fri</strong></td>
@@ -167,158 +198,184 @@
 </tr>
 <tr>
 <td><strong>14 Nov Sat</strong></td>
-<td>Flexible Tokyo daytime; <strong>Koishikawa Korakuen autumn night garden ~18:00–19:30</strong>; optional Kagurazaka dinner/lanes afterward</td>
-<td><strong>Garden advance ticket purchased; 14 Nov selected visit date, not ticket-restricted</strong>; daytime flexible</td>
+<td>Flexible Tokyo then <strong>Koishikawa Korakuen West Gate</strong> night garden ~18:00, optional Kagurazaka</td>
+<td>Paid flexible-date voucher; check two tickets and West Gate</td>
 </tr>
 <tr>
 <td><strong>15 Nov Sun</strong></td>
 <td><strong>11:00 Romancecar</strong>, Open-Air Museum if practical; Gora ryokan</td>
 <td><strong>Rail, pass, ryokan paid; museum not booked</strong></td>
 </tr>
+<tr>
+<td><strong>16 Nov Mon</strong></td>
+<td><strong>Settled main Hakone day:</strong> Gora cable car → Sounzan/Owakudani → Togendai → <strong>Kojiri Lakeside Park</strong> → <strong>Lake Ashi cruise</strong> to Hakone-machi → <strong>Onshi-Hakone Park</strong> → back to <strong>Gora ryokan for included dinner</strong></td>
+<td>Both parks selected and day sequence approved; exact stops, actual departures and weather fallback flexible. Return in time for possible <strong>17:15</strong> dinner seating.</td>
+</tr>
+<tr>
+<td><strong>17 Nov Tue</strong></td>
+<td>Gora Park optional; <strong>13:00–15:00 Yuryo bath</strong>; return to ICI Asakusabashi</td>
+<td>Bath booked, return route linked; Hakone guide has detailed baggage/shuttle</td>
+</tr>
+<tr>
+<td><strong>18 Nov Wed</strong></td>
+<td><strong>Kamakura:</strong> Hasedera + Great Buddha → Enoden coastal train → <strong>Enoshima</strong></td>
+<td>Preferred weather-flexible day; route, meaning and return covered; no excursion ticket booked</td>
+</tr>
+<tr>
+<td><strong>19 Nov Thu</strong></td>
+<td><strong>Shibuya Crossing + SHIBUYA SKY</strong> and flexible GU/shopping → <strong>Ebisu Garden Place Christmas</strong></td>
+<td>SKY requested but <strong>not booked</strong>; check timed tickets around 5 Nov; Ebisu free, evening ~17:30–20:00</td>
+</tr>
+<tr>
+<td><strong>20 Nov Fri</strong></td>
+<td><strong>Last full day, easy:</strong> Yanaka+Nezu default; Kagurazaka/Asakusa alternatives; <strong>Mt Takao optional</strong></td>
+<td>Ranked by fit and effort; <strong>no Takao booking identified</strong></td>
+</tr>
+<tr>
+<td><strong>21 Nov Sat</strong></td>
+<td>Travel day: ICI Asakusabashi → Narita T1 for earlier <strong>17:00 ZIPAIR</strong> / later <strong>19:55 Scoot</strong></td>
+<td>Aim NRT ~14:00; confirm ZIPAIR 7kg carry-on/no checked allowance</td>
+</tr>
 </tbody>
 </table>
-</div><p>| <strong>17 Nov Tue</strong> | Gora Park / optional Craft House; <strong>13:00–15:00 private bath</strong>; Tokyo | <strong>Yuryo accepted/pay onsite</strong>; workshop optional |
-| <strong>18 Nov Wed</strong> | <strong>Kamakura + Enoshima</strong> | Preferred, weather-flexible day trip |
-| <strong>19 Nov Thu</strong> | <strong>Wife-planned Tokyo shopping day</strong> (including GU); <strong>Ebisu Garden Place illuminations + Clock Plaza Christmas market ~17:30–20:00</strong>, then optional dinner | <strong>Ebisu selected; free/no booking.</strong> Keep wife’s daytime plans in her control; evening can move if needed |
-| <strong>20 Nov Fri</strong> | <strong>Mt Takao</strong> hiking/foliage | Preferred, <strong>weather-flexible</strong> day trip |
-| <strong>21 Nov Sat</strong> | Hotel checkout, Narita; earlier Bangkok return flight | Return flights booked |</p>
-<p><strong>Selected seasonal evenings (24 Oct decision):</strong> Only <strong>two additional seasonal experiences</strong> are added to the working itinerary: (1) <a href="https://www.google.com/maps/search/?api=1&amp;query=Koishikawa+Korakuen+Garden+West+Gate" target="_blank" rel="noopener noreferrer" class="map-link">Koishikawa Korakuen Night Garden</a> on <strong>Sat 14 Nov ~18:00–19:30</strong>; (2) <a href="https://www.google.com/maps/search/?api=1&amp;query=Yebisu+Garden+Place" target="_blank" rel="noopener noreferrer" class="map-link">Yebisu Garden Place</a> on <strong>Thu 19 Nov ~17:30–20:00</strong> for the chandelier, gold lights, tree and Clock Plaza market. Both are <strong>selected itinerary visits</strong>, not reservations to fixed time slots. Garden voucher can instead be used on another event day in its validity period; Ebisu timing is adaptable around the wife-led shopping plans. Kagurazaka is optional after the garden; other researched lights/events remain <em>options</em>, not newly added stops.</p>
-<p><strong>Approved planning style:</strong> a few explained Google Maps anchors per area, optional alternatives, then improvise food, cafés and shops around your actual location. Keep other attractions unbooked unless limited entry or booking adds substantial value. <strong>No hotel-to-hotel luggage forwarding</strong>; carry luggage, using temporary lockers/storage when needed. <strong>Suica is the default for Kawagoe urban rail and compatible buses</strong> (no Kawagoe sightseeing pass purchased).</p>
+</div><p><strong>Selected seasonal evenings (24 Oct decision):</strong> Only <strong>two additional seasonal experiences</strong> are added to the working itinerary: (1) <a href="https://www.google.com/maps/search/?api=1&amp;query=Koishikawa+Korakuen+Garden+West+Gate" target="_blank" rel="noopener noreferrer" class="map-link">Koishikawa Korakuen Night Garden</a> on <strong>Sat 14 Nov ~18:00–19:30</strong>; (2) <a href="https://www.google.com/maps/search/?api=1&amp;query=Yebisu+Garden+Place" target="_blank" rel="noopener noreferrer" class="map-link">Yebisu Garden Place</a> on <strong>Thu 19 Nov ~17:30–20:00</strong> for the chandelier, gold lights, tree and Clock Plaza market. Both are <strong>selected itinerary visits</strong>, not reservations to fixed time slots. Garden ticket can instead be used on another event day in its validity period; Ebisu timing is adaptable around the shopping plans. Kagurazaka is optional after the garden; other researched lights/events remain <em>options</em>, not newly added stops.</p>
+<p><strong>Approved planning style (24 Oct):</strong> each day should have an accessible managed reference with a few Google Maps anchors, significance, a workable transport route, and flexible alternatives; no additional commitments required.  a few explained Google Maps anchors per area, optional alternatives, then improvise food, cafés and shops around your actual location. Keep other attractions unbooked unless limited entry or booking adds substantial value. <strong>No hotel-to-hotel luggage forwarding</strong>; carry luggage, using temporary lockers/storage when needed. <strong>Suica is the default for Kawagoe urban rail and compatible buses</strong> (no Kawagoe sightseeing pass purchased).</p>
 <h2 id="verified-accommodation-9-of-9-nights">Verified accommodation — 9 of 9 nights</h2>
-<div class="table-wrap" tabindex="0"><table>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
 <thead>
 <tr>
-<th>Location and reservation</th>
-<th>Stay</th>
-<th>Payment / key details</th>
-<th>Proof</th>
+<th scope="col">Location and reservation</th>
+<th scope="col">Stay</th>
+<th scope="col">Payment / key details</th>
+<th scope="col">Proof</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>remm Roppongi</strong></td>
 <td>Thu 12 → Sun 15 Nov; <strong>3 nights</strong></td>
-<td><strong>S$532.95 paid</strong>; 2 adults, semi-double room</td>
-<td>Agoda confirmation</td>
+<td><strong>S$532.95 paid</strong>, non-refundable; 2 adults, semi-double room</td>
+<td>Booking confirmation on file</td>
 </tr>
 <tr>
 <td><strong>Tokinoyu Setsugetsuka (Kyoritsu Resort), Gora</strong></td>
 <td>Sun 15 → Tue 17 Nov; <strong>2 nights</strong></td>
-<td><strong>Paid and confirmed</strong> as of 16 Oct. Japanese-Western room with open-air bath; breakfast and dinner included.</td>
-<td>Agoda booking confirmation</td>
+<td><strong>Paid and confirmed</strong> as of 16 Oct; originally quoted <strong>¥124,218</strong>. Japanese-Western room with open-air bath; breakfast and dinner included.</td>
+<td>Booking confirmation on file</td>
 </tr>
 <tr>
 <td><strong>ICI HOTEL Asakusabashi</strong></td>
 <td>Tue 17 → Sat 21 Nov; <strong>4 nights</strong></td>
-<td><strong>S$490.79 paid</strong>; 2 adults, double non-smoking room</td>
-<td>Agoda confirmation</td>
+<td><strong>S$490.79 paid</strong>, non-refundable; 2 adults, double non-smoking room</td>
+<td>Booking confirmation on file</td>
 </tr>
 </tbody>
 </table>
 </div><p><strong>Coverage:</strong> 12, 13, 14 Nov at remm; 15, 16 Nov in Hakone; 17, 18, 19, 20 Nov at ICI. No gap and no double-booked overnight.</p>
-<p><strong>ICI luggage constraint — verified:</strong> The hotel front desk replied on <strong>13 September 2026</strong> that it accepts forwarded luggage <strong>only on the check-in date, 17 November</strong>. <strong>Decision, 18 Oct:</strong> Travellers will carry their own suitcase between all hotels; <strong>no luggage-forwarding service will be arranged</strong>.</p>
+<p><strong>ICI luggage constraint — verified:</strong> The hotel front desk replied on <strong>13 September 2026</strong> that it accepts forwarded luggage <strong>only on the check-in date, 17 November</strong>, not on 15 or 16 November. <strong>Decision, 18 Oct:</strong> Travellers will carry their own suitcase between all hotels; <strong>no luggage-forwarding service will be arranged</strong>.</p>
 <h2 id="confirmed-activity-bookings-with-proof">Confirmed activity bookings — with proof</h2>
-<div class="table-wrap" tabindex="0"><table>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
 <thead>
 <tr>
-<th>Booking</th>
-<th>Accepted / purchased details</th>
-<th>Primary proof</th>
+<th scope="col">Booking</th>
+<th scope="col">Accepted / purchased details</th>
+<th scope="col">Primary proof</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Hakone Freepass</strong></td>
 <td>Two adults; Shinjuku-origin <strong>3 days, 15–17 Nov</strong>, digital tickets, <strong>S$119 paid</strong></td>
-<td>Klook voucher</td>
+<td>Klook confirmation on file</td>
 </tr>
 <tr>
 <td><strong>Outbound Romancecar</strong></td>
-<td>Sun <strong>15 Nov 11:00 Shinjuku → 12:25 Hakone-Yumoto</strong>, Hakone No. 13, two reserved seats; <strong>S$20.08 paid</strong></td>
-<td>Klook confirmation</td>
+<td>Sun <strong>15 Nov 11:00 Shinjuku → 12:25 Hakone-Yumoto</strong>, Hakone No. 13, two reserved seats; <strong>S$20.08 paid</strong> (supplement; Freepass covers base rail fare)</td>
+<td>Klook confirmation on file</td>
 </tr>
 <tr>
 <td><strong>Hakone Yuryo bath</strong></td>
-<td>Tue <strong>17 Nov 13:00–15:00</strong>, two adults, private <strong>Kikyo</strong> room, <strong>¥12,400 pay onsite</strong></td>
-<td>Reservation accepted</td>
+<td>Tue <strong>17 Nov 13:00–15:00</strong>, two adults, private <strong>Kikyo</strong> room (max 4), <strong>¥12,400 pay onsite</strong>; booking accepted</td>
+<td>Reservation confirmation on file</td>
 </tr>
 <tr>
-<td><strong>Wargo couples' kimono</strong></td>
-<td>Fri <strong>13 Nov 10:00</strong>, Wargo <strong>Kawagoe Store</strong>, two people, <strong>¥9,460 web prepaid</strong>, must return <strong>by 16:30</strong>.</td>
-<td>Wargo confirmation</td>
+<td><strong>Wargo kimono rental</strong></td>
+<td>Fri <strong>13 Nov 10:00</strong>, Wargo <strong>Kawagoe Store</strong>, two people, <strong>¥9,460 web prepaid</strong>, must return <strong>by 16:30</strong>. <strong>No photoshoot</strong> booked</td>
+<td>Official Wargo confirmation on file</td>
 </tr>
 <tr>
 <td><strong>Koishikawa Korakuen night garden</strong></td>
-<td><strong>Advance tickets voucher confirmed 24 Oct</strong>; event <strong>13–24 Nov 18:00–21:00</strong>. Planned visit <strong>Sat 14 Nov ~18:00</strong>. Enter by <strong>West Gate</strong>, present mobile voucher.</td>
-<td>Voucher confirmed</td>
+<td><strong>KKday 'Advance tickets' confirmed 24 Oct</strong>; event <strong>13–24 Nov 18:00–21:00</strong>, last admission <strong>20:00</strong>. <strong>No date on ticket: redeem on any permitted event day.</strong> Planned visit <strong>Sat 14 Nov ~18:00</strong>. Enter by <strong>West Gate</strong>, present mobile ticket; follow staff instructions for swipe redemption (do not pre-redeem). Ticket quantity not independently confirmed.</td>
+<td><a href="https://www.kkday.com/en/product/195630" target="_blank" rel="noopener noreferrer">KKday product/redemption rules</a></td>
 </tr>
 </tbody>
 </table>
-</div><p><strong>Yuryo payment/discount:</strong> The published Hakone Freepass benefit is <strong>¥600 off a private 120-minute room</strong>. Present the active pass and ask before paying onsite; potential ¥11,800 if granted.</p>
-<p><strong>Superseded Hakone booking:</strong> A Romancecar accidentally dated <strong>25 Oct</strong> was <strong>cancelled</strong>. Refund credit processed.</p>
+</div><p><strong>Yuryo payment/discount:</strong> The published Hakone Freepass benefit is <strong>¥600 off a private 120-minute room</strong> (<a href="https://www.hakoneyuryo.jp/news/" target="_blank" rel="noopener noreferrer">Yuryo notices</a> / <a href="https://www.hakonenavi.jp/spot/886" target="_blank" rel="noopener noreferrer">Hakone Navi</a>). <strong>It is not applied or guaranteed</strong> on the confirmed ¥12,400 Kikyo reservation. Present the active pass and ask before paying onsite; potential ¥11,800 if granted.</p>
+<p><strong>Superseded Hakone booking:</strong> A duplicate Romancecar booking was cancelled; use the confirmed 15 Nov service in this overview.</p>
 <h2 id="flight-verification-latest-usable-itinerary">Flight verification — latest usable itinerary</h2>
 <p>All times local to each airport. These are reservation details, not live flight-operation promises.</p>
-<div class="table-wrap" tabindex="0"><table>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
 <thead>
 <tr>
-<th>Traveller / leg</th>
-<th>Flight details</th>
-<th>Booking evidence and status</th>
+<th scope="col">Traveller / leg</th>
+<th scope="col">Flight details</th>
+<th scope="col">Booking evidence and status</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Singapore → Tokyo</strong>, 11–12 Nov</td>
 <td><strong>Scoot TR894</strong> · Wed 11 Nov <strong>23:30</strong> SIN T1 → Thu 12 Nov <strong>07:10</strong> NRT T1</td>
-<td>Booking status confirmed; use TR894.</td>
+<td><a href="http://Trip.com" target="_blank" rel="noopener noreferrer">Trip.com</a> itinerary checked 16 Oct displays TR894 and these times. The old TR884 flight number was changed to <strong>TR894</strong> in a 30 Sep notification. <strong>Use TR894, not TR884.</strong></td>
 </tr>
 <tr>
 <td><strong>Tokyo → Singapore</strong>, 21–22 Nov</td>
-<td><strong>Scoot TR875</strong> · Sat 21 Nov <strong>19:55</strong> NRT T1 → Sun 22 Nov <strong>04:55</strong> SIN T1</td>
-<td>Booking status confirmed.</td>
+<td><strong>Scoot TR875</strong> · Sat 21 Nov <strong>19:55</strong> NRT T1 → Sun 22 Nov <strong>04:55</strong> SIN T1; via Taipei</td>
+<td><a href="http://Trip.com" target="_blank" rel="noopener noreferrer">Trip.com</a> booking on file. No newer return change was found in the available records.</td>
 </tr>
 <tr>
 <td><strong>Bangkok → Tokyo</strong>, 11–12 Nov</td>
 <td><strong>ZIPAIR ZG052</strong> · Wed 11 Nov <strong>23:45</strong> BKK → Thu 12 Nov <strong>07:30</strong> NRT T1</td>
-<td>Booking status confirmed.</td>
+<td>Original <a href="http://Trip.com" target="_blank" rel="noopener noreferrer">Trip.com</a> booking for the split-ticket package is on file. No later outbound change was found in the available records; airline-side status has not been checked live.</td>
 </tr>
 <tr>
 <td><strong>Tokyo → Bangkok</strong>, 21 Nov</td>
 <td><strong>ZIPAIR, direct</strong> · Sat 21 Nov <strong>17:00</strong> NRT T1 North Wing → <strong>22:15</strong> Bangkok <strong>BKK</strong></td>
-<td><strong>S$363.66 paid</strong> on 29 Jul. Includes 7 kg cabin baggage, no checked baggage.</td>
+<td><strong>Replacement paid booking</strong> through Traveloka; <strong>S$363.66 paid</strong>. Booking records do not explicitly display a flight number, so none is asserted here. Ticket shows <strong>7 kg cabin baggage</strong>, <strong>no checked baggage</strong>.</td>
 </tr>
 </tbody>
 </table>
-</div><p><strong>Important replacement history:</strong> The wife's original Tokyo → Bangkok return was rescheduled, prompting purchase of the separate 21 Nov ZIPAIR return. <strong>Do not use the old return in planning.</strong> Refund confirmed.</p>
-<p><strong>Airport departure constraint:</strong> On 21 Nov, the <strong>17:00</strong> Bangkok-bound flight is earlier than the <strong>19:55</strong> Singapore-bound flight. Plan the final day and Narita transfer around the earlier departure, with adequate check-in margin. Note the wife's replacement flight lands at <strong>BKK</strong>, not the old itinerary's DMK.</p>
-<h2 id="only-the-decisions-still-worth-making">Only the decisions still worth making</h2>
-<ol start="2">
+</div><p><strong>Important replacement history:</strong> The original Tokyo → Bangkok <strong>Thai Lion Air SL395</strong> return was rescheduled from 21 Nov to <strong>22 Nov</strong>, prompting purchase of the separate 21 Nov ZIPAIR return. <strong>Do not use the old Thai Lion Air return in planning.</strong> The separate 21 Nov ZIPAIR booking is the usable return.</p>
+<p><strong>Airport departure constraint:</strong> On 21 Nov, the <strong>17:00</strong> Bangkok-bound flight is earlier than the <strong>19:55</strong> Singapore-bound flight. Plan the final day and Narita transfer around the earlier departure, with adequate check-in margin. Note the replacement flight lands at <strong>BKK</strong>, not the old itinerary's DMK.</p>
+<h2 id="only-the-decisions-still-worth-making">Only the decisions still worth making</h2><aside class="section-enrichment" aria-label="Additional exploration resources"><p class="explore-links"><strong>Explore further (publisher-added):</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Koishikawa%20Korakuen%20Garden%20autumn" target="_blank" rel="noopener noreferrer">Search on Google Maps</a></p></aside>
+<ol>
+<li><strong>Hakone 15 Nov:</strong> Open-Air Museum ticket (unbooked) vs simply reaching Gora early; protect included ryokan dinner. <strong>16 Nov route approved</strong>: Owakudani → <strong>Kojiri Lakeside Park</strong> → <strong>Togendai→Hakone-machi pirate ship</strong> → <strong>Onshi-Hakone Park</strong> → return via <strong>H bus / Kowakidani train to Gora</strong> for <strong>included ryokan dinner</strong> (possibly 17:15). Exact stops, weather fallback and transport departures remain flexible. Yuryo bath is <strong>already booked</strong> for 17 Nov 13:00, and Gora Craft House is a <strong>walk-in-only-if-convenient</strong> option.</li>
 <li><strong>Kawagoe 13 Nov:</strong> no more reservations necessary. Leave Roppongi about <strong>08:15</strong>, protect the <strong>10:00 Wargo check-in / 16:30 outfit return</strong>. Shop/food discoveries remain spontaneous, with unagi and sweet-potato snacks as specialties.</li>
-<li><strong>Selected Tokyo evenings:</strong> <strong>14 Nov Koishikawa Korakuen night garden (paid flexible-date voucher)</strong> and <strong>19 Nov Ebisu Garden Place Christmas lights/Clock Plaza market (free entry)</strong>. Both now belong in the itinerary; exact evening routing may change without changing voucher validity. Protect the wife's choice of daytime shopping on 19 Nov. Keep Kamakura/Enoshima and Mt Takao dates weather-flexible and do not add other researched seasonal events as obligations. Area descriptions, practical evening details and Maps keywords.</li>
-<li><strong>Before departure:</strong> verify actual flights, baggage allowances, bookings and attraction hours; confirm the garden voucher in KKday and its quantity (email does not display quantity), and the West Gate entry procedure. Ebisu Clock Plaza market closes <strong>20:00</strong> and may cancel in bad weather. Ryokan meal sitting commonly <strong>17:15 or 19:45</strong>, allocated on check-in, not yet known.</li>
+<li><strong>Tokyo selections:</strong> <strong>14 Nov</strong> Koishikawa night garden paid/selected. <strong>19 Nov</strong> Shibuya Crossing and <strong>SHIBUYA SKY</strong> plus GU/shopping, then selected <strong>Ebisu Christmas</strong>. SKY is <strong>unbooked</strong>: official <a href="https://www.shibuya-scramble-square.com/sky/ticket/" target="_blank" rel="noopener noreferrer">timed ticket sales</a> up to two weeks before; check around <strong>5 Nov</strong> for 19 Nov. <strong>20 Nov defaults to easy Yanaka+Nezu</strong>, with Kagurazaka/Asakusa alternatives; <strong>Mt Takao optional/not booked</strong>. <strong>18 Nov</strong> Kamakura/Enoshima preferred and weather-flexible. Tokyo daily guide · Kamakura day guide.</li>
+<li><strong>Before departure:</strong> check <strong>two</strong> Koishikawa KKday tickets, West Gate, Shibuya SKY admission if desired, and confirm the <strong>ZIPAIR 7kg cabin/no checked bag allowance</strong> against the actual suitcase. Check actual flight times, railway conditions and opening hours. For <strong>21 Nov ZIPAIR 17:00 NRT T1</strong>, arrive around 14:00; the Scoot departure is later. Hakone ryokan dinner <strong>16 Nov is included</strong>; possible 17:15/19:45 seating assigned at hotel check-in.</li>
 </ol>
 <h2 id="evidence-accuracy-and-updates">Evidence, accuracy and updates</h2>
 <ul>
-<li>Original private evidence is held in secure personal storage. <strong>Do not duplicate tickets/passports/personal reservation screenshots into GitHub</strong>.</li>
-<li>Accommodation and flights were audited <strong>16 Oct 2026</strong>; local destination research <strong>18 Oct</strong>; bath and kimono bookings confirmed <strong>20 Oct</strong>; <strong>Koishikawa KKday voucher email read and selected Koishikawa/Ebisu dates entered 24 Oct</strong>. Voucher quantity was not established from the email. Supplier operations and weather remain subject to change.</li>
+<li>Keep personal travel documents and reservation screenshots out of public repositories.</li>
+<li>Accommodation and flights were audited <strong>16 Oct 2026</strong>; local destination research <strong>18 Oct</strong>; bath and kimono bookings confirmed <strong>20 Oct</strong>; <strong>Koishikawa/Ebisu dates selected 24 Oct</strong>. Ticket quantity was not independently confirmed. Supplier operations and weather remain subject to change.</li>
 <li>Update the applicable <strong>guide</strong> for detailed changes and <strong>this overview</strong> when a booking, time or major itinerary constraint changes. Preserve links and original creation-date filename.</li>
-<li>Supporting Hakone research record and area-preferences record are older context, <strong>not</strong> instructions to revert confirmed 20 Oct bookings.</li>
+<li>Supporting destination research notes are older context, <strong>not</strong> instructions to revert confirmed 20 Oct bookings.</li>
 </ul>
 
         <footer class="publication-note">
           <p>This is an automatically prepared public-safe adaptation of a private Markdown guide.</p>
-          <p>Source hash 8fe25dc19569 · Publisher 29a3d7dfcf26 · Model openrouter/google/gemini-3.1-flash-lite</p>
+          <p>Source hash 555036420217 · Publisher 628855336918 · Model openrouter/deepseek/deepseek-v4.1-flash-1017#max</p>
         </footer>
       </article>
     </main>
   </div>
   <script type="application/json" id="publication-metadata">{
   "sourcePath": "knowledge-base/managed/2026-10-16--japan-autumn-trip-2026-bookings-and-planning.md",
-  "sourceHash": "8fe25dc19569789173003f48b83c8ef1d19000ae80f1932f1a0f8a0d8da97819",
-  "sourceRevision": "af2db2c3b297a8992295e7a6359b7dc847be17d5",
-  "publisherHash": "29a3d7dfcf261b073b541ce918f3fdd790068e9aad4969e09618466d29cd652f",
-  "model": "openrouter/google/gemini-3.1-flash-lite",
-  "generatedAt": "2026-10-24T14:19:49.050Z",
+  "sourceHash": "555036420217b1543c4431f2faf6fc669e5a311f633ecd42b4934704cc2cdd21",
+  "sourceRevision": "6bd644aff40f444ad0ec05916524136d55282e03",
+  "publisherHash": "628855336918e632a42b3fefc636d5a775117a3c48493ca27eb6e615e5446457",
+  "model": "openrouter/deepseek/deepseek-v4.1-flash-1017#max",
+  "generatedAt": "2026-10-25T16:44:27.193Z",
   "usage": {
     "input": null,
     "output": null,
@@ -330,98 +387,156 @@
   "privacy": {
     "version": 1,
     "reviewed": true,
-    "title": "Japan Autumn Trip 2026 — Itinerary Overview",
-    "description": "Public itinerary summary for Japan travel, covering verified bookings and planned excursions.",
+    "title": null,
+    "description": null,
     "edits": [
       {
         "line": 4,
-        "text": ""
+        "text": "**Travel in Japan: 12–21 November 2026 (9 hotel nights), two adults; flights leave Singapore/Bangkok late 11 November; Singapore return arrives 22 November.** Three nights Roppongi → two nights Hakone/Gora → four nights Asakusabashi. The itinerary includes a flexible Hakone day on **Monday 16 Nov**: the day and two park stops are settled, while exact stops within the shortlisted parks remain flexible."
       },
       {
-        "line": 40,
-        "text": "| **remm Roppongi** | Thu 12 → Sun 15 Nov; **3 nights** | **S$532.95 paid**; 2 adults, semi-double room | Agoda confirmation |"
+        "line": 6,
+        "text": "**This document is the canonical *booking overview* and status index.** Practical area guides are separate so you can use them on the day without re-reading every reservation. “Confirmed” here means an item was recorded as booked, **not** a live airline, rail or attraction status guarantee."
       },
       {
-        "line": 41,
-        "text": "| **Tokinoyu Setsugetsuka (Kyoritsu Resort), Gora** | Sun 15 → Tue 17 Nov; **2 nights** | **Paid and confirmed** as of 16 Oct. Japanese-Western room with open-air bath; breakfast and dinner included. | Agoda booking confirmation |"
+        "line": 15,
+        "text": "| Kawagoe, Friday 13 Nov | **10:00 confirmed kimono rental for two**, Suica routes, explained five-stop old town walk, buses, food and map searches |"
       },
       {
-        "line": 42,
-        "text": "| **ICI HOTEL Asakusabashi** | Tue 17 → Sat 21 Nov; **4 nights** | **S$490.79 paid**; 2 adults, double non-smoking room | Agoda confirmation |"
+        "line": 29,
+        "text": "| **16 Nov Mon** | **Settled main Hakone day:** Gora cable car → Sounzan/Owakudani → Togendai → **Kojiri Lakeside Park** → **Lake Ashi cruise** to Hakone-machi → **Onshi-Hakone Park** → back to **Gora ryokan for included dinner** | Both parks selected and day sequence approved; exact stops, actual departures and weather fallback flexible. Return in time for possible **17:15** dinner seating. |"
+      },
+      {
+        "line": 32,
+        "text": "| **19 Nov Thu** | **Shibuya Crossing + SHIBUYA SKY** and flexible GU/shopping → **Ebisu Garden Place Christmas** | SKY requested but **not booked**; check timed tickets around 5 Nov; Ebisu free, evening ~17:30–20:00 |"
+      },
+      {
+        "line": 34,
+        "text": "| **21 Nov Sat** | Travel day: ICI Asakusabashi → Narita T1 for earlier **17:00 ZIPAIR** / later **19:55 Scoot** | Aim NRT ~14:00; confirm ZIPAIR 7kg carry-on/no checked allowance |"
+      },
+      {
+        "line": 36,
+        "text": "**Selected seasonal evenings (24 Oct decision):** Only **two additional seasonal experiences** are added to the working itinerary: (1) [Koishikawa Korakuen Night Garden](https://www.google.com/maps/search/?api=1\u0026query=Koishikawa+Korakuen+Garden+West+Gate) on **Sat 14 Nov ~18:00–19:30**; (2) [Yebisu Garden Place](https://www.google.com/maps/search/?api=1\u0026query=Yebisu+Garden+Place) on **Thu 19 Nov ~17:30–20:00** for the chandelier, gold lights, tree and Clock Plaza market. Both are **selected itinerary visits**, not reservations to fixed time slots. Garden ticket can instead be used on another event day in its validity period; Ebisu timing is adaptable around the shopping plans. Kagurazaka is optional after the garden; other researched lights/events remain *options*, not newly added stops."
+      },
+      {
+        "line": 44,
+        "text": "| **remm Roppongi** | Thu 12 → Sun 15 Nov; **3 nights** | **S$532.95 paid**, non-refundable; 2 adults, semi-double room | Booking confirmation on file |"
+      },
+      {
+        "line": 45,
+        "text": "| **Tokinoyu Setsugetsuka (Kyoritsu Resort), Gora** | Sun 15 → Tue 17 Nov; **2 nights** | **Paid and confirmed** as of 16 Oct; originally quoted **¥124,218**. Japanese-Western room with open-air bath; breakfast and dinner included. | Booking confirmation on file |"
       },
       {
         "line": 46,
-        "text": "**ICI luggage constraint — verified:** The hotel front desk replied on **13 September 2026** that it accepts forwarded luggage **only on the check-in date, 17 November**. **Decision, 18 Oct:** Travellers will carry their own suitcase between all hotels; **no luggage-forwarding service will be arranged**."
+        "text": "| **ICI HOTEL Asakusabashi** | Tue 17 → Sat 21 Nov; **4 nights** | **S$490.79 paid**, non-refundable; 2 adults, double non-smoking room | Booking confirmation on file |"
       },
       {
-        "line": 52,
-        "text": "| **Hakone Freepass** | Two adults; Shinjuku-origin **3 days, 15–17 Nov**, digital tickets, **S$119 paid** | Klook voucher |"
-      },
-      {
-        "line": 53,
-        "text": "| **Outbound Romancecar** | Sun **15 Nov 11:00 Shinjuku → 12:25 Hakone-Yumoto**, Hakone No. 13, two reserved seats; **S$20.08 paid** | Klook confirmation |"
-      },
-      {
-        "line": 54,
-        "text": "| **Hakone Yuryo bath** | Tue **17 Nov 13:00–15:00**, two adults, private **Kikyo** room, **¥12,400 pay onsite** | Reservation accepted |"
-      },
-      {
-        "line": 55,
-        "text": "| **Wargo couples' kimono** | Fri **13 Nov 10:00**, Wargo **Kawagoe Store**, two people, **¥9,460 web prepaid**, must return **by 16:30**. | Wargo confirmation |"
+        "line": 50,
+        "text": "**ICI luggage constraint — verified:** The hotel front desk replied on **13 September 2026** that it accepts forwarded luggage **only on the check-in date, 17 November**, not on 15 or 16 November. **Decision, 18 Oct:** Travellers will carry their own suitcase between all hotels; **no luggage-forwarding service will be arranged**."
       },
       {
         "line": 56,
-        "text": "| **Koishikawa Korakuen night garden** | **Advance tickets voucher confirmed 24 Oct**; event **13–24 Nov 18:00–21:00**. Planned visit **Sat 14 Nov ~18:00**. Enter by **West Gate**, present mobile voucher. | Voucher confirmed |"
+        "text": "| **Hakone Freepass** | Two adults; Shinjuku-origin **3 days, 15–17 Nov**, digital tickets, **S$119 paid** | Klook confirmation on file |"
+      },
+      {
+        "line": 57,
+        "text": "| **Outbound Romancecar** | Sun **15 Nov 11:00 Shinjuku → 12:25 Hakone-Yumoto**, Hakone No. 13, two reserved seats; **S$20.08 paid** (supplement; Freepass covers base rail fare) | Klook confirmation on file |"
       },
       {
         "line": 58,
-        "text": "**Yuryo payment/discount:** The published Hakone Freepass benefit is **¥600 off a private 120-minute room**. Present the active pass and ask before paying onsite; potential ¥11,800 if granted."
+        "text": "| **Hakone Yuryo bath** | Tue **17 Nov 13:00–15:00**, two adults, private **Kikyo** room (max 4), **¥12,400 pay onsite**; booking accepted | Reservation confirmation on file |"
+      },
+      {
+        "line": 59,
+        "text": "| **Wargo kimono rental** | Fri **13 Nov 10:00**, Wargo **Kawagoe Store**, two people, **¥9,460 web prepaid**, must return **by 16:30**. **No photoshoot** booked | Official Wargo confirmation on file |"
       },
       {
         "line": 60,
-        "text": "**Superseded Hakone booking:** A Romancecar accidentally dated **25 Oct** was **cancelled**. Refund credit processed."
+        "text": "| **Koishikawa Korakuen night garden** | **KKday 'Advance tickets' confirmed 24 Oct**; event **13–24 Nov 18:00–21:00**, last admission **20:00**. **No date on ticket: redeem on any permitted event day.** Planned visit **Sat 14 Nov ~18:00**. Enter by **West Gate**, present mobile ticket; follow staff instructions for swipe redemption (do not pre-redeem). Ticket quantity not independently confirmed. | [KKday product/redemption rules](https://www.kkday.com/en/product/195630) |"
       },
       {
-        "line": 68,
-        "text": "| **Singapore → Tokyo**, 11–12 Nov | **Scoot TR894** · Wed 11 Nov **23:30** SIN T1 → Thu 12 Nov **07:10** NRT T1 | Booking status confirmed; use TR894. |"
+        "line": 62,
+        "text": "**Yuryo payment/discount:** The published Hakone Freepass benefit is **¥600 off a private 120-minute room** ([Yuryo notices](https://www.hakoneyuryo.jp/news/) / [Hakone Navi](https://www.hakonenavi.jp/spot/886)). **It is not applied or guaranteed** on the confirmed ¥12,400 Kikyo reservation. Present the active pass and ask before paying onsite; potential ¥11,800 if granted."
       },
       {
-        "line": 69,
-        "text": "| **Tokyo → Singapore**, 21–22 Nov | **Scoot TR875** · Sat 21 Nov **19:55** NRT T1 → Sun 22 Nov **04:55** SIN T1 | Booking status confirmed. |"
+        "line": 64,
+        "text": "**Superseded Hakone booking:** A duplicate Romancecar booking was cancelled; use the confirmed 15 Nov service in this overview."
       },
       {
-        "line": 70,
-        "text": "| **Bangkok → Tokyo**, 11–12 Nov | **ZIPAIR ZG052** · Wed 11 Nov **23:45** BKK → Thu 12 Nov **07:30** NRT T1 | Booking status confirmed. |"
-      },
-      {
-        "line": 71,
-        "text": "| **Tokyo → Bangkok**, 21 Nov | **ZIPAIR, direct** · Sat 21 Nov **17:00** NRT T1 North Wing → **22:15** Bangkok **BKK** | **S$363.66 paid** on 29 Jul. Includes 7 kg cabin baggage, no checked baggage. |"
+        "line": 72,
+        "text": "| **Singapore → Tokyo**, 11–12 Nov | **Scoot TR894** · Wed 11 Nov **23:30** SIN T1 → Thu 12 Nov **07:10** NRT T1 | Trip.com itinerary checked 16 Oct displays TR894 and these times. The old TR884 flight number was changed to **TR894** in a 30 Sep notification. **Use TR894, not TR884.** |"
       },
       {
         "line": 73,
-        "text": "**Important replacement history:** The wife's original Tokyo → Bangkok return was rescheduled, prompting purchase of the separate 21 Nov ZIPAIR return. **Do not use the old return in planning.** Refund confirmed."
+        "text": "| **Tokyo → Singapore**, 21–22 Nov | **Scoot TR875** · Sat 21 Nov **19:55** NRT T1 → Sun 22 Nov **04:55** SIN T1; via Taipei | Trip.com booking on file. No newer return change was found in the available records. |"
+      },
+      {
+        "line": 74,
+        "text": "| **Bangkok → Tokyo**, 11–12 Nov | **ZIPAIR ZG052** · Wed 11 Nov **23:45** BKK → Thu 12 Nov **07:30** NRT T1 | Original Trip.com booking for the split-ticket package is on file. No later outbound change was found in the available records; airline-side status has not been checked live. |"
+      },
+      {
+        "line": 75,
+        "text": "| **Tokyo → Bangkok**, 21 Nov | **ZIPAIR, direct** · Sat 21 Nov **17:00** NRT T1 North Wing → **22:15** Bangkok **BKK** | **Replacement paid booking** through Traveloka; **S$363.66 paid**. Booking records do not explicitly display a flight number, so none is asserted here. Ticket shows **7 kg cabin baggage**, **no checked baggage**. |"
+      },
+      {
+        "line": 77,
+        "text": "**Important replacement history:** The original Tokyo → Bangkok **Thai Lion Air SL395** return was rescheduled from 21 Nov to **22 Nov**, prompting purchase of the separate 21 Nov ZIPAIR return. **Do not use the old Thai Lion Air return in planning.** The separate 21 Nov ZIPAIR booking is the usable return."
+      },
+      {
+        "line": 79,
+        "text": "**Airport departure constraint:** On 21 Nov, the **17:00** Bangkok-bound flight is earlier than the **19:55** Singapore-bound flight. Plan the final day and Narita transfer around the earlier departure, with adequate check-in margin. Note the replacement flight lands at **BKK**, not the old itinerary's DMK."
+      },
+      {
+        "line": 83,
+        "text": "1. **Hakone 15 Nov:** Open-Air Museum ticket (unbooked) vs simply reaching Gora early; protect included ryokan dinner. **16 Nov route approved**: Owakudani → **Kojiri Lakeside Park** → **Togendai→Hakone-machi pirate ship** → **Onshi-Hakone Park** → return via **H bus / Kowakidani train to Gora** for **included ryokan dinner** (possibly 17:15). Exact stops, weather fallback and transport departures remain flexible. Yuryo bath is **already booked** for 17 Nov 13:00, and Gora Craft House is a **walk-in-only-if-convenient** option."
+      },
+      {
+        "line": 85,
+        "text": "3. **Tokyo selections:** **14 Nov** Koishikawa night garden paid/selected. **19 Nov** Shibuya Crossing and **SHIBUYA SKY** plus GU/shopping, then selected **Ebisu Christmas**. SKY is **unbooked**: official [timed ticket sales](https://www.shibuya-scramble-square.com/sky/ticket/) up to two weeks before; check around **5 Nov** for 19 Nov. **20 Nov defaults to easy Yanaka+Nezu**, with Kagurazaka/Asakusa alternatives; **Mt Takao optional/not booked**. **18 Nov** Kamakura/Enoshima preferred and weather-flexible. Tokyo daily guide · Kamakura day guide."
       },
       {
         "line": 86,
-        "text": "- Original private evidence is held in secure personal storage. **Do not duplicate tickets/passports/personal reservation screenshots into GitHub**."
+        "text": "4. **Before departure:** check **two** Koishikawa KKday tickets, West Gate, Shibuya SKY admission if desired, and confirm the **ZIPAIR 7kg cabin/no checked bag allowance** against the actual suitcase. Check actual flight times, railway conditions and opening hours. For **21 Nov ZIPAIR 17:00 NRT T1**, arrive around 14:00; the Scoot departure is later. Hakone ryokan dinner **16 Nov is included**; possible 17:15/19:45 seating assigned at hotel check-in."
+      },
+      {
+        "line": 90,
+        "text": "- Keep personal travel documents and reservation screenshots out of public repositories."
+      },
+      {
+        "line": 91,
+        "text": "- Accommodation and flights were audited **16 Oct 2026**; local destination research **18 Oct**; bath and kimono bookings confirmed **20 Oct**; **Koishikawa/Ebisu dates selected 24 Oct**. Ticket quantity was not independently confirmed. Supplier operations and weather remain subject to change."
+      },
+      {
+        "line": 92,
+        "text": "- Update the applicable **guide** for detailed changes and **this overview** when a booking, time or major itinerary constraint changes. Preserve links and original creation-date filename."
+      },
+      {
+        "line": 93,
+        "text": "- Supporting destination research notes are older context, **not** instructions to revert confirmed 20 Oct bookings."
       }
     ]
   },
   "enhancement": {
     "theme": "maple",
-    "heroImage": {
-      "commonsSearch": "Autumn colors in Hakone Japan",
-      "commonsFileName": "File:Hakone – Japan (4118914353).jpg",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Hakone_%E2%80%93_Japan_%284118914353%29.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=thumbnail_unscaled",
-      "width": 1600,
-      "height": 2287,
-      "alt": "Autumn foliage in Hakone",
-      "creator": "William Cho",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hakone_%E2%80%93_Japan_(4118914353).jpg"
-    },
-    "sections": []
+    "heroImage": null,
+    "sections": [
+      {
+        "anchor": "open-the-right-guide",
+        "commonsSearch": "Kamakura Great Buddha Japan",
+        "wikiSearch": null,
+        "alt": "Great Buddha at Kotoku-in in Kamakura",
+        "image": null,
+        "wikiLink": null
+      },
+      {
+        "anchor": "only-the-decisions-still-worth-making",
+        "commonsSearch": "Koishikawa Korakuen Garden autumn",
+        "wikiSearch": null,
+        "alt": "Autumn foliage at Koishikawa Korakuen Garden in Tokyo",
+        "image": null,
+        "wikiLink": null
+      }
+    ]
   }
 }</script>
 </body>
