@@ -69,6 +69,26 @@
     .table-wrap { max-width: 100%; margin: 1.5rem 0; overflow-x: auto; border: 1px solid var(--line); border-radius: .75rem; }
     table { width: 100%; border-collapse: collapse; font-size: .92rem; line-height: 1.48; }
     table:has(th:nth-child(4)) { min-width: 32rem; }
+    /* Practical travel tables remain readable labelled cards at any width.
+       Wider screens get two cards per row; compact generic tables are unchanged. */
+    .table-wrap:has(> .mobile-card-table) { border: 0; overflow: visible; }
+      .mobile-card-table, .mobile-card-table tbody, .mobile-card-table tbody tr,
+      .mobile-card-table tbody td, .mobile-card-table tbody th { display: block; width: 100%; min-width: 0; }
+      .mobile-card-table { min-width: 0 !important; }
+      .mobile-card-table thead { position: absolute; width: 1px; height: 1px; padding: 0;
+        overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+      .mobile-card-table tbody tr { margin: 0 0 .85rem; padding: .75rem 1rem;
+        border: 1px solid var(--line); border-radius: .7rem; background: var(--surface); }
+      .mobile-card-table tbody td, .mobile-card-table tbody th { padding: .3rem 0;
+        border: 0; background: transparent; overflow-wrap: anywhere; word-break: normal; }
+      .mobile-card-table tbody [data-label]::before { content: attr(data-label); display: block;
+        margin-bottom: .12rem; color: var(--muted); font-size: .77rem; font-weight: 750; }
+      .mobile-card-table tbody td:first-child, .mobile-card-table tbody th:first-child
+        { color: var(--ink); font-weight: 750; font-size: 1.03rem; }
+    @media (min-width: 66rem) {
+      .mobile-card-table tbody { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+      .mobile-card-table tbody tr { margin: 0; }
+    }
     caption { padding: .7rem .8rem; text-align: left; font-weight: 750; }
     th, td { padding: .72rem .8rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
     th, td { overflow-wrap: normal; word-break: normal; }
@@ -129,15 +149,15 @@
       <p class="eyebrow">Published knowledge-base view</p>
       <h1>Tokyo day-use guide — 12, 14, 17, 19, 20 and 21 November 2026</h1>
       <p class="description">On-the-day routes for 12, 14, 17, 19, 20 and 21 Nov: arrival, Shibuya/Ebisu, gentle final full day versus Takao, nightlife and Narita.</p>
-      <ul class="meta-list"><li>Created 2026-10-24</li><li>Updated 2026-10-24</li><li>Canonical source: Markdown</li></ul>
+      <ul class="meta-list"><li>Created 2026-10-24</li><li>Updated 2026-10-26</li><li>Canonical source: Markdown</li></ul>
     </div>
   </header>
   <div class="layout">
-    <nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li class="toc-level-2"><a href="#thursday-12-nov-arrive-narita-easy-roppongi-afternoonevening">Thursday 12 Nov — arrive Narita, easy Roppongi afternoon/evening</a></li><li class="toc-level-2"><a href="#saturday-14-nov-daytime-flexible-koishikawa-garden-evening-selected">Saturday 14 Nov — daytime flexible, Koishikawa garden evening selected</a></li><li class="toc-level-2"><a href="#tuesday-17-nov-back-from-hakone-simple-hotel-arrival">Tuesday 17 Nov — back from Hakone; simple hotel arrival</a></li><li class="toc-level-2"><a href="#thursday-19-nov-wife-led-shibuya-crossing-shibuya-sky-ebisu-christmas">Thursday 19 Nov — wife-led Shibuya Crossing + Shibuya SKY, Ebisu Christmas</a></li><li class="toc-level-2"><a href="#friday-20-nov-last-full-day-deliberately-relaxed-by-default">Friday 20 Nov — LAST FULL DAY: deliberately relaxed by default</a></li><li class="toc-level-3"><a href="#default-walk-yanaka-nezu-old-tokyo-without-an-exhausting-excursion">Default walk: Yanaka + Nezu (old Tokyo without an exhausting excursion)</a></li><li class="toc-level-3"><a href="#alternative-walk-kagurazaka-very-flexible-especially-after-lunch">Alternative walk: Kagurazaka (very flexible, especially after lunch)</a></li><li class="toc-level-3"><a href="#if-you-decide-to-do-mt-takao-after-all-optional-route-and-effort">If you decide to do Mt Takao after all — optional route and effort</a></li><li class="toc-level-3"><a href="#other-easy-backup-from-asakusabashi">Other easy backup from Asakusabashi</a></li><li class="toc-level-2"><a href="#nightlife-menu-meaningful-places-not-assigned-obligations">Nightlife menu — meaningful places, not assigned obligations</a></li><li class="toc-level-2"><a href="#saturday-21-nov-check-out-and-fly-from-narita-t1">Saturday 21 Nov — check out and fly from Narita T1</a></li><li class="toc-level-2"><a href="#minimal-pre-trip-reminders-not-a-new-planning-project">Minimal pre-trip reminders (not a new planning project)</a></li></ol></nav>
+    <nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li class="toc-level-2"><a href="#thursday-12-nov-arrive-narita-easy-roppongi-afternoonevening">Thursday 12 Nov — arrive Narita, easy Roppongi afternoon/evening</a></li><li class="toc-level-2"><a href="#saturday-14-nov-daytime-flexible-koishikawa-garden-evening-selected">Saturday 14 Nov — daytime flexible, Koishikawa garden evening selected</a></li><li class="toc-level-2"><a href="#tuesday-17-nov-back-from-hakone-simple-hotel-arrival">Tuesday 17 Nov — back from Hakone; simple hotel arrival</a></li><li class="toc-level-2"><a href="#thursday-19-nov-wife-led-shibuya-crossing-shibuya-sky-ebisu-christmas">Thursday 19 Nov — wife-led Shibuya Crossing + Shibuya SKY, Ebisu Christmas</a></li><li class="toc-level-2"><a href="#friday-20-nov-last-full-day-deliberately-relaxed-by-default">Friday 20 Nov — LAST FULL DAY: deliberately relaxed by default</a></li><li class="toc-level-3"><a href="#default-walk-yanaka-nezu-old-tokyo-without-an-exhausting-excursion">Default walk: Yanaka + Nezu (old Tokyo without an exhausting excursion)</a></li><li class="toc-level-3"><a href="#alternative-walk-kagurazaka-very-flexible-especially-after-lunch">Alternative walk: Kagurazaka (very flexible, especially after lunch)</a></li><li class="toc-level-3"><a href="#if-you-decide-to-do-mt-takao-after-all-optional-route-and-effort">If you decide to do Mt Takao after all — optional route and effort</a></li><li class="toc-level-3"><a href="#other-easy-backup-from-asakusabashi">Other easy backup from Asakusabashi</a></li><li class="toc-level-2"><a href="#nightlife-menu-meaningful-places-not-assigned-obligations">Nightlife menu — meaningful places, not assigned obligations</a></li><li class="toc-level-3"><a href="#compare-the-three-yokochonightlife-choices-added-26-oct">Compare the three yokocho/nightlife choices (added 26 Oct)</a></li><li class="toc-level-2"><a href="#saturday-21-nov-check-out-and-fly-from-narita-t1">Saturday 21 Nov — check out and fly from Narita T1</a></li><li class="toc-level-2"><a href="#minimal-pre-trip-reminders-not-a-new-planning-project">Minimal pre-trip reminders (not a new planning project)</a></li></ol></nav>
     <main id="content" tabindex="-1">
-      <details class="mobile-toc"><summary>On this page</summary><ol><li class="toc-level-2"><a href="#thursday-12-nov-arrive-narita-easy-roppongi-afternoonevening">Thursday 12 Nov — arrive Narita, easy Roppongi afternoon/evening</a></li><li class="toc-level-2"><a href="#saturday-14-nov-daytime-flexible-koishikawa-garden-evening-selected">Saturday 14 Nov — daytime flexible, Koishikawa garden evening selected</a></li><li class="toc-level-2"><a href="#tuesday-17-nov-back-from-hakone-simple-hotel-arrival">Tuesday 17 Nov — back from Hakone; simple hotel arrival</a></li><li class="toc-level-2"><a href="#thursday-19-nov-wife-led-shibuya-crossing-shibuya-sky-ebisu-christmas">Thursday 19 Nov — wife-led Shibuya Crossing + Shibuya SKY, Ebisu Christmas</a></li><li class="toc-level-2"><a href="#friday-20-nov-last-full-day-deliberately-relaxed-by-default">Friday 20 Nov — LAST FULL DAY: deliberately relaxed by default</a></li><li class="toc-level-3"><a href="#default-walk-yanaka-nezu-old-tokyo-without-an-exhausting-excursion">Default walk: Yanaka + Nezu (old Tokyo without an exhausting excursion)</a></li><li class="toc-level-3"><a href="#alternative-walk-kagurazaka-very-flexible-especially-after-lunch">Alternative walk: Kagurazaka (very flexible, especially after lunch)</a></li><li class="toc-level-3"><a href="#if-you-decide-to-do-mt-takao-after-all-optional-route-and-effort">If you decide to do Mt Takao after all — optional route and effort</a></li><li class="toc-level-3"><a href="#other-easy-backup-from-asakusabashi">Other easy backup from Asakusabashi</a></li><li class="toc-level-2"><a href="#nightlife-menu-meaningful-places-not-assigned-obligations">Nightlife menu — meaningful places, not assigned obligations</a></li><li class="toc-level-2"><a href="#saturday-21-nov-check-out-and-fly-from-narita-t1">Saturday 21 Nov — check out and fly from Narita T1</a></li><li class="toc-level-2"><a href="#minimal-pre-trip-reminders-not-a-new-planning-project">Minimal pre-trip reminders (not a new planning project)</a></li></ol></details>
+      <details class="mobile-toc"><summary>On this page</summary><ol><li class="toc-level-2"><a href="#thursday-12-nov-arrive-narita-easy-roppongi-afternoonevening">Thursday 12 Nov — arrive Narita, easy Roppongi afternoon/evening</a></li><li class="toc-level-2"><a href="#saturday-14-nov-daytime-flexible-koishikawa-garden-evening-selected">Saturday 14 Nov — daytime flexible, Koishikawa garden evening selected</a></li><li class="toc-level-2"><a href="#tuesday-17-nov-back-from-hakone-simple-hotel-arrival">Tuesday 17 Nov — back from Hakone; simple hotel arrival</a></li><li class="toc-level-2"><a href="#thursday-19-nov-wife-led-shibuya-crossing-shibuya-sky-ebisu-christmas">Thursday 19 Nov — wife-led Shibuya Crossing + Shibuya SKY, Ebisu Christmas</a></li><li class="toc-level-2"><a href="#friday-20-nov-last-full-day-deliberately-relaxed-by-default">Friday 20 Nov — LAST FULL DAY: deliberately relaxed by default</a></li><li class="toc-level-3"><a href="#default-walk-yanaka-nezu-old-tokyo-without-an-exhausting-excursion">Default walk: Yanaka + Nezu (old Tokyo without an exhausting excursion)</a></li><li class="toc-level-3"><a href="#alternative-walk-kagurazaka-very-flexible-especially-after-lunch">Alternative walk: Kagurazaka (very flexible, especially after lunch)</a></li><li class="toc-level-3"><a href="#if-you-decide-to-do-mt-takao-after-all-optional-route-and-effort">If you decide to do Mt Takao after all — optional route and effort</a></li><li class="toc-level-3"><a href="#other-easy-backup-from-asakusabashi">Other easy backup from Asakusabashi</a></li><li class="toc-level-2"><a href="#nightlife-menu-meaningful-places-not-assigned-obligations">Nightlife menu — meaningful places, not assigned obligations</a></li><li class="toc-level-3"><a href="#compare-the-three-yokochonightlife-choices-added-26-oct">Compare the three yokocho/nightlife choices (added 26 Oct)</a></li><li class="toc-level-2"><a href="#saturday-21-nov-check-out-and-fly-from-narita-t1">Saturday 21 Nov — check out and fly from Narita T1</a></li><li class="toc-level-2"><a href="#minimal-pre-trip-reminders-not-a-new-planning-project">Minimal pre-trip reminders (not a new planning project)</a></li></ol></details>
       <article class="prose">
-<p><strong>Purpose:</strong> Open this on the date, look up 2–4 linked Google Maps anchors, understand why each is interesting and use Maps transit for the final train/platform. This is a <strong>flexible reference, not a list to finish</strong>. Main booking / flight overview is authoritative for paid arrangements; Tokyo destinations catalogue has more optional neighbourhoods. Kawagoe Friday 13 Nov and Hakone 15–17 Nov have separate guides. Kamakura / Enoshima Wednesday 18 Nov is separate.</p>
+<p><strong>Purpose:</strong> Open this on the date, look up 2–4 linked Google Maps anchors, understand why each is interesting and use Maps transit for the final train/platform. This is a <strong>flexible reference, not a list to finish</strong>. Separate booking and flight notes remain authoritative for paid arrangements; the Tokyo destinations catalogue has more optional neighbourhoods. Kawagoe Friday 13 Nov, Hakone 15–17 Nov and Kamakura / Enoshima Wednesday 18 Nov have separate guides.</p>
 <h2 id="thursday-12-nov-arrive-narita-easy-roppongi-afternoonevening">Thursday 12 Nov — arrive Narita, easy Roppongi afternoon/evening</h2>
 <p><strong>What matters:</strong> The two confirmed arriving flights reach <strong>Narita Terminal 1</strong> about <strong>07:10 and 07:30</strong> respectively. Meet after your own entry formalities in a pre-agreed <strong>public T1 Arrivals meeting area</strong> (arrival exit/terminal level; don't assume you can wait airside together). Immigration, bags, finding each other and hotel check-in are buffers, not appointments. <strong>remm Roppongi</strong> is booked for nights 12–14 Nov.</p>
 <p><strong>Suggested airport-to-hotel rail route (simple, not the only route):</strong></p>
@@ -149,7 +169,7 @@
 </ol>
 <p><strong>If easier with luggage:</strong> <a href="https://www.hankyu-hotel.com/en/hotel/remm/roppongi/access/" target="_blank" rel="noopener noreferrer">Narita Express → Tokyo Station → Marunouchi Line to Kasumigaseki → Hibiya Line to Roppongi</a> is described in hotel-area access guidance, but entails more station navigation. Check route options in Google Maps on arrival, including any current disruption. <a href="https://www.narita-airport.jp/en/access/train/" target="_blank" rel="noopener noreferrer">Official airport train information</a> · <a href="https://www.keisei.co.jp/keisei/tetudou/skyliner/us/index.php" target="_blank" rel="noopener noreferrer">Keisei Skyliner</a>.</p>
 <p><strong>Choose just 2–3 nearby anchors (walkable from hotel):</strong></p>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table class="mobile-card-table">
 <thead>
 <tr>
 <th scope="col">Google Maps anchor</th>
@@ -159,39 +179,39 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=Tokyo+Midtown+Hinokicho+Park" target="_blank" rel="noopener noreferrer" class="map-link">Tokyo Midtown / Hinokicho Park</a></td>
-<td>Architecture, design shops, casual meal and an easy park walk after long flights</td>
-<td><strong>Easy</strong> · flexible</td>
+<td data-label="Google Maps anchor"><a href="https://www.google.com/maps/search/?api=1&amp;query=Tokyo+Midtown+Hinokicho+Park" target="_blank" rel="noopener noreferrer" class="map-link">Tokyo Midtown / Hinokicho Park</a></td>
+<td data-label="Why bother?">Architecture, design shops, casual meal and an easy park walk after long flights</td>
+<td data-label="Effort / status"><strong>Easy</strong> · flexible</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=Roppongi+Hills+Mori+Garden" target="_blank" rel="noopener noreferrer" class="map-link">Roppongi Hills / Mori Garden</a></td>
-<td>Contemporary Tokyo skyline architecture, compact garden and food cluster</td>
-<td><strong>Easy</strong> · flexible</td>
+<td data-label="Google Maps anchor"><a href="https://www.google.com/maps/search/?api=1&amp;query=Roppongi+Hills+Mori+Garden" target="_blank" rel="noopener noreferrer" class="map-link">Roppongi Hills / Mori Garden</a></td>
+<td data-label="Why bother?">Contemporary Tokyo skyline architecture, compact garden and food cluster</td>
+<td data-label="Effort / status"><strong>Easy</strong> · flexible</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=Keyakizaka+Christmas+Lights+Roppongi+Hills" target="_blank" rel="noopener noreferrer" class="map-link">Roppongi Keyakizaka illumination</a></td>
-<td>Blue-white Christmas lights on a street with Tokyo Tower backdrop; 2026 event runs from 5 Nov</td>
-<td><strong>Easy evening</strong> · strong suggestion</td>
+<td data-label="Google Maps anchor"><a href="https://www.google.com/maps/search/?api=1&amp;query=Keyakizaka+Christmas+Lights+Roppongi+Hills" target="_blank" rel="noopener noreferrer" class="map-link">Roppongi Keyakizaka illumination</a></td>
+<td data-label="Why bother?">Blue-white Christmas lights on a street with Tokyo Tower backdrop; 2026 event runs from 5 Nov</td>
+<td data-label="Effort / status"><strong>Easy evening</strong> · strong suggestion</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=Tokyo+City+View+Roppongi+Hills" target="_blank" rel="noopener noreferrer" class="map-link">Tokyo City View (Mori Tower 52F)</a></td>
-<td>Premium indoor skyline panorama, <strong>paid</strong>; only if refreshed after the flight</td>
-<td><strong>Optional</strong> · no reservation assumed</td>
+<td data-label="Google Maps anchor"><a href="https://www.google.com/maps/search/?api=1&amp;query=Tokyo+City+View+Roppongi+Hills" target="_blank" rel="noopener noreferrer" class="map-link">Tokyo City View (Mori Tower 52F)</a></td>
+<td data-label="Why bother?">Premium indoor skyline panorama, <strong>paid</strong>; only if refreshed after the flight</td>
+<td data-label="Effort / status"><strong>Optional</strong> · no reservation assumed</td>
 </tr>
 </tbody>
 </table>
 </div><p><strong>Good evening plan:</strong> Eat near Midtown or Roppongi Hills → Keyakizaka lights → hotel. Nightlife can wait until another day if tired.</p>
-<h2 id="saturday-14-nov-daytime-flexible-koishikawa-garden-evening-selected">Saturday 14 Nov — daytime flexible, Koishikawa garden evening selected</h2><aside class="section-enrichment" aria-label="Additional exploration resources"><p class="explore-links"><strong>Explore further (publisher-added):</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Koishikawa%20Korakuen" target="_blank" rel="noopener noreferrer">Search on Google Maps</a></p></aside>
-<p><strong>One fixed-ish anchor:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Koishikawa+Korakuen+West+Gate" target="_blank" rel="noopener noreferrer" class="map-link">Koishikawa Korakuen <strong>West Gate</strong></a> around <strong>18:00–19:30</strong> for the paid <em>flexible-date</em> night-garden ticket. Travel by metro/JR towards <strong>Iidabashi</strong>; the <strong>West Gate, not East Gate</strong>, is the event entrance. Arrive around 17:45–18:00. Present KKday voucher; <strong>only swipe to redeem with the staff</strong>. The voucher quantity for two guests needs checking in KKday. 2026 event details and proof.</p>
-<p><strong>Choose your daytime area only when awake:</strong> stay near Roppongi; alternatively walk <a href="https://www.google.com/maps/search/?api=1&amp;query=Shinjuku+Gyoen" target="_blank" rel="noopener noreferrer" class="map-link">Shinjuku Gyoen</a> or do <strong>one</strong> Tokyo neighbourhood from the area menu.</p>
+<h2 id="saturday-14-nov-daytime-flexible-koishikawa-garden-evening-selected">Saturday 14 Nov — daytime flexible, Koishikawa garden evening selected</h2>
+<p><strong>One fixed-ish anchor:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Koishikawa+Korakuen+West+Gate" target="_blank" rel="noopener noreferrer" class="map-link">Koishikawa Korakuen <strong>West Gate</strong></a> around <strong>18:00–19:30</strong> for the paid <em>flexible-date</em> night-garden ticket. Travel by metro/JR towards <strong>Iidabashi</strong>; the <strong>West Gate, not East Gate</strong>, is the event entrance. Arrive around 17:45–18:00. Present the night-garden voucher; <strong>only swipe to redeem with the staff</strong>. Check that the voucher quantity matches the party before arrival. Confirm the 2026 event details before travel.</p>
+<p><strong>Choose your daytime area only when awake:</strong> stay near Roppongi; alternatively walk <a href="https://www.google.com/maps/search/?api=1&amp;query=Shinjuku+Gyoen" target="_blank" rel="noopener noreferrer" class="map-link">Shinjuku Gyoen</a> or do <strong>one</strong> Tokyo neighbourhood from the <a href="2026-10-20--japan-tokyo-discovery-and-seasonal-guide.html">area menu</a>.</p>
 <p><strong>Natural optional dinner after the garden:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Hyogo+Yokocho+Kagurazaka" target="_blank" rel="noopener noreferrer" class="map-link">Kagurazaka Hyogo Yokocho</a> for lantern-lit historical side alleys and restaurants; it's convenient from the Iidabashi side. If you already explore Kagurazaka tonight, there's no need to repeat it on 20 Nov. No extra reservation.</p>
 <h2 id="tuesday-17-nov-back-from-hakone-simple-hotel-arrival">Tuesday 17 Nov — back from Hakone; simple hotel arrival</h2>
-<p><strong>The day already has a hard commitment:</strong> Hakone Yuryo <strong>Kikyo private bath 13:00–15:00</strong>, then collect suitcases by <strong>18:00</strong> at Hakone-Yumoto station storage. Full logistics and shuttle in Hakone guide.</p>
+<p><strong>The day already has a hard commitment:</strong> Hakone Yuryo <strong>Kikyo private bath 13:00–15:00</strong>, then collect suitcases by <strong>18:00</strong> at Hakone-Yumoto station storage. Full logistics and shuttle are in the separate Hakone guide.</p>
 <p><strong>After bath:</strong> Take an ordinary Odakyu service covered by the returning <strong>Shinjuku-origin Hakone Freepass</strong> from <strong>Hakone-Yumoto via Odawara to Shinjuku</strong> (check actual train); no Romancecar supplement is bought for this direction. From Shinjuku take <strong>JR Chuo-Sobu local eastbound</strong> toward Asakusabashi, typically via a direct local or a connection depending on the train. Enter destination in Maps as <a href="https://www.google.com/maps/search/?api=1&amp;query=ICI+HOTEL+Asakusabashi" target="_blank" rel="noopener noreferrer" class="map-link">ICI HOTEL Asakusabashi</a>. The hotel is about <strong>2 min from JR Asakusabashi West Exit</strong> or <strong>4 min from Asakusa subway A3</strong>. Unpack, rest; nearby <a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B5%85%E8%8D%89%E6%A9%8B+%E5%B1%85%E9%85%92%E5%B1%8B" target="_blank" rel="noopener noreferrer" class="map-link">Asakusabashi izakaya search</a> is optional. Don't add obligatory activities after the bath.</p>
-<h2 id="thursday-19-nov-wife-led-shibuya-crossing-shibuya-sky-ebisu-christmas">Thursday 19 Nov — wife-led Shibuya Crossing + Shibuya SKY, Ebisu Christmas</h2><aside class="section-enrichment" aria-label="Additional exploration resources"><p class="explore-links"><strong>Explore further (publisher-added):</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Shibuya%20Crossing" target="_blank" rel="noopener noreferrer">Search on Google Maps</a></p></aside>
+<h2 id="thursday-19-nov-wife-led-shibuya-crossing-shibuya-sky-ebisu-christmas">Thursday 19 Nov — wife-led Shibuya Crossing + Shibuya SKY, Ebisu Christmas</h2>
 <p><strong>Selected daytime direction:</strong> Shibuya, including <strong>Shibuya Crossing</strong> and <strong>SHIBUYA SKY</strong> as requested by wife. Shopping and restaurants are free-form; don't dictate where she spends the afternoon. <strong>SKY ticket is not booked as of 24 Oct</strong>. <strong>Selected evening:</strong> Ebisu Garden Place Christmas.</p>
 <p><strong>Getting there:</strong> From ICI/Asakusabashi take the <strong>JR Chuo-Sobu local westbound to Yoyogi</strong> then JR Yamanote to Shibuya, or whichever one-/two-transfer route Maps recommends on 19 Nov (~35–50 minutes). Use Suica.</p>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table class="mobile-card-table">
 <thead>
 <tr>
 <th scope="col">Anchor</th>
@@ -201,24 +221,24 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=Shibuya+Scramble+Crossing" target="_blank" rel="noopener noreferrer" class="map-link">Shibuya Scramble Crossing / Hachiko exit</a></td>
-<td>The famous multi-direction urban crossing: enjoy 10–20 min on foot, not a special attraction booking</td>
-<td>Start here or after shopping</td>
+<td data-label="Anchor"><a href="https://www.google.com/maps/search/?api=1&amp;query=Shibuya+Scramble+Crossing" target="_blank" rel="noopener noreferrer" class="map-link">Shibuya Scramble Crossing / Hachiko exit</a></td>
+<td data-label="Why it's worth it">The famous multi-direction urban crossing: enjoy 10–20 min on foot, not a special attraction booking</td>
+<td data-label="Time suggestion / caveat">Start here or after shopping</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=GU+Shibuya+Udagawacho+32-13" target="_blank" rel="noopener noreferrer" class="map-link">GU Shibuya large store</a></td>
-<td>Affordable Japanese apparel including men's/women's, matching wife's shopping request</td>
-<td>Flexible</td>
+<td data-label="Anchor"><a href="https://www.google.com/maps/search/?api=1&amp;query=GU+Shibuya+Udagawacho+32-13" target="_blank" rel="noopener noreferrer" class="map-link">GU Shibuya large store</a></td>
+<td data-label="Why it's worth it">Affordable Japanese apparel including men's/women's, matching wife's shopping request</td>
+<td data-label="Time suggestion / caveat">Flexible</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=Shibuya+PARCO" target="_blank" rel="noopener noreferrer" class="map-link">Shibuya PARCO</a></td>
-<td>Japanese design/culture shopping and food. Optional quick rooftop park on 10F</td>
-<td>Optional</td>
+<td data-label="Anchor"><a href="https://www.google.com/maps/search/?api=1&amp;query=Shibuya+PARCO" target="_blank" rel="noopener noreferrer" class="map-link">Shibuya PARCO</a></td>
+<td data-label="Why it's worth it">Japanese design/culture shopping and food. Optional quick rooftop park on 10F</td>
+<td data-label="Time suggestion / caveat">Optional</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=SHIBUYA+SKY" target="_blank" rel="noopener noreferrer" class="map-link">SHIBUYA SKY, Shibuya Scramble Square</a></td>
-<td>Dramatic panoramic roof over Shibuya; <strong>paid, timed-entry ticket</strong></td>
-<td>Target <strong>~14:30–16:00 entry</strong> if also doing Ebisu by ~17:30, adjusted to actual ticket availability</td>
+<td data-label="Anchor"><a href="https://www.google.com/maps/search/?api=1&amp;query=SHIBUYA+SKY" target="_blank" rel="noopener noreferrer" class="map-link">SHIBUYA SKY, Shibuya Scramble Square</a></td>
+<td data-label="Why it's worth it">Dramatic panoramic roof over Shibuya; <strong>paid, timed-entry ticket</strong></td>
+<td data-label="Time suggestion / caveat">Target <strong>~14:30–16:00 entry</strong> if also doing Ebisu by ~17:30, adjusted to actual ticket availability</td>
 </tr>
 </tbody>
 </table>
@@ -232,7 +252,7 @@
 </ul>
 <p><strong>If sky entry late or wife's shopping runs long:</strong> move <strong>Ebisu</strong> to a free evening on 18/20 Nov. The two experiences remain selected but their clock times are not rigid.</p>
 <h2 id="friday-20-nov-last-full-day-deliberately-relaxed-by-default">Friday 20 Nov — LAST FULL DAY: deliberately relaxed by default</h2>
-<p><strong>Decision (24 Oct):</strong> Mt Takao is <strong>not booked</strong>; <strong>do not auto-book it.</strong> Because the international flights are tomorrow, choose an easy Tokyo day by default. Keep Takao as an optional good-weather excursion, not an obligation.</p>
+<p><strong>Decision (24 Oct):</strong> Mt Takao is <strong>not booked</strong>. <strong>Do not auto-book it.</strong> Because the international flights are tomorrow, choose an easy Tokyo day by default. Keep Takao as an optional good-weather excursion, not an obligation.</p>
 <p><strong>Subjective scores for <em>your final full day</em> (not general attraction ratings), and effort: 1=very easy; 5=long/physical.</strong></p>
 <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
 <thead>
@@ -279,7 +299,7 @@
 <p>From Asakusabashi, take <strong>JR Chuo-Sobu to Akihabara</strong>, then <strong>JR Yamanote or Keihin-Tohoku northbound to Nippori</strong> (check Google Maps for most convenient train). <strong>Route:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Nippori+Station+West+Exit" target="_blank" rel="noopener noreferrer" class="map-link">Nippori West Exit</a> → <a href="https://www.google.com/maps/search/?api=1&amp;query=Yuyake+Dandan" target="_blank" rel="noopener noreferrer" class="map-link">Yuyake Dandan sunset stairs</a> → <a href="https://www.google.com/maps/search/?api=1&amp;query=Yanaka+Ginza" target="_blank" rel="noopener noreferrer" class="map-link">Yanaka Ginza shopping street</a> → optional <a href="https://www.google.com/maps/search/?api=1&amp;query=Kayaba+Coffee+Yanaka" target="_blank" rel="noopener noreferrer" class="map-link">Kayaba Coffee</a> / <a href="https://www.google.com/maps/search/?api=1&amp;query=Ueno+Sakuragi+Atari" target="_blank" rel="noopener noreferrer" class="map-link">Ueno Sakuragi Atari</a> → <a href="https://www.google.com/maps/search/?api=1&amp;query=Nezu+Shrine" target="_blank" rel="noopener noreferrer" class="map-link">Nezu Shrine</a>. Nezu Shrine's red torii, ponds and historic buildings are worth the visit; the <strong>azalea blooms are spring</strong>, not November. Navigate home from <strong>Nezu or Nippori</strong>; no need to walk back to the start. Snack/stroll/coffee as you wish. <a href="https://www.gotokyo.org/en/destinations/northern-tokyo/yanaka-and-nezu/index.html" target="_blank" rel="noopener noreferrer">Official Tokyo Yanaka + Nezu guide</a>.</p>
 <h3 id="alternative-walk-kagurazaka-very-flexible-especially-after-lunch">Alternative walk: Kagurazaka (very flexible, especially after lunch)</h3>
 <p>From Asakusabashi take <strong>JR Chuo-Sobu Local westbound to Iidabashi</strong>, then <a href="https://www.google.com/maps/search/?api=1&amp;query=Kagurazaka+dori" target="_blank" rel="noopener noreferrer" class="map-link">Kagurazaka main slope</a> → <a href="https://www.google.com/maps/search/?api=1&amp;query=Zenkokuji+Kagurazaka" target="_blank" rel="noopener noreferrer" class="map-link">Bishamonten Zenkoku-ji Temple</a> → <a href="https://www.google.com/maps/search/?api=1&amp;query=Hyogo+Yokocho" target="_blank" rel="noopener noreferrer" class="map-link">Hyogo Yokocho</a> / <a href="https://www.google.com/maps/search/?api=1&amp;query=Kakurenbo+Yokocho" target="_blank" rel="noopener noreferrer" class="map-link">Kakurenbo Yokocho</a> → optional <a href="https://www.google.com/maps/search/?api=1&amp;query=Akagi+Jinja+Kagurazaka" target="_blank" rel="noopener noreferrer" class="map-link">Akagi-jinja Shrine</a>. <strong>Why:</strong> traditional lanes and former geisha-district architecture with stylish cafés and small bistros. 2–4h, easy but hilly streets. <a href="https://www.gotokyo.org/en/story/walks-and-tours/kagurazaka/index.html" target="_blank" rel="noopener noreferrer">GO TOKYO official walk</a>.</p>
-<h3 id="if-you-decide-to-do-mt-takao-after-all-optional-route-and-effort">If you decide to do Mt Takao after all — optional route and effort</h3><aside class="section-enrichment" aria-label="Additional exploration resources"><figure class="section-image"><img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Mount_Takao_20051023.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="Mount Takao in autumn" width="1600" height="793" loading="lazy" decoding="async" referrerpolicy="no-referrer"><figcaption>Photo: Ans~jawiki at Japanese Wikipedia · <a href="https://commons.wikimedia.org/wiki/File:Mount_Takao_20051023.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://commons.wikimedia.org/wiki/File:Mount_Takao_20051023.jpg" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></figcaption></figure><p class="explore-links"><strong>Explore further (publisher-added):</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Mount%20Takao" target="_blank" rel="noopener noreferrer">Search on Google Maps</a></p></aside>
+<h3 id="if-you-decide-to-do-mt-takao-after-all-optional-route-and-effort">If you decide to do Mt Takao after all — optional route and effort</h3>
 <p><strong>No booking necessary for ordinary trains or cable car.</strong> From Asakusabashi, use JR Chuo-Sobu to <strong>Shinjuku</strong>, then <strong>Keio Line / Takao Line</strong> to <strong>Takaosanguchi</strong> (approximately <strong>50–60 min from Shinjuku</strong>; some services involve a transfer at Kitano). Allow <strong>~90–120 min each way from hotel including transfers</strong> on a normal day; autumn congestion adds time. <a href="https://www.google.com/maps/search/?api=1&amp;query=Takaosanguchi+Station" target="_blank" rel="noopener noreferrer" class="map-link">Keio Takaosanguchi Google Maps</a>.</p>
 <p><strong>Gentle summit version:</strong> Takaosanguchi → ~5 min walk <a href="https://www.google.com/maps/search/?api=1&amp;query=Kiyotaki+Station+Mount+Takao" target="_blank" rel="noopener noreferrer" class="map-link">Kiyotaki cable-car station</a> → <strong>cable car to Takaosan Station</strong> (about 6 min) → follow <strong>Trail 1</strong>, stop at <a href="https://www.google.com/maps/search/?api=1&amp;query=Mount+Takao+Yakuoin+Temple" target="_blank" rel="noopener noreferrer" class="map-link">Yakuoin Temple</a> (Tengu iconography, mountain worship) → <a href="https://www.google.com/maps/search/?api=1&amp;query=Mount+Takao+Summit" target="_blank" rel="noopener noreferrer" class="map-link">Mt Takao summit</a> (599m, possible Fuji view) → retrace Trail 1 to cable car down. <strong>Important: cable car does not reach summit</strong>; there are still slopes/stairs and approximately <strong>40–60 min walking each way</strong> from upper station including temple and pauses. Or do <strong>cable car + scenic viewpoints/temple only</strong>, skip summit for a <strong>lighter half-day on the mountain</strong> (still a long commute). No need for hard Trail 6 or Inariyama.</p>
 <p><strong>Official cable car details observed Oct 2026:</strong> adult ¥490 one-way / ¥980 return; weekday November last cable car typically <strong>17:45</strong> (can change), chairlift ends around <strong>16:30</strong>, so don't rely on a late descent. <a href="https://www.takaotozan.co.jp/timeprice/index.php" target="_blank" rel="noopener noreferrer">Official operator timetable</a> · <a href="https://www.gotokyo.org/en/spot/ev074/index.html" target="_blank" rel="noopener noreferrer">2026 autumn event</a>. Choose Takao only if the forecast looks good and you're happy spending most of the final day there; crowds may add significant queues. <strong>No reservation now.</strong></p>
@@ -287,7 +307,7 @@
 <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Sensoji+Asakusa" target="_blank" rel="noopener noreferrer" class="map-link">Asakusa Sensoji</a> (Tokyo's classic Buddhist temple) → <a href="https://www.google.com/maps/search/?api=1&amp;query=Nakamise+Asakusa" target="_blank" rel="noopener noreferrer" class="map-link">Nakamise street</a> (traditional snacks) OR <a href="https://www.google.com/maps/search/?api=1&amp;query=Ameyoko+Ueno" target="_blank" rel="noopener noreferrer" class="map-link">Ueno Ameyoko</a> (market, casual eateries). Choose one cluster, not all.</p>
 <h2 id="nightlife-menu-meaningful-places-not-assigned-obligations">Nightlife menu — meaningful places, not assigned obligations</h2>
 <p><strong>Good pairings by day (pick 0–1 evening):</strong></p>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table class="mobile-card-table">
 <thead>
 <tr>
 <th scope="col">Evening / area</th>
@@ -297,39 +317,74 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>12 Nov Roppongi, only if not tired</strong></td>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%85%AD%E6%9C%AC%E6%9C%A8+%E5%B1%85%E9%85%92%E5%B1%8B" target="_blank" rel="noopener noreferrer" class="map-link">Roppongi bars / 居酒屋</a></td>
-<td>Near first hotel; easy beer/sake after lights</td>
+<td data-label="Evening / area"><strong>12 Nov Roppongi, only if not tired</strong></td>
+<td data-label="Where on Google Maps"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%85%AD%E6%9C%AC%E6%9C%A8+%E5%B1%85%E9%85%92%E5%B1%8B" target="_blank" rel="noopener noreferrer" class="map-link">Roppongi bars / 居酒屋</a></td>
+<td data-label="Why go / note">Near first hotel; easy beer/sake after lights</td>
 </tr>
 <tr>
-<td><strong>13 Nov after Kawagoe, if return via Seibu-Shinjuku</strong></td>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=Omoide+Yokocho" target="_blank" rel="noopener noreferrer" class="map-link">Omoide Yokocho</a> → <a href="https://www.google.com/maps/search/?api=1&amp;query=Shinjuku+Golden+Gai" target="_blank" rel="noopener noreferrer" class="map-link">Golden Gai</a></td>
-<td>Atmospheric grilled-skewer alley, then tiny themed bars; optional Friday night, avoid crowds if exhausted</td>
+<td data-label="Evening / area"><strong>13 Nov after Kawagoe, if return via Seibu-Shinjuku</strong></td>
+<td data-label="Where on Google Maps"><a href="https://www.google.com/maps/search/?api=1&amp;query=Omoide+Yokocho" target="_blank" rel="noopener noreferrer" class="map-link">Omoide Yokocho</a> → <a href="https://www.google.com/maps/search/?api=1&amp;query=Shinjuku+Golden+Gai" target="_blank" rel="noopener noreferrer" class="map-link">Golden Gai</a></td>
+<td data-label="Why go / note">Atmospheric grilled-skewer alley, then tiny themed bars; optional Friday night, avoid crowds if exhausted</td>
 </tr>
 <tr>
-<td><strong>14 Nov after Koishikawa</strong></td>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=Hyogo+Yokocho+Kagurazaka" target="_blank" rel="noopener noreferrer" class="map-link">Kagurazaka / Hyogo Yokocho</a></td>
-<td>Historic charming dinner lanes by Iidabashi; calmer than Shinjuku</td>
+<td data-label="Evening / area"><strong>14 Nov after Koishikawa</strong></td>
+<td data-label="Where on Google Maps"><a href="https://www.google.com/maps/search/?api=1&amp;query=Hyogo+Yokocho+Kagurazaka" target="_blank" rel="noopener noreferrer" class="map-link">Kagurazaka / Hyogo Yokocho</a></td>
+<td data-label="Why go / note">Historic charming dinner lanes by Iidabashi; calmer than Shinjuku</td>
 </tr>
 <tr>
-<td><strong>19 Nov after Ebisu lights</strong></td>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=Ebisu+Yokocho" target="_blank" rel="noopener noreferrer" class="map-link">Ebisu Yokocho</a> or <a href="https://www.google.com/maps/search/?api=1&amp;query=Bar+Trench+Ebisu" target="_blank" rel="noopener noreferrer" class="map-link">BAR TRENCH</a></td>
-<td>Busy izakaya counters vs quiet craft cocktails</td>
+<td data-label="Evening / area"><strong>19 Nov after Ebisu lights</strong></td>
+<td data-label="Where on Google Maps"><a href="https://www.google.com/maps/search/?api=1&amp;query=Ebisu+Yokocho" target="_blank" rel="noopener noreferrer" class="map-link">Ebisu Yokocho</a> or <a href="https://www.google.com/maps/search/?api=1&amp;query=Bar+Trench+Ebisu" target="_blank" rel="noopener noreferrer" class="map-link">BAR TRENCH</a></td>
+<td data-label="Why go / note">Busy izakaya counters vs quiet craft cocktails</td>
 </tr>
 <tr>
-<td><strong>20 Nov only if energy</strong></td>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=Omoide+Yokocho" target="_blank" rel="noopener noreferrer" class="map-link">Shinjuku Omoide Yokocho</a> / <a href="https://www.google.com/maps/search/?api=1&amp;query=Golden+Gai+Tokyo" target="_blank" rel="noopener noreferrer" class="map-link">Golden Gai</a></td>
-<td>Last optional nightlife; consider early finish before flights</td>
+<td data-label="Evening / area"><strong>20 Nov only if energy</strong></td>
+<td data-label="Where on Google Maps"><a href="https://www.google.com/maps/search/?api=1&amp;query=Omoide+Yokocho" target="_blank" rel="noopener noreferrer" class="map-link">Shinjuku Omoide Yokocho</a> / <a href="https://www.google.com/maps/search/?api=1&amp;query=Golden+Gai+Tokyo" target="_blank" rel="noopener noreferrer" class="map-link">Golden Gai</a></td>
+<td data-label="Why go / note">Last optional nightlife; consider early finish before flights</td>
 </tr>
 </tbody>
 </table>
-</div><p><strong>Important etiquette:</strong> Golden Gai micro-bars may require <strong>cover charge / otōshi</strong> in addition to drinks; check before sitting, bring some cash, don't follow street touts and respect no-photo signs. <a href="https://golden-gai.tokyo/en/introduction/" target="_blank" rel="noopener noreferrer">Official Golden Gai explanation</a>. No restaurant bookings required; avoid trying to cover all five nights.</p>
+</div><h3 id="compare-the-three-yokochonightlife-choices-added-26-oct">Compare the three yokocho/nightlife choices (added 26 Oct)</h3>
+<p><strong>Geography correction:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Shinjuku+Golden+Gai" target="_blank" rel="noopener noreferrer" class="map-link">Golden Gai</a> and <a href="https://www.google.com/maps/search/?api=1&amp;query=Omoide+Yokocho+Shinjuku" target="_blank" rel="noopener noreferrer" class="map-link">Omoide Yokocho</a> are <strong>both in Shinjuku</strong> but are separate areas; <a href="https://www.google.com/maps/search/?api=1&amp;query=Ebisu+Yokocho+Tokyo" target="_blank" rel="noopener noreferrer" class="map-link">Ebisu Yokocho</a> is in <strong>Ebisu</strong>, not Shinjuku. These are optional experiences, not reservations.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
+<thead>
+<tr>
+<th scope="col">Spot</th>
+<th scope="col">What to expect</th>
+<th scope="col">Best for</th>
+<th style="text-align:right" scope="col">Trip-fit rating (subjective)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Omoide Yokocho, Shinjuku</strong></td>
+<td>Nostalgic narrow lantern-lit lanes, compact yakitori/grill counters and smoky dinner atmosphere; some crowding</td>
+<td><strong>Dinner plus quintessential old-Tokyo alley photos</strong></td>
+<td style="text-align:right"><strong>9.2/10</strong></td>
+</tr>
+<tr>
+<td><strong>Golden Gai, Shinjuku</strong></td>
+<td>Many tiny, distinctive bars; conversation and drinks are the attraction, with limited food</td>
+<td><strong>One atmospheric post-dinner drink</strong> rather than a full meal</td>
+<td style="text-align:right"><strong>9.0/10</strong></td>
+</tr>
+<tr>
+<td><strong>Ebisu Yokocho, Ebisu</strong></td>
+<td>Busy, sociable indoor izakaya alley with varied casual dishes and drinks</td>
+<td><strong>Lively dinner after the Ebisu Garden Place Christmas lights</strong></td>
+<td style="text-align:right"><strong>8.5/10</strong></td>
+</tr>
+</tbody>
+</table>
+</div><p><strong>Recommended Shinjuku pairing:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Omoide+Yokocho+Shinjuku" target="_blank" rel="noopener noreferrer" class="map-link">Omoide Yokocho</a> for an early dinner → stroll to <a href="https://www.google.com/maps/search/?api=1&amp;query=Shinjuku+Golden+Gai" target="_blank" rel="noopener noreferrer" class="map-link">Golden Gai</a> for one drink. Convenient as a <strong>13 Nov</strong> optional detour on the return from Kawagoe (if routed via Shinjuku), or on another uncommitted evening. Neither stop is locked.</p>
+<p><strong>Ebisu pairing:</strong> Keep <strong>19 Nov</strong> Shibuya shopping → selected <strong>Ebisu Garden Place</strong> lights first; then consider <a href="https://www.google.com/maps/search/?api=1&amp;query=Ebisu+Yokocho+Tokyo" target="_blank" rel="noopener noreferrer" class="map-link">Ebisu Yokocho</a> for dinner if hungry and energetic. Ebisu Yokocho is nearer <strong>Ebisu Station</strong>, not inside Garden Place. Do not force both Shinjuku and Ebisu nightlife into the same evening.</p>
+<p><strong>Practical cautions:</strong> Typical total spend varies by establishment and drinks ordered; use posted menus rather than assuming a fixed price. Golden Gai's tiny bars may charge a cover/otōshi, have limited seating or rules on photos. Izakaya venues can be crowded; check hours and queues on the day.</p>
+<p><strong>Important etiquette:</strong> Golden Gai micro-bars may require <strong>cover charge / otōshi</strong> in addition to drinks; check before sitting, bring some cash, don't follow street touts and respect no-photo signs. <a href="https://golden-gai.tokyo/en/introduction/" target="_blank" rel="noopener noreferrer">Official Golden Gai explanation</a>. No restaurant bookings required; avoid trying to cover all five nights.</p>
 <h2 id="saturday-21-nov-check-out-and-fly-from-narita-t1">Saturday 21 Nov — check out and fly from Narita T1</h2>
-<p><strong>This is a travel day, not a sightseeing day.</strong> The earlier <strong>17:00 ZIPAIR</strong> departure is before the later <strong>19:55 Scoot</strong> departure. <strong>Both are recorded at Narita Terminal 1</strong>; recheck boarding passes for exact counters and flight numbers. Aim to <strong>arrive NRT T1 around 13:45–14:00 for the earlier flight</strong>. ZIPAIR officially opens counter check-in <strong>3 hours before</strong> and closes it <strong>1 hour before</strong>; do not rely on arriving shortly before closing. You'll have extra airport time before the later departure.</p>
+<p><strong>This is a travel day, not a sightseeing day.</strong> The <strong>17:00 ZIPAIR return to Bangkok (BKK)</strong> is earlier than the <strong>19:55 Scoot service to Singapore (via Taipei)</strong>. <strong>Both are scheduled from Narita Terminal 1</strong>; recheck boarding passes for exact counters and flight numbers. Aim to <strong>arrive NRT T1 around 13:45–14:00 for the earlier flight</strong>. ZIPAIR officially opens counter check-in <strong>3 hours before</strong> and closes it <strong>1 hour before</strong>; do not rely on arriving shortly before closing. There will be extra airport time before the later Scoot departure.</p>
 <p><strong>Best simple station-to-airport choice with luggage:</strong> From <a href="https://www.google.com/maps/search/?api=1&amp;query=ICI+HOTEL+Asakusabashi" target="_blank" rel="noopener noreferrer" class="map-link">ICI HOTEL Asakusabashi</a> (about <strong>4 min walk from Toei Asakusa Asakusabashi A3</strong>), check Google Maps for a <strong>direct through Keisei / Toei Asakusa Airport Access Express to Narita Airport T1 (成田空港)</strong>. Some departure times offer a no-transfer service, others require changing trains; <strong>inspect the particular Saturday timetable and train destination on the day</strong>. Allow <strong>~70–100 minutes station to airport</strong> if direct, plus waiting and walk. This is a normal commuter-style train with luggage, not the reserved Skyliner; ensure the destination really says <strong>Narita Airport</strong>, not Haneda. <a href="https://www.kotsu.metro.tokyo.jp/eng/guides/airportaccess/" target="_blank" rel="noopener noreferrer">Official Toei airport connectivity</a> · <a href="https://www.keisei.co.jp/keisei/tetudou/skyliner/us/traffic/express.php" target="_blank" rel="noopener noreferrer">Keisei Access Express</a>.</p>
 <p><strong>Backup (comfort/clearer train times):</strong> JR from Asakusabashi → <strong>Akihabara</strong>, then JR → <strong>Ueno / Nippori</strong>, walk to <strong>Keisei-Ueno</strong> or transfer at <strong>Nippori</strong>, and take a reserved-seat <strong>Skyliner</strong> to Narita Airport T1. More transfers and a higher fare, but more reliable seat/luggage space. <a href="https://www.keisei.co.jp/keisei/tetudou/skyliner/us/traffic/skyliner_1213.php" target="_blank" rel="noopener noreferrer">Keisei timetable</a>.</p>
 <p><strong>Practical time target:</strong> Check out and start heading to Asakusabashi Station around <strong>11:30–12:00</strong>, earlier if your chosen train requires changes or baggage makes transfer slow. Use <a href="https://www.google.com/maps/search/?api=1&amp;query=Narita+Airport+Terminal+1+departures" target="_blank" rel="noopener noreferrer" class="map-link">Narita Airport Terminal 1 departures</a> as the navigation target. ZIPAIR uses <strong>Terminal 1 North Wing, 4F</strong>. Both parties keep passports, boarding credentials, and airline-specific baggage allowances handy. <a href="https://www.narita-airport.jp/en/flight/airline-search/tzp/" target="_blank" rel="noopener noreferrer">Narita ZIPAIR terminal</a> · <a href="https://www.zipair.net/en/boarding/checkin" target="_blank" rel="noopener noreferrer">ZIPAIR check-in rules</a>.</p>
-<p><strong>One actionable baggage check before departure:</strong> ZIPAIR allows two cabin pieces totalling <strong>7 kg</strong>; a paid upgrade to <strong>15 kg cabin total</strong> needs advance purchase <strong>at least 24 hours</strong> before the flight, and checked luggage is a paid separate add-on. Confirm whether the actual suitcase needs checking, and buy any needed allowance in advance rather than finding out at airport. <a href="https://www.zipair.net/en/service/baggage" target="_blank" rel="noopener noreferrer">Official ZIPAIR baggage policy</a>. Verify any other airline allowance separately.</p>
+<p><strong>One actionable baggage check before departure:</strong> The ZIPAIR allowance is <strong>7 kg total carry-on, no checked baggage</strong>. ZIPAIR allows two cabin pieces totalling <strong>7 kg</strong>; paid upgrade to <strong>15 kg cabin total</strong> needs advance purchase <strong>at least 24 hours</strong> before flight, and checked luggage is a paid separate add-on. Confirm whether the actual suitcase needs checking, and buy any needed allowance in advance rather than finding out at the airport. <a href="https://www.zipair.net/en/service/baggage" target="_blank" rel="noopener noreferrer">Official ZIPAIR baggage policy</a>. Verify the Scoot allowance separately.</p>
 <h2 id="minimal-pre-trip-reminders-not-a-new-planning-project">Minimal pre-trip reminders (not a new planning project)</h2>
 <ol>
 <li><strong>About 5 Nov</strong> check <a href="https://www.shibuya-scramble-square.com/sky/ticket/" target="_blank" rel="noopener noreferrer">SHIBUYA SKY official ticket sale</a> for <strong>19 Nov</strong>, for two people, if you're going. This is the one extra advance admission most likely to matter.</li>
@@ -341,18 +396,18 @@
 
         <footer class="publication-note">
           <p>This is an automatically prepared public-safe adaptation of a private Markdown guide.</p>
-          <p>Source hash 6f46ff4bcdfa · Publisher 628855336918 · Model openrouter/deepseek/deepseek-v4.1-flash-1017#max</p>
+          <p>Source hash a24ee78bebad · Publisher c27048e84b55 · Model openrouter/deepseek/deepseek-v4.1-flash-1017#max</p>
         </footer>
       </article>
     </main>
   </div>
   <script type="application/json" id="publication-metadata">{
   "sourcePath": "knowledge-base/managed/2026-10-24--tokyo-day-by-day-flexible-field-guide.md",
-  "sourceHash": "6f46ff4bcdfa84e1c5a63120673f6f00d52b86df24a3ceb431292be7e5643043",
-  "sourceRevision": "6bd644aff40f444ad0ec05916524136d55282e03",
-  "publisherHash": "628855336918e632a42b3fefc636d5a775117a3c48493ca27eb6e615e5446457",
+  "sourceHash": "a24ee78bebad2d18e873dcfbcfe1b6b0cc0deca5a8bf7189dfc5e7c5fefa07a8",
+  "sourceRevision": "201332560ea2367cc3c0dc0e7d17f8c5189d859b",
+  "publisherHash": "c27048e84b557ea2be6680fb439d11e20d7ba4ff254989197d8bf2ce3376e6b9",
   "model": "openrouter/deepseek/deepseek-v4.1-flash-1017#max",
-  "generatedAt": "2026-10-25T16:52:28.857Z",
+  "generatedAt": "2026-10-27T03:15:37.923Z",
   "usage": {
     "input": null,
     "output": null,
@@ -368,59 +423,116 @@
     "description": null,
     "edits": [
       {
+        "line": 4,
+        "text": "**Purpose:** Open this on the date, look up 2–4 linked Google Maps anchors, understand why each is interesting and use Maps transit for the final train/platform. This is a **flexible reference, not a list to finish**. Separate booking and flight notes remain authoritative for paid arrangements; the Tokyo destinations catalogue has more optional neighbourhoods. Kawagoe Friday 13 Nov, Hakone 15–17 Nov and Kamakura / Enoshima Wednesday 18 Nov have separate guides."
+      },
+      {
+        "line": 31,
+        "text": "**One fixed-ish anchor:** [Koishikawa Korakuen **West Gate**](https://www.google.com/maps/search/?api=1\u0026query=Koishikawa+Korakuen+West+Gate) around **18:00–19:30** for the paid *flexible-date* night-garden ticket. Travel by metro/JR towards **Iidabashi**; the **West Gate, not East Gate**, is the event entrance. Arrive around 17:45–18:00. Present the night-garden voucher; **only swipe to redeem with the staff**. Check that the voucher quantity matches the party before arrival. Confirm the 2026 event details before travel."
+      },
+      {
+        "line": 39,
+        "text": "**The day already has a hard commitment:** Hakone Yuryo **Kikyo private bath 13:00–15:00**, then collect suitcases by **18:00** at Hakone-Yumoto station storage. Full logistics and shuttle are in the separate Hakone guide."
+      },
+      {
         "line": 68,
-        "text": "**Decision (24 Oct):** Mt Takao is **not booked**; **do not auto-book it.** Because the international flights are tomorrow, choose an easy Tokyo day by default. Keep Takao as an optional good-weather excursion, not an obligation."
+        "text": "**Decision (24 Oct):** Mt Takao is **not booked**. **Do not auto-book it.** Because the international flights are tomorrow, choose an easy Tokyo day by default. Keep Takao as an optional good-weather excursion, not an obligation."
       },
       {
-        "line": 115,
-        "text": "**This is a travel day, not a sightseeing day.** The earlier **17:00 ZIPAIR** departure is before the later **19:55 Scoot** departure. **Both are recorded at Narita Terminal 1**; recheck boarding passes for exact counters and flight numbers. Aim to **arrive NRT T1 around 13:45–14:00 for the earlier flight**. ZIPAIR officially opens counter check-in **3 hours before** and closes it **1 hour before**; do not rely on arriving shortly before closing. You'll have extra airport time before the later departure."
+        "line": 131,
+        "text": "**This is a travel day, not a sightseeing day.** The **17:00 ZIPAIR return to Bangkok (BKK)** is earlier than the **19:55 Scoot service to Singapore (via Taipei)**. **Both are scheduled from Narita Terminal 1**; recheck boarding passes for exact counters and flight numbers. Aim to **arrive NRT T1 around 13:45–14:00 for the earlier flight**. ZIPAIR officially opens counter check-in **3 hours before** and closes it **1 hour before**; do not rely on arriving shortly before closing. There will be extra airport time before the later Scoot departure."
       },
       {
-        "line": 123,
-        "text": "**One actionable baggage check before departure:** ZIPAIR allows two cabin pieces totalling **7 kg**; a paid upgrade to **15 kg cabin total** needs advance purchase **at least 24 hours** before the flight, and checked luggage is a paid separate add-on. Confirm whether the actual suitcase needs checking, and buy any needed allowance in advance rather than finding out at airport. [Official ZIPAIR baggage policy](https://www.zipair.net/en/service/baggage). Verify any other airline allowance separately."
+        "line": 139,
+        "text": "**One actionable baggage check before departure:** The ZIPAIR allowance is **7 kg total carry-on, no checked baggage**. ZIPAIR allows two cabin pieces totalling **7 kg**; paid upgrade to **15 kg cabin total** needs advance purchase **at least 24 hours** before flight, and checked luggage is a paid separate add-on. Confirm whether the actual suitcase needs checking, and buy any needed allowance in advance rather than finding out at the airport. [Official ZIPAIR baggage policy](https://www.zipair.net/en/service/baggage). Verify the Scoot allowance separately."
       }
+    ]
+  },
+  "publicTargets": {
+    "2026-10-16--japan-autumn-trip-2026-bookings-and-planning.md": [
+      "content",
+      "open-the-right-guide",
+      "working-dates-only-supplier-bookings-are-fixed",
+      "verified-accommodation-9-of-9-nights",
+      "confirmed-activity-bookings-with-proof",
+      "flight-verification-latest-usable-itinerary",
+      "only-the-decisions-still-worth-making",
+      "evidence-accuracy-and-updates",
+      "publication-metadata"
+    ],
+    "2026-10-20--japan-hakone-field-guide.md": [
+      "content",
+      "hakone-booked-transport-sights-and-day-outline",
+      "confirmed-tickets-and-station-by-station-arrival",
+      "three-day-activity-outline-intentionally-flexible",
+      "monday-16-nov-settled-route-kojiri-then-onshi-and-dinner-at-the-ryokan",
+      "key-places-to-save-on-google-maps",
+      "hakone-yuryo-17-nov-confirmed",
+      "gora-park-craft-house-bracelets-and-keyrings-optional-unbooked",
+      "ryokan-mealbath-details-protect-the-included-value",
+      "what-is-still-open",
+      "other-researched-scenic-anchors",
+      "additional-hakone-map-anchors-original-18-oct-research",
+      "flexible-google-maps-searches",
+      "publication-metadata"
+    ],
+    "2026-10-20--japan-kawagoe-day-guide.md": [
+      "content",
+      "transport-suica-no-additional-sightseeing-rail-pass",
+      "five-classic-saved-stops-with-significance",
+      "relaxed-time-budget",
+      "kawagoe-food-choose-on-the-day",
+      "publication-metadata"
+    ],
+    "2026-10-20--japan-tokyo-discovery-and-seasonal-guide.md": [
+      "content",
+      "two-selected-seasonal-evenings-part-of-the-itinerary",
+      "saturday-14-nov-koishikawa-korakuen-night-garden-18001930",
+      "thursday-19-nov-yebisu-garden-place-christmas-17302000",
+      "full-day-excursions",
+      "mt-takao-9510",
+      "kamakura-enoshima-9010",
+      "tokyo-neighbourhoods-select-dont-complete-them-all",
+      "ebisu-9410",
+      "shinjuku-9310",
+      "shibuya-with-optional-harajuku-omotesando-9210",
+      "ueno-okachimachi-8910",
+      "roppongi-9010",
+      "asakusa-kappabashi-8810",
+      "marunouchi-yurakucho-hibiya-8710",
+      "seasonal-opportunities-and-reality-check-specific-to-1221-nov-2026",
+      "google-maps-discovery-toolkit",
+      "publication-metadata"
+    ],
+    "2026-10-24--kamakura-enoshima-day-guide.md": [
+      "content",
+      "one-line-route-and-how-to-get-there",
+      "recommended-anchors-why-order-and-flexibility",
+      "flexible-workable-sample-timing-not-transport-reservations",
+      "food-and-low-effort-swaps",
+      "publication-metadata"
+    ],
+    "2026-10-24--tokyo-day-by-day-flexible-field-guide.md": [
+      "content",
+      "thursday-12-nov-arrive-narita-easy-roppongi-afternoonevening",
+      "saturday-14-nov-daytime-flexible-koishikawa-garden-evening-selected",
+      "tuesday-17-nov-back-from-hakone-simple-hotel-arrival",
+      "thursday-19-nov-wife-led-shibuya-crossing-shibuya-sky-ebisu-christmas",
+      "friday-20-nov-last-full-day-deliberately-relaxed-by-default",
+      "default-walk-yanaka-nezu-old-tokyo-without-an-exhausting-excursion",
+      "alternative-walk-kagurazaka-very-flexible-especially-after-lunch",
+      "if-you-decide-to-do-mt-takao-after-all-optional-route-and-effort",
+      "other-easy-backup-from-asakusabashi",
+      "nightlife-menu-meaningful-places-not-assigned-obligations",
+      "saturday-21-nov-check-out-and-fly-from-narita-t1",
+      "minimal-pre-trip-reminders-not-a-new-planning-project",
+      "publication-metadata"
     ]
   },
   "enhancement": {
     "theme": "maple",
     "heroImage": null,
-    "sections": [
-      {
-        "anchor": "saturday-14-nov-daytime-flexible-koishikawa-garden-evening-selected",
-        "commonsSearch": "Koishikawa Korakuen",
-        "wikiSearch": null,
-        "alt": "Koishikawa Korakuen garden in Tokyo",
-        "image": null,
-        "wikiLink": null
-      },
-      {
-        "anchor": "thursday-19-nov-wife-led-shibuya-crossing-shibuya-sky-ebisu-christmas",
-        "commonsSearch": "Shibuya Crossing",
-        "wikiSearch": null,
-        "alt": "Shibuya Crossing in Tokyo",
-        "image": null,
-        "wikiLink": null
-      },
-      {
-        "anchor": "if-you-decide-to-do-mt-takao-after-all-optional-route-and-effort",
-        "commonsSearch": "Mount Takao",
-        "wikiSearch": null,
-        "alt": "Mount Takao in autumn",
-        "image": {
-          "commonsSearch": "Mount Takao",
-          "commonsFileName": "File:Mount Takao 20051023.jpg",
-          "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Mount_Takao_20051023.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=thumbnail_unscaled",
-          "width": 1600,
-          "height": 793,
-          "alt": "Mount Takao in autumn",
-          "creator": "Ans~jawiki at Japanese Wikipedia",
-          "license": "CC BY-SA 3.0",
-          "licenseUrl": "https://commons.wikimedia.org/wiki/File:Mount_Takao_20051023.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mount_Takao_20051023.jpg"
-        },
-        "wikiLink": null
-      }
-    ]
+    "sections": []
   }
 }</script>
 </body>

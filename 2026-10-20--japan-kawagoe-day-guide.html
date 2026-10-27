@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kawagoe kimono day guide: Wargo rental, Suica route and buses, five old-town stops, local food and Google Maps keywords.">
+  <meta name="description" content="Kawagoe day guide: Suica and bus routes, five walkable old-town stops, kimono rental, food specialties and Google Maps keywords.">
   <meta name="color-scheme" content="light dark">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src https://upload.wikimedia.org data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
   <title>Kawagoe — 13 November 2026 Day Guide</title>
@@ -69,6 +69,26 @@
     .table-wrap { max-width: 100%; margin: 1.5rem 0; overflow-x: auto; border: 1px solid var(--line); border-radius: .75rem; }
     table { width: 100%; border-collapse: collapse; font-size: .92rem; line-height: 1.48; }
     table:has(th:nth-child(4)) { min-width: 32rem; }
+    /* Practical travel tables remain readable labelled cards at any width.
+       Wider screens get two cards per row; compact generic tables are unchanged. */
+    .table-wrap:has(> .mobile-card-table) { border: 0; overflow: visible; }
+      .mobile-card-table, .mobile-card-table tbody, .mobile-card-table tbody tr,
+      .mobile-card-table tbody td, .mobile-card-table tbody th { display: block; width: 100%; min-width: 0; }
+      .mobile-card-table { min-width: 0 !important; }
+      .mobile-card-table thead { position: absolute; width: 1px; height: 1px; padding: 0;
+        overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+      .mobile-card-table tbody tr { margin: 0 0 .85rem; padding: .75rem 1rem;
+        border: 1px solid var(--line); border-radius: .7rem; background: var(--surface); }
+      .mobile-card-table tbody td, .mobile-card-table tbody th { padding: .3rem 0;
+        border: 0; background: transparent; overflow-wrap: anywhere; word-break: normal; }
+      .mobile-card-table tbody [data-label]::before { content: attr(data-label); display: block;
+        margin-bottom: .12rem; color: var(--muted); font-size: .77rem; font-weight: 750; }
+      .mobile-card-table tbody td:first-child, .mobile-card-table tbody th:first-child
+        { color: var(--ink); font-weight: 750; font-size: 1.03rem; }
+    @media (min-width: 66rem) {
+      .mobile-card-table tbody { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+      .mobile-card-table tbody tr { margin: 0; }
+    }
     caption { padding: .7rem .8rem; text-align: left; font-weight: 750; }
     th, td { padding: .72rem .8rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
     th, td { overflow-wrap: normal; word-break: normal; }
@@ -128,7 +148,7 @@
     <div class="header-inner">
       <p class="eyebrow">Published knowledge-base view</p>
       <h1>Kawagoe — Friday 13 November 2026</h1>
-      <p class="description">Kawagoe kimono day guide: Wargo rental, Suica route and buses, five old-town stops, local food and Google Maps keywords.</p>
+      <p class="description">Kawagoe day guide: Suica and bus routes, five walkable old-town stops, kimono rental, food specialties and Google Maps keywords.</p>
       <ul class="meta-list"><li>Created 2026-10-20</li><li>Updated 2026-10-20</li><li>Canonical source: Markdown</li></ul>
     </div>
   </header><figure class="hero-image"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/TokiNoKane_Kawagoe_2013Feb.JPG?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="Toki no Kane bell tower in Kawagoe" width="1600" height="1202" loading="lazy" decoding="async" referrerpolicy="no-referrer"><figcaption>Photo: Kentagon · <a href="https://commons.wikimedia.org/wiki/File:TokiNoKane_Kawagoe_2013Feb.JPG" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></figcaption></figure>
@@ -137,7 +157,7 @@
     <main id="content" tabindex="-1">
       <details class="mobile-toc"><summary>On this page</summary><ol><li class="toc-level-2"><a href="#transport-suica-no-additional-sightseeing-rail-pass">Transport: Suica, no additional sightseeing rail pass</a></li><li class="toc-level-2"><a href="#five-classic-saved-stops-with-significance">Five classic saved stops, with significance</a></li><li class="toc-level-2"><a href="#relaxed-time-budget">Relaxed time budget</a></li><li class="toc-level-2"><a href="#kawagoe-food-choose-on-the-day">Kawagoe food: choose on the day</a></li></ol></details>
       <article class="prose">
-<p><strong>Wargo Couple Kimono Plan:</strong> 2 people, 10:00; <strong>¥9,460</strong>; <strong>return by 16:30</strong>. Dressing starts after reception and takes <strong>60–90 minutes</strong>. <strong>Use a restroom before check-in</strong>; Wargo says it has no visitor toilet. Optional extras are <strong>not itemized</strong>, so don't assume which add-ons are included. No professional photography is planned. <a href="https://kyotokimonorental.com/en/shop/36/" target="_blank" rel="noopener noreferrer">Wargo Kawagoe Store</a> is about a 6-minute walk from Hon-Kawagoe and 13 minutes from Kawagoe Station. Cancel up to 2 days before for free; cancellation the previous day or day of visit is charged 100%.</p>
+<p><strong>Kimono rental plan:</strong> Wargo <strong>Couple Kimono Plan, 2 people, 10:00</strong>, <strong>¥9,460</strong>, with <strong>return by 16:30</strong>. The 10:00 appointment starts <em>reception</em>; dressing takes <strong>60–90 minutes</strong>. No professional photography session is planned. <strong>Use a restroom before check-in</strong>, since Wargo says it has no visitor toilet. Optional extras are <strong>not itemized</strong> in advance; confirm them at check-in. <a href="https://kyotokimonorental.com/en/shop/36/" target="_blank" rel="noopener noreferrer">Wargo Kawagoe Store</a>: close to Hon-Kawagoe (~6 min walk) and further from Kawagoe Station (~13 min). Cancellation is free up to 2 days before; previous day/day of visit is charged 100%.</p>
 <h2 id="transport-suica-no-additional-sightseeing-rail-pass">Transport: Suica, no additional sightseeing rail pass</h2>
 <p><strong>Leave remm Roppongi around 08:15</strong> and check the real <strong>13 Nov morning train</strong> on Google Maps. <strong>Suica works for ordinary Tokyo rail and compatible buses</strong>; flexibility wins over a Tobu-only pass for a day spent mostly on foot.</p>
 <ul>
@@ -145,9 +165,9 @@
 <li><strong>Via Tobu/Ikebukuro:</strong> transfer to Ikebukuro then Tobu Tojo Line to <strong>Kawagoe Station</strong>; longer walk to the rental shop. Choose whichever Google Maps transit connection is better that morning.</li>
 <li><strong>Local bus:</strong> useful mainly <em>after Hikawa Shrine</em> if tired in kimono sandals; find a stop/service toward <strong>本川越駅 / Hon-Kawagoe</strong> and check the weekday schedule. For IC-accepted buses, tap at the displayed boarding/exit readers (some buses use two taps). <strong>Tobu Koedo Meisho Meguri / 小江戸名所めぐりバス</strong> is associated with <strong>Kawagoe Station East Exit stand 3</strong>; the separate <strong>Eagle Koedo Loop / 小江戸巡回バス</strong> with <strong>West Exit stand 2</strong>. Operator/pass coverage differs; do not assume all buses use a Tobu pass. <a href="https://www.tobu-bus.com/pc/area/koedo_routetour.html" target="_blank" rel="noopener noreferrer">Tobu bus guide</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE%20%E3%83%90%E3%82%B9%E5%81%9C" target="_blank" rel="noopener noreferrer" class="map-link">Hikawa bus stops</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9C%AC%E5%B7%9D%E8%B6%8A%E9%A7%85" target="_blank" rel="noopener noreferrer" class="map-link">Hon-Kawagoe</a>. Check the actual bus line/IC signs on site.</li>
 </ul>
-<h2 id="five-classic-saved-stops-with-significance">Five classic saved stops, with significance</h2><aside class="section-enrichment" aria-label="Additional exploration resources"><p class="explore-links"><strong>Explore further (publisher-added):</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Kawagoe%20Kurazukuri" target="_blank" rel="noopener noreferrer">Search on Google Maps</a></p></aside>
+<h2 id="five-classic-saved-stops-with-significance">Five classic saved stops, with significance</h2>
 <p>The <strong>old town is meant to be walked</strong>—browsing façades, food shops and taking kimono photographs. Do not rush through as five unrelated photo checkboxes. Walk the compact Taisho Roman → Kurazukuri → Bell Tower → Candy Alley cluster; <strong>Hikawa Shrine is farther</strong>. Expect several kilometres across a full day with detours; a bus return can reduce fatigue.</p>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table class="mobile-card-table">
 <thead>
 <tr>
 <th scope="col">Anchor</th>
@@ -157,35 +177,35 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E5%A4%A7%E6%AD%A3%E6%B5%AA%E6%BC%AB%E5%A4%A2%E9%80%9A%E3%82%8A" target="_blank" rel="noopener noreferrer" class="map-link">1. Taisho Roman Yume-dori / 大正浪漫夢通り</a></td>
-<td>Nostalgic early-20th-century architecture, small cafés and stores</td>
-<td>Optional first strolling/photo stop, ~15–30 min</td>
+<td data-label="Anchor"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E5%A4%A7%E6%AD%A3%E6%B5%AA%E6%BC%AB%E5%A4%A2%E9%80%9A%E3%82%8A" target="_blank" rel="noopener noreferrer" class="map-link">1. Taisho Roman Yume-dori / 大正浪漫夢通り</a></td>
+<td data-label="Why it is worth seeing">Nostalgic early-20th-century architecture, small cafés and stores</td>
+<td data-label="Use it">Optional first strolling/photo stop, ~15–30 min</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E8%94%B5%E9%80%A0%E3%82%8A%E3%81%AE%E7%94%BA%E4%B8%A6%E3%81%BF" target="_blank" rel="noopener noreferrer" class="map-link">2. Kurazukuri / Ichibangai / 蔵造りの町並み</a></td>
-<td>Kawagoe's signature dark merchant warehouses and traditional shopfronts; main kimono photo setting</td>
-<td>Core destination; wander freely</td>
+<td data-label="Anchor"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E8%94%B5%E9%80%A0%E3%82%8A%E3%81%AE%E7%94%BA%E4%B8%A6%E3%81%BF" target="_blank" rel="noopener noreferrer" class="map-link">2. Kurazukuri / Ichibangai / 蔵造りの町並み</a></td>
+<td data-label="Why it is worth seeing">Kawagoe's signature dark merchant warehouses and traditional shopfronts; main kimono photo setting</td>
+<td data-label="Use it">Core destination; wander freely</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E6%99%82%E3%81%AE%E9%90%98" target="_blank" rel="noopener noreferrer" class="map-link">3. Toki no Kane / 時の鐘</a></td>
-<td>Signature wooden bell tower and recognizable Kawagoe photo backdrop</td>
-<td>Core quick stop, bell typically rings at noon and 15:00</td>
+<td data-label="Anchor"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E6%99%82%E3%81%AE%E9%90%98" target="_blank" rel="noopener noreferrer" class="map-link">3. Toki no Kane / 時の鐘</a></td>
+<td data-label="Why it is worth seeing">Signature wooden bell tower and recognizable Kawagoe photo backdrop</td>
+<td data-label="Use it">Core quick stop, bell typically rings at noon and 15:00</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E8%8F%93%E5%AD%90%E5%B1%8B%E6%A8%AA%E4%B8%81" target="_blank" rel="noopener noreferrer" class="map-link">4. Kashiya Yokocho / 菓子屋横丁</a></td>
-<td>Compact traditional sweets alley with nostalgic confectionery</td>
-<td>Core snacks stop, ~20–40 min</td>
+<td data-label="Anchor"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E8%8F%93%E5%AD%90%E5%B1%8B%E6%A8%AA%E4%B8%81" target="_blank" rel="noopener noreferrer" class="map-link">4. Kashiya Yokocho / 菓子屋横丁</a></td>
+<td data-label="Why it is worth seeing">Compact traditional sweets alley with nostalgic confectionery</td>
+<td data-label="Use it">Core snacks stop, ~20–40 min</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE" target="_blank" rel="noopener noreferrer" class="map-link">5. Hikawa Shrine / 川越氷川神社</a></td>
-<td>Shrine associated with matchmaking and lasting relationships, especially meaningful for a couple</td>
-<td>Core shrine, bus back toward Wargo if needed</td>
+<td data-label="Anchor"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%E6%B0%B7%E5%B7%9D%E7%A5%9E%E7%A4%BE" target="_blank" rel="noopener noreferrer" class="map-link">5. Hikawa Shrine / 川越氷川神社</a></td>
+<td data-label="Why it is worth seeing">Shrine associated with matchmaking and lasting relationships, especially meaningful for a couple</td>
+<td data-label="Use it">Core shrine, bus back toward Wargo if needed</td>
 </tr>
 </tbody>
 </table>
 </div><p><strong>Alternatives, not additional obligations:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E7%86%8A%E9%87%8E%E7%A5%9E%E7%A4%BE" target="_blank" rel="noopener noreferrer" class="map-link">Kawagoe Kumano Shrine</a> (fortunes and luck), <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E5%96%9C%E5%A4%9A%E9%99%A2" target="_blank" rel="noopener noreferrer" class="map-link">Kita-in Temple</a> (Buddhist/Edo history and stone statues), <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%E5%9F%8E%20%E6%9C%AC%E4%B8%B8%E5%BE%A1%E6%AE%BF" target="_blank" rel="noopener noreferrer" class="map-link">Kawagoe Castle Honmaru Palace</a> (samurai-era architecture). Shingashi River is better known for spring blossoms; <strong>Hikawa wind-chimes are a summer event</strong>, not November. <a href="https://www.japan.travel/en/itineraries/kawagoe-an-edo-period-town-frozen-in-time/" target="_blank" rel="noopener noreferrer">JNTO old town itinerary</a>.</p>
-<h2 id="relaxed-time-budget">Relaxed time budget</h2><aside class="section-enrichment" aria-label="Additional exploration resources"><p class="explore-links"><strong>Explore further (publisher-added):</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Kawagoe%20Hikawa%20Shrine" target="_blank" rel="noopener noreferrer">Search on Google Maps</a></p></aside>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
+<h2 id="relaxed-time-budget">Relaxed time budget</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table class="mobile-card-table">
 <thead>
 <tr>
 <th scope="col">Local time</th>
@@ -194,37 +214,37 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>08:15</strong></td>
-<td>Leave Roppongi with train/transfer buffer</td>
+<td data-label="Local time"><strong>08:15</strong></td>
+<td data-label="Plan">Leave Roppongi with train/transfer buffer</td>
 </tr>
 <tr>
-<td><strong>09:40–09:50 target</strong></td>
-<td>Get near Wargo and find restroom</td>
+<td data-label="Local time"><strong>09:40–09:50 target</strong></td>
+<td data-label="Plan">Get near Wargo and find restroom</td>
 </tr>
 <tr>
-<td><strong>10:00–11:00/11:30</strong></td>
-<td><strong>Booked</strong> rental and dressing</td>
+<td data-label="Local time"><strong>10:00–11:00/11:30</strong></td>
+<td data-label="Plan">Kimono rental and dressing</td>
 </tr>
 <tr>
-<td><strong>11:30–13:30</strong></td>
-<td>Old-town approach, Kurazukuri, bell tower, lunch/photos</td>
+<td data-label="Local time"><strong>11:30–13:30</strong></td>
+<td data-label="Plan">Old-town approach, Kurazukuri, bell tower, lunch/photos</td>
 </tr>
 <tr>
-<td><strong>13:30–15:00</strong></td>
-<td>Candy Alley and Hikawa Shrine (adjust freely)</td>
+<td data-label="Local time"><strong>13:30–15:00</strong></td>
+<td data-label="Plan">Candy Alley and Hikawa Shrine (adjust freely)</td>
 </tr>
 <tr>
-<td><strong>By 16:30</strong></td>
-<td><strong>Return kimono</strong> at Wargo; use bus if needed</td>
+<td data-label="Local time"><strong>By 16:30</strong></td>
+<td data-label="Plan"><strong>Return kimono</strong> at Wargo; use bus if needed</td>
 </tr>
 <tr>
-<td><strong>After</strong></td>
-<td>Return to Tokyo, flexible dinner or evening lights</td>
+<td data-label="Local time"><strong>After</strong></td>
+<td data-label="Plan">Return to Tokyo, flexible dinner or evening lights</td>
 </tr>
 </tbody>
 </table>
 </div><h2 id="kawagoe-food-choose-on-the-day">Kawagoe food: choose on the day</h2>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table class="mobile-card-table">
 <thead>
 <tr>
 <th scope="col">Search on Google Maps</th>
@@ -233,38 +253,38 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E3%81%86%E3%81%AA%E3%81%8E" target="_blank" rel="noopener noreferrer" class="map-link">川越 うなぎ / unagi</a></td>
-<td><strong>Unajū</strong> (grilled eel over rice), a traditional Kawagoe specialty and sit-down lunch</td>
+<td data-label="Search on Google Maps"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E3%81%86%E3%81%AA%E3%81%8E" target="_blank" rel="noopener noreferrer" class="map-link">川越 うなぎ / unagi</a></td>
+<td data-label="Significance"><strong>Unajū</strong> (grilled eel over rice), a traditional Kawagoe specialty and sit-down lunch</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E3%81%84%E3%82%82%E6%81%8B" target="_blank" rel="noopener noreferrer" class="map-link">川越 いも恋 / Imokoi</a></td>
-<td>Warm steamed sweet-potato and red bean bun, a local specialty</td>
+<td data-label="Search on Google Maps"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E3%81%84%E3%82%82%E6%81%8B" target="_blank" rel="noopener noreferrer" class="map-link">川越 いも恋 / Imokoi</a></td>
+<td data-label="Significance">Warm steamed sweet-potato and red bean bun, a local specialty</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E8%8A%8B%E3%82%B9%E3%82%A4%E3%83%BC%E3%83%84" target="_blank" rel="noopener noreferrer" class="map-link">川越 芋スイーツ / sweet-potato desserts</a></td>
-<td>Chips, kenpi strips, cakes/soft-serve: signature sweet-potato snack culture</td>
+<td data-label="Search on Google Maps"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E8%8A%8B%E3%82%B9%E3%82%A4%E3%83%BC%E3%83%84" target="_blank" rel="noopener noreferrer" class="map-link">川越 芋スイーツ / sweet-potato desserts</a></td>
+<td data-label="Significance">Chips, kenpi strips, cakes/soft-serve: signature sweet-potato snack culture</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E7%84%BC%E3%81%8D%E5%9B%A3%E5%AD%90" target="_blank" rel="noopener noreferrer" class="map-link">川越 焼き団子 / grilled dango</a></td>
-<td>Soy-sauce grilled rice dumplings; a savoury contrast</td>
+<td data-label="Search on Google Maps"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E7%84%BC%E3%81%8D%E5%9B%A3%E5%AD%90" target="_blank" rel="noopener noreferrer" class="map-link">川越 焼き団子 / grilled dango</a></td>
+<td data-label="Significance">Soy-sauce grilled rice dumplings; a savoury contrast</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E7%94%98%E5%91%B3%E5%87%A6" target="_blank" rel="noopener noreferrer" class="map-link">川越 甘味処 / traditional sweet cafés</a></td>
-<td>Matcha, traditional desserts, relaxed indoor break</td>
+<td data-label="Search on Google Maps"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E7%94%98%E5%91%B3%E5%87%A6" target="_blank" rel="noopener noreferrer" class="map-link">川越 甘味処 / traditional sweet cafés</a></td>
+<td data-label="Significance">Matcha, traditional desserts, relaxed indoor break</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E5%8F%A4%E6%B0%91%E5%AE%B6%E3%82%AB%E3%83%95%E3%82%A7" target="_blank" rel="noopener noreferrer" class="map-link">川越 古民家カフェ / old-house cafés</a></td>
-<td>Atmospheric lunch or tea in older buildings</td>
+<td data-label="Search on Google Maps"><a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E5%8F%A4%E6%B0%91%E5%AE%B6%E3%82%AB%E3%83%95%E3%82%A7" target="_blank" rel="noopener noreferrer" class="map-link">川越 古民家カフェ / old-house cafés</a></td>
+<td data-label="Significance">Atmospheric lunch or tea in older buildings</td>
 </tr>
 </tbody>
 </table>
 </div><p><strong>No food reservation needed</strong>: an unagi restaurant if queue allows, otherwise street snacks and a simple lunch. Avoid walking while eating in crowded historic streets; find shop-designated areas.</p>
-<p><strong>Other searches:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E5%92%8C%E9%9B%91%E8%B2%A8" target="_blank" rel="noopener noreferrer" class="map-link">川越 和雑貨 / Japanese-style gifts</a>, <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E9%A3%9F%E3%81%B9%E6%AD%A9%E3%81%8D" target="_blank" rel="noopener noreferrer" class="map-link">川越 食べ歩き / snacks</a>, <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E7%A5%9E%E7%A4%BE" target="_blank" rel="noopener noreferrer" class="map-link">川越 神社 / shrines</a>. General Japanese/English keywords live in the Tokyo/day-trip guide.</p>
-<p><strong>The standard route is deliberately approved</strong>, and the five named stops are saved in Google Maps.</p>
+<p><strong>Other searches:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E5%92%8C%E9%9B%91%E8%B2%A8" target="_blank" rel="noopener noreferrer" class="map-link">川越 和雑貨 / Japanese-style gifts</a>, <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E9%A3%9F%E3%81%B9%E6%AD%A9%E3%81%8D" target="_blank" rel="noopener noreferrer" class="map-link">川越 食べ歩き / snacks</a>, <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B7%9D%E8%B6%8A%20%E7%A5%9E%E7%A4%BE" target="_blank" rel="noopener noreferrer" class="map-link">川越 神社 / shrines</a>. General Japanese/English keywords live in the <a href="2026-10-20--japan-tokyo-discovery-and-seasonal-guide.html#google-maps-discovery-toolkit">Tokyo/day-trip guide</a>.</p>
+<p><strong>The five named stops form the standard route for this day.</strong></p>
 
         <footer class="publication-note">
           <p>This is an automatically prepared public-safe adaptation of a private Markdown guide.</p>
-          <p>Source hash 2131aff908c0 · Publisher 628855336918 · Model openrouter/deepseek/deepseek-v4.1-flash-1017#max</p>
+          <p>Source hash 2131aff908c0 · Publisher c27048e84b55 · Model openrouter/deepseek/deepseek-v4.1-flash-1017#max</p>
         </footer>
       </article>
     </main>
@@ -272,10 +292,10 @@
   <script type="application/json" id="publication-metadata">{
   "sourcePath": "knowledge-base/managed/2026-10-20--japan-kawagoe-day-guide.md",
   "sourceHash": "2131aff908c03865435b4ab9faed45b32da24e606f0cbaf054041178158d45b9",
-  "sourceRevision": "6bd644aff40f444ad0ec05916524136d55282e03",
-  "publisherHash": "628855336918e632a42b3fefc636d5a775117a3c48493ca27eb6e615e5446457",
+  "sourceRevision": "201332560ea2367cc3c0dc0e7d17f8c5189d859b",
+  "publisherHash": "c27048e84b557ea2be6680fb439d11e20d7ba4ff254989197d8bf2ce3376e6b9",
   "model": "openrouter/deepseek/deepseek-v4.1-flash-1017#max",
-  "generatedAt": "2026-10-25T16:49:25.898Z",
+  "generatedAt": "2026-10-27T03:09:12.870Z",
   "usage": {
     "input": null,
     "output": null,
@@ -288,16 +308,101 @@
     "version": 1,
     "reviewed": true,
     "title": null,
-    "description": "Kawagoe kimono day guide: Wargo rental, Suica route and buses, five old-town stops, local food and Google Maps keywords.",
+    "description": "Kawagoe day guide: Suica and bus routes, five walkable old-town stops, kimono rental, food specialties and Google Maps keywords.",
     "edits": [
       {
         "line": 4,
-        "text": "**Wargo Couple Kimono Plan:** 2 people, 10:00; **¥9,460**; **return by 16:30**. Dressing starts after reception and takes **60–90 minutes**. **Use a restroom before check-in**; Wargo says it has no visitor toilet. Optional extras are **not itemized**, so don't assume which add-ons are included. No professional photography is planned. [Wargo Kawagoe Store](https://kyotokimonorental.com/en/shop/36/) is about a 6-minute walk from Hon-Kawagoe and 13 minutes from Kawagoe Station. Cancel up to 2 days before for free; cancellation the previous day or day of visit is charged 100%."
+        "text": "**Kimono rental plan:** Wargo **Couple Kimono Plan, 2 people, 10:00**, **¥9,460**, with **return by 16:30**. The 10:00 appointment starts *reception*; dressing takes **60–90 minutes**. No professional photography session is planned. **Use a restroom before check-in**, since Wargo says it has no visitor toilet. Optional extras are **not itemized** in advance; confirm them at check-in. [Wargo Kawagoe Store](https://kyotokimonorental.com/en/shop/36/): close to Hon-Kawagoe (~6 min walk) and further from Kawagoe Station (~13 min). Cancellation is free up to 2 days before; previous day/day of visit is charged 100%."
+      },
+      {
+        "line": 34,
+        "text": "| **10:00–11:00/11:30** | Kimono rental and dressing |"
       },
       {
         "line": 55,
-        "text": "**The standard route is deliberately approved**, and the five named stops are saved in Google Maps."
+        "text": "**The five named stops form the standard route for this day.**"
       }
+    ]
+  },
+  "publicTargets": {
+    "2026-10-16--japan-autumn-trip-2026-bookings-and-planning.md": [
+      "content",
+      "open-the-right-guide",
+      "working-dates-only-supplier-bookings-are-fixed",
+      "verified-accommodation-9-of-9-nights",
+      "confirmed-activity-bookings-with-proof",
+      "flight-verification-latest-usable-itinerary",
+      "only-the-decisions-still-worth-making",
+      "evidence-accuracy-and-updates",
+      "publication-metadata"
+    ],
+    "2026-10-20--japan-hakone-field-guide.md": [
+      "content",
+      "hakone-booked-transport-sights-and-day-outline",
+      "confirmed-tickets-and-station-by-station-arrival",
+      "three-day-activity-outline-intentionally-flexible",
+      "monday-16-nov-settled-route-kojiri-then-onshi-and-dinner-at-the-ryokan",
+      "key-places-to-save-on-google-maps",
+      "hakone-yuryo-17-nov-confirmed",
+      "gora-park-craft-house-bracelets-and-keyrings-optional-unbooked",
+      "ryokan-mealbath-details-protect-the-included-value",
+      "what-is-still-open",
+      "other-researched-scenic-anchors",
+      "additional-hakone-map-anchors-original-18-oct-research",
+      "flexible-google-maps-searches",
+      "publication-metadata"
+    ],
+    "2026-10-20--japan-kawagoe-day-guide.md": [
+      "content",
+      "transport-suica-no-additional-sightseeing-rail-pass",
+      "five-classic-saved-stops-with-significance",
+      "relaxed-time-budget",
+      "kawagoe-food-choose-on-the-day",
+      "publication-metadata"
+    ],
+    "2026-10-20--japan-tokyo-discovery-and-seasonal-guide.md": [
+      "content",
+      "two-selected-seasonal-evenings-part-of-the-itinerary",
+      "saturday-14-nov-koishikawa-korakuen-night-garden-18001930",
+      "thursday-19-nov-yebisu-garden-place-christmas-17302000",
+      "full-day-excursions",
+      "mt-takao-9510",
+      "kamakura-enoshima-9010",
+      "tokyo-neighbourhoods-select-dont-complete-them-all",
+      "ebisu-9410",
+      "shinjuku-9310",
+      "shibuya-with-optional-harajuku-omotesando-9210",
+      "ueno-okachimachi-8910",
+      "roppongi-9010",
+      "asakusa-kappabashi-8810",
+      "marunouchi-yurakucho-hibiya-8710",
+      "seasonal-opportunities-and-reality-check-specific-to-1221-nov-2026",
+      "google-maps-discovery-toolkit",
+      "publication-metadata"
+    ],
+    "2026-10-24--kamakura-enoshima-day-guide.md": [
+      "content",
+      "one-line-route-and-how-to-get-there",
+      "recommended-anchors-why-order-and-flexibility",
+      "flexible-workable-sample-timing-not-transport-reservations",
+      "food-and-low-effort-swaps",
+      "publication-metadata"
+    ],
+    "2026-10-24--tokyo-day-by-day-flexible-field-guide.md": [
+      "content",
+      "thursday-12-nov-arrive-narita-easy-roppongi-afternoonevening",
+      "saturday-14-nov-daytime-flexible-koishikawa-garden-evening-selected",
+      "tuesday-17-nov-back-from-hakone-simple-hotel-arrival",
+      "thursday-19-nov-wife-led-shibuya-crossing-shibuya-sky-ebisu-christmas",
+      "friday-20-nov-last-full-day-deliberately-relaxed-by-default",
+      "default-walk-yanaka-nezu-old-tokyo-without-an-exhausting-excursion",
+      "alternative-walk-kagurazaka-very-flexible-especially-after-lunch",
+      "if-you-decide-to-do-mt-takao-after-all-optional-route-and-effort",
+      "other-easy-backup-from-asakusabashi",
+      "nightlife-menu-meaningful-places-not-assigned-obligations",
+      "saturday-21-nov-check-out-and-fly-from-narita-t1",
+      "minimal-pre-trip-reminders-not-a-new-planning-project",
+      "publication-metadata"
     ]
   },
   "enhancement": {
@@ -314,24 +419,7 @@
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:TokiNoKane_Kawagoe_2013Feb.JPG"
     },
-    "sections": [
-      {
-        "anchor": "five-classic-saved-stops-with-significance",
-        "commonsSearch": "Kawagoe Kurazukuri",
-        "wikiSearch": null,
-        "alt": "Kurazukuri merchant warehouses in Kawagoe",
-        "image": null,
-        "wikiLink": null
-      },
-      {
-        "anchor": "relaxed-time-budget",
-        "commonsSearch": "Kawagoe Hikawa Shrine",
-        "wikiSearch": null,
-        "alt": "Hikawa Shrine in Kawagoe",
-        "image": null,
-        "wikiLink": null
-      }
-    ]
+    "sections": []
   }
 }</script>
 </body>

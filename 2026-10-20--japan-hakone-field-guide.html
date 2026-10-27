@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Hakone 2026 field guide covering Romancecar and Freepass, a Gora ryokan, onsen, scenic loop, museums and crafts.">
+  <meta name="description" content="Romancecar and Freepass, Gora ryokan, onsen visit, scenic loop, arrival museum, crafts and baggage notes.">
   <meta name="color-scheme" content="light dark">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src https://upload.wikimedia.org data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
   <title>Hakone 2026 — 15–17 November Field Guide</title>
@@ -69,6 +69,26 @@
     .table-wrap { max-width: 100%; margin: 1.5rem 0; overflow-x: auto; border: 1px solid var(--line); border-radius: .75rem; }
     table { width: 100%; border-collapse: collapse; font-size: .92rem; line-height: 1.48; }
     table:has(th:nth-child(4)) { min-width: 32rem; }
+    /* Practical travel tables remain readable labelled cards at any width.
+       Wider screens get two cards per row; compact generic tables are unchanged. */
+    .table-wrap:has(> .mobile-card-table) { border: 0; overflow: visible; }
+      .mobile-card-table, .mobile-card-table tbody, .mobile-card-table tbody tr,
+      .mobile-card-table tbody td, .mobile-card-table tbody th { display: block; width: 100%; min-width: 0; }
+      .mobile-card-table { min-width: 0 !important; }
+      .mobile-card-table thead { position: absolute; width: 1px; height: 1px; padding: 0;
+        overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+      .mobile-card-table tbody tr { margin: 0 0 .85rem; padding: .75rem 1rem;
+        border: 1px solid var(--line); border-radius: .7rem; background: var(--surface); }
+      .mobile-card-table tbody td, .mobile-card-table tbody th { padding: .3rem 0;
+        border: 0; background: transparent; overflow-wrap: anywhere; word-break: normal; }
+      .mobile-card-table tbody [data-label]::before { content: attr(data-label); display: block;
+        margin-bottom: .12rem; color: var(--muted); font-size: .77rem; font-weight: 750; }
+      .mobile-card-table tbody td:first-child, .mobile-card-table tbody th:first-child
+        { color: var(--ink); font-weight: 750; font-size: 1.03rem; }
+    @media (min-width: 66rem) {
+      .mobile-card-table tbody { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+      .mobile-card-table tbody tr { margin: 0; }
+    }
     caption { padding: .7rem .8rem; text-align: left; font-weight: 750; }
     th, td { padding: .72rem .8rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
     th, td { overflow-wrap: normal; word-break: normal; }
@@ -128,20 +148,20 @@
     <div class="header-inner">
       <p class="eyebrow">Published knowledge-base view</p>
       <h1>Hakone — 15–17 November 2026</h1>
-      <p class="description">Hakone 2026 field guide covering Romancecar and Freepass, a Gora ryokan, onsen, scenic loop, museums and crafts.</p>
+      <p class="description">Romancecar and Freepass, Gora ryokan, onsen visit, scenic loop, arrival museum, crafts and baggage notes.</p>
       <ul class="meta-list"><li>Created 2026-10-20</li><li>Updated 2026-10-24</li><li>Canonical source: Markdown</li></ul>
     </div>
-  </header><figure class="hero-image"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/LakeAshi_and_MtFuji_Hakone.JPG?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="Lake Ashi in Hakone, Japan" width="1600" height="1200" loading="lazy" decoding="async" referrerpolicy="no-referrer"><figcaption>Photo: Kentagon · <a href="https://commons.wikimedia.org/wiki/File:LakeAshi_and_MtFuji_Hakone.JPG" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></figcaption></figure>
+  </header><figure class="hero-image"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/LakeAshi_and_MtFuji_Hakone.JPG?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="Lake Ashi and mountains in Hakone, Japan" width="1600" height="1200" loading="lazy" decoding="async" referrerpolicy="no-referrer"><figcaption>Photo: Kentagon · <a href="https://commons.wikimedia.org/wiki/File:LakeAshi_and_MtFuji_Hakone.JPG" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></figcaption></figure>
   <div class="layout">
     <nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li class="toc-level-2"><a href="#hakone-booked-transport-sights-and-day-outline">Hakone: booked transport, sights and day outline</a></li><li class="toc-level-3"><a href="#confirmed-tickets-and-station-by-station-arrival">Confirmed tickets and station-by-station arrival</a></li><li class="toc-level-3"><a href="#three-day-activity-outline-intentionally-flexible">Three-day activity outline — intentionally flexible</a></li><li class="toc-level-3"><a href="#monday-16-nov-settled-route-kojiri-then-onshi-and-dinner-at-the-ryokan">Monday 16 Nov — settled route: Kojiri then Onshi, and dinner at the ryokan</a></li><li class="toc-level-3"><a href="#key-places-to-save-on-google-maps">Key places to save on Google Maps</a></li><li class="toc-level-3"><a href="#hakone-yuryo-17-nov-confirmed">Hakone Yuryo — 17 Nov, confirmed</a></li><li class="toc-level-3"><a href="#gora-park-craft-house-bracelets-and-keyrings-optional-unbooked">Gora Park Craft House — bracelets and keyrings (optional, unbooked)</a></li><li class="toc-level-3"><a href="#ryokan-mealbath-details-protect-the-included-value">Ryokan meal/bath details — protect the included value</a></li><li class="toc-level-3"><a href="#what-is-still-open">What is still open</a></li><li class="toc-level-2"><a href="#other-researched-scenic-anchors">Other researched scenic anchors</a></li><li class="toc-level-3"><a href="#additional-hakone-map-anchors-original-18-oct-research">Additional Hakone map anchors — original 18 Oct research</a></li><li class="toc-level-2"><a href="#flexible-google-maps-searches">Flexible Google Maps searches</a></li></ol></nav>
     <main id="content" tabindex="-1">
       <details class="mobile-toc"><summary>On this page</summary><ol><li class="toc-level-2"><a href="#hakone-booked-transport-sights-and-day-outline">Hakone: booked transport, sights and day outline</a></li><li class="toc-level-3"><a href="#confirmed-tickets-and-station-by-station-arrival">Confirmed tickets and station-by-station arrival</a></li><li class="toc-level-3"><a href="#three-day-activity-outline-intentionally-flexible">Three-day activity outline — intentionally flexible</a></li><li class="toc-level-3"><a href="#monday-16-nov-settled-route-kojiri-then-onshi-and-dinner-at-the-ryokan">Monday 16 Nov — settled route: Kojiri then Onshi, and dinner at the ryokan</a></li><li class="toc-level-3"><a href="#key-places-to-save-on-google-maps">Key places to save on Google Maps</a></li><li class="toc-level-3"><a href="#hakone-yuryo-17-nov-confirmed">Hakone Yuryo — 17 Nov, confirmed</a></li><li class="toc-level-3"><a href="#gora-park-craft-house-bracelets-and-keyrings-optional-unbooked">Gora Park Craft House — bracelets and keyrings (optional, unbooked)</a></li><li class="toc-level-3"><a href="#ryokan-mealbath-details-protect-the-included-value">Ryokan meal/bath details — protect the included value</a></li><li class="toc-level-3"><a href="#what-is-still-open">What is still open</a></li><li class="toc-level-2"><a href="#other-researched-scenic-anchors">Other researched scenic anchors</a></li><li class="toc-level-3"><a href="#additional-hakone-map-anchors-original-18-oct-research">Additional Hakone map anchors — original 18 Oct research</a></li><li class="toc-level-2"><a href="#flexible-google-maps-searches">Flexible Google Maps searches</a></li></ol></details>
       <article class="prose">
-<p><strong>Two nights at Tokinoyu Setsugetsuka, Gora</strong>, breakfast + dinner both nights, Shinjuku-origin 3-day Freepass and <strong>11:00 Romancecar on Sun 15 Nov</strong> paid; <strong>Tue 17 Nov 13:00–15:00 Yuryo Kikyo bath confirmed</strong>. <strong>16 Nov circuit is selected: Kojiri Lakeside Park followed by Onshi-Hakone Park, returning for the included hotel dinner</strong>. Open-Air Museum and Craft House are not booked.</p>
+<p><strong>Read alongside the separate trip overview for flights, hotel and planning context.</strong> Two nights at <strong>Tokinoyu Setsugetsuka, Gora</strong>, breakfast + dinner both nights, Shinjuku-origin 3-day Freepass and <strong>11:00 Romancecar on Sun 15 Nov</strong> paid; <strong>Tue 17 Nov 13:00–15:00 Yuryo private bath booked</strong>. Museum, Craft House and optional stops not booked.</p>
 <h2 id="hakone-booked-transport-sights-and-day-outline">Hakone: booked transport, sights and day outline</h2>
 <p><strong>Stay:</strong> <strong>15–17 Nov (Sun–Tue), Tokinoyu Setsugetsuka, Gora</strong>, two adults, breakfast + dinner included for <strong>both nights</strong>. <strong>Carry luggage personally throughout the trip; no baggage forwarding.</strong> The plan favors a relaxed, scenic experience, not completing every attraction. <strong>Selected</strong> means traveller wants to visit; <strong>tentative</strong> means not booked or finalised.</p>
 <h3 id="confirmed-tickets-and-station-by-station-arrival">Confirmed tickets and station-by-station arrival</h3>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table class="mobile-card-table">
 <thead>
 <tr>
 <th scope="col">Status</th>
@@ -151,27 +171,22 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Paid, confirmed</strong> — 3-day Hakone Freepass, Shinjuku origin</td>
-<td><strong>15–17 Nov</strong>, two adults, digital e-tickets (one per smartphone), <strong>S$119</strong></td>
-<td>Booking reference omitted</td>
+<td data-label="Status"><strong>Paid, confirmed</strong> — 3-day Hakone Freepass, Shinjuku origin</td>
+<td data-label="Date / details"><strong>15–17 Nov</strong>, two adults, digital e-tickets (one per smartphone), <strong>S$119</strong></td>
+<td data-label="Evidence">Booking details omitted</td>
 </tr>
 <tr>
-<td><strong>Paid, confirmed</strong> — outward Romancecar supplement</td>
-<td><strong>Sun 15 Nov, Hakone No. 13</strong>, <strong>11:00 Shinjuku → 12:25 Hakone-Yumoto</strong>, two seats, <strong>S$20.08</strong>; Freepass supplies the basic rail fare</td>
-<td>Booking reference omitted</td>
-</tr>
-<tr>
-<td><strong>Superseded, cancelled</strong> — wrong-date Romancecar</td>
-<td>Earlier booking cancelled; do not use</td>
-<td>Booking reference omitted</td>
+<td data-label="Status"><strong>Paid, confirmed</strong> — outward Romancecar supplement</td>
+<td data-label="Date / details"><strong>Sun 15 Nov, Hakone No. 13</strong>, <strong>11:00 Shinjuku → 12:25 Hakone-Yumoto</strong>, two seats, <strong>S$20.08</strong></td>
+<td data-label="Evidence">Booking details omitted</td>
 </tr>
 </tbody>
 </table>
 </div><p><strong>15 Nov route:</strong> remm Roppongi → Toei Oedo Line (Suica) to Shinjuku → find the Odakyu platforms → <strong>11:00 booked Romancecar → Hakone-Yumoto 12:25</strong> → mountain train <strong>uphill</strong> (about 35–40 minutes) to Chokoku-no-Mori/Open-Air Museum if practical, then Gora ryokan. Leave Roppongi around 09:45 with transfer margin. The museum is <strong>not booked</strong>; avoid missing hotel dinner. <strong>Yuryo is booked for 17 Nov</strong>, not the arrival day.</p>
 <p><strong>Freepass includes:</strong> one <strong>Shinjuku↔Odawara Odakyu round trip</strong> (basic fare); unlimited designated local Hakone Tozan trains, <strong>Gora→Sounzan cable car</strong>, <strong>Sounzan→Owakudani→Togendai ropeway</strong>, <strong>Lake Ashi sightseeing cruise</strong> and specified buses, plus attraction discounts. <strong>Romancecar express-seat surcharge is separate</strong> and is already paid <strong>outbound only</strong>; <strong>17 Nov</strong> use ordinary Odakyu trains back to Shinjuku with no Romancecar surcharge. Suica covers Roppongi→Shinjuku and Tokyo-city legs, not necessarily the mountain pass services. <a href="https://www.hakonenavi.jp/international/en/discount_passes/free_pass/" target="_blank" rel="noopener noreferrer">Official pass guide</a>.</p>
-<p><strong>Digital use:</strong> <strong>Share pass</strong> with your traveling companion in Klook; each adult activates a separate ticket <strong>15 Nov</strong>, then shows/scans the <strong>live QR</strong> on their own phone at gates, vehicles and discount counters. <strong>Internet is required; screenshots are not valid.</strong> Do not exit between Shinjuku and Odawara on the covered outbound/return Odakyu trip; the round-trip privilege ends if exiting mid-route. Keep the voucher available in the booking account.</p>
+<p><strong>Digital use:</strong> <strong>Share pass</strong> with your travel companion in Klook; each adult activates a separate ticket <strong>15 Nov</strong>, then shows/scans the <strong>live QR</strong> on their own phone at gates, vehicles and discount counters. <strong>Internet is required; screenshots are not valid.</strong> Do not exit between Shinjuku and Odawara on the covered outbound/return Odakyu trip; the round-trip privilege ends if exiting mid-route.</p>
 <h3 id="three-day-activity-outline-intentionally-flexible">Three-day activity outline — intentionally flexible</h3>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table class="mobile-card-table">
 <thead>
 <tr>
 <th scope="col">Date</th>
@@ -181,25 +196,25 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Sun 15 Nov — arrival</strong></td>
-<td><strong>Preferred, unbooked:</strong> Open-Air Museum near Chokoku-no-Mori after the 12:25 Yumoto arrival, then Gora check-in, included dinner and free baths.</td>
-<td>Allow 90–120 minutes at museum, but skip if connections or dinner seating make it impractical. Yuryo is <strong>not</strong> on this day.</td>
+<td data-label="Date"><strong>Sun 15 Nov — arrival</strong></td>
+<td data-label="Priority / likely sequence"><strong>Preferred, unbooked:</strong> Open-Air Museum near Chokoku-no-Mori after the 12:25 Yumoto arrival, then Gora check-in, included dinner and free baths.</td>
+<td data-label="Booking and timing caveats">Allow 90–120 minutes at museum, but skip if connections or dinner seating make it impractical. Yuryo is <strong>not</strong> on this day.</td>
 </tr>
 <tr>
-<td><strong>Mon 16 Nov — settled day route</strong></td>
-<td><strong>09:00 Gora departure</strong> → cable car / Sounzan / Owakudani → ropeway to Togendai → <strong>Kojiri Lakeside Park (selected)</strong> → <strong>pirate ship Togendai → Hakone-machi</strong> → <strong>Onshi-Hakone Park (selected)</strong> → H-route bus to Kowakidani, train to Gora → <strong>included ryokan dinner</strong>.</td>
-<td>Park order and hotel dinner approved <strong>24 Oct</strong>; exact stops and sailing/bus times deliberately flexible. Leave Onshi ~14:45, aim back ~16:15–17:00 to protect a possible 17:15 dinner sitting; actual restaurant seating assigned at hotel check-in.</td>
+<td data-label="Date"><strong>Mon 16 Nov — settled day route</strong></td>
+<td data-label="Priority / likely sequence"><strong>09:00 Gora departure</strong> → cable car / Sounzan / Owakudani → ropeway to Togendai → <strong>Kojiri Lakeside Park (selected)</strong> → <strong>pirate ship Togendai → Hakone-machi</strong> → <strong>Onshi-Hakone Park (selected)</strong> → H-route bus to Kowakidani, train to Gora → <strong>included ryokan dinner</strong>.</td>
+<td data-label="Booking and timing caveats">Park order and hotel dinner approved <strong>24 Oct</strong>; exact viewpoints and sailing/bus times deliberately flexible. Leave Onshi ~14:45, aim back ~16:15–17:00 to protect a possible 17:15 dinner sitting; actual restaurant seating assigned at hotel check-in.</td>
 </tr>
 <tr>
-<td><strong>Tue 17 Nov — return</strong></td>
-<td>Breakfast, <strong>check out ~09:15–09:30</strong>, short Gora Park and optional brief Craft House walk-in, collect suitcases, descend to Yumoto for storage and shuttle; <strong>Yuryo Kikyo room booked 13:00–15:00</strong>. Ordinary Odakyu train back to Tokyo afterward.</td>
-<td>Reach Yuryo <strong>before 13:00</strong>; do not let crafts delay it. Suitcase collection at Yumoto storage <strong>by 18:00</strong>.</td>
+<td data-label="Date"><strong>Tue 17 Nov — return</strong></td>
+<td data-label="Priority / likely sequence">Breakfast, <strong>check out ~09:15–09:30</strong>, short Gora Park and optional brief Craft House walk-in, collect suitcases, descend to Yumoto for storage and shuttle; <strong>Yuryo private bath booked 13:00–15:00</strong>. Ordinary Odakyu train back to Tokyo afterward.</td>
+<td data-label="Booking and timing caveats">Reach Yuryo <strong>before 13:00</strong>; do not let crafts delay it. Suitcase collection at Yumoto storage <strong>by 18:00</strong>.</td>
 </tr>
 </tbody>
 </table>
 </div><p><strong>Admission distinction — don't infer attractions are free from Klook marketing:</strong> <strong>Gora Park is free</strong> with Freepass (regular adult ¥650; for two, saves ¥1,300). <strong>Open-Air Museum admission is NOT included:</strong> ¥2,000 at counter / ¥1,900 with Freepass / ¥1,800 via <a href="https://www.hakone-oam.or.jp/en/webticket/" target="_blank" rel="noopener noreferrer">museum online ticket</a>. Traveller saw <strong>~S$13/adult at Klook</strong>, preferred for simplicity if buying; <strong>hold off until the day is decided</strong>. Official hours and ticket pricing may change. <a href="https://www.hakonenavi.jp/international/en/discount_passes/free_pass2" target="_blank" rel="noopener noreferrer">Freepass discount facilities</a>.</p>
 <h3 id="monday-16-nov-settled-route-kojiri-then-onshi-and-dinner-at-the-ryokan">Monday 16 Nov — settled route: Kojiri then Onshi, and dinner at the ryokan</h3>
-<p><strong>Committed stops, not reserved time slots.</strong> Two scenic parks on the existing Golden Course loop: Kojiri first near the north end of Lake Ashi, then Onshi at the south end after the sightseeing cruise. Both are free-access parks; the exact viewpoint is <strong>deliberately undecided</strong>, based on on-the-day privacy, visibility and autumn colours. Don't plan a torii photo queue.</p>
+<p><strong>Committed stops, not reserved time slots.</strong> Two scenic parks on the existing Golden Course loop: Kojiri first near the north end of Lake Ashi, then Onshi at the south end after the sightseeing cruise. Both are free-access parks; the exact viewpoint will be chosen on the day based on privacy, visibility and autumn colours. Don't plan a torii photo queue.</p>
 <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
 <thead>
 <tr>
@@ -222,7 +237,7 @@
 </tr>
 <tr>
 <td><strong>11:15–12:15</strong></td>
-<td><strong>Kojiri Lakeside Park / Kojiri-enchi (湖尻園地)</strong>, wooded lakeside paths. Walk out from Togendai and back (roughly 5–10 min each direction depending on park area).</td>
+<td><strong>Kojiri Lakeside Park / Kojiri-enchi (湖尻園地)</strong>, wooded lakeside paths and a scenic viewpoint option. Walk out from Togendai and back (roughly 5–10 min each direction depending on park area).</td>
 </tr>
 <tr>
 <td><strong>~12:15–13:15</strong></td>
@@ -230,7 +245,7 @@
 </tr>
 <tr>
 <td><strong>~13:30–14:45</strong></td>
-<td>Walk ~10–15 minutes from <strong>Hakone-machi Port</strong> to <strong>Onshi-Hakone Park (恩賜箱根公園)</strong>; panorama views.</td>
+<td>Walk ~10–15 minutes from <strong>Hakone-machi Port</strong> to <strong>Onshi-Hakone Park (恩賜箱根公園)</strong>; panorama views / second scenic viewpoint option.</td>
 </tr>
 <tr>
 <td><strong>~14:45–17:00</strong></td>
@@ -251,13 +266,13 @@
 <li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Hakone+Craft+House+Gora+Park" target="_blank" rel="noopener noreferrer" class="map-link">Hakone Craft House / 箱根クラフトハウス</a></strong> — <strong>appealing optional souvenir workshop inside free-entry Gora Park</strong>, favoring <strong>bracelets or keyrings</strong> over pottery. <a href="https://www.crafthouse-reserve.com/en/hakone/vintage/" target="_blank" rel="noopener noreferrer">Vintage Beads reservation</a> · <a href="https://www.crafthouse-reserve.com/en/hakone/laser/" target="_blank" rel="noopener noreferrer">Laser Engraving / personalized keyring reservation</a>. Both are <strong>paid separately and unbooked</strong>.</li>
 <li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=cu-mo+Hakone+Sounzan" target="_blank" rel="noopener noreferrer" class="map-link">cu-mo Hakone at Sounzan</a></strong> — scenic station café/footbath; optional <strong>10–20 minutes</strong> while transferring from cable car to ropeway.</li>
 <li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Owakudani+Earth+Valley" target="_blank" rel="noopener noreferrer" class="map-link">Owakudani Earth Valley / ちきゅうの谷</a></strong> — newer volcano viewing terrace/glass lookout, on the main 16 Nov ropeway route; weather and volcanic safety notices apply.</li>
-<li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B9%96%E5%B0%BB%E5%9C%92%E5%9C%B0" target="_blank" rel="noopener noreferrer" class="map-link">Kojiri Lakeside Park / 湖尻園地</a></strong> — <strong>selected for 16 Nov</strong>, wooded lakeside paths within a short walk from Togendai; first scenic candidate before boarding the pirate ship. <a href="https://hakonevc.sunnyday.jp/map/Kojiri%20enchi%20area%20walk.pdf" target="_blank" rel="noopener noreferrer">Kojiri walk map</a>.</li>
-<li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Onshi+Hakone+Park" target="_blank" rel="noopener noreferrer" class="map-link">Onshi-Hakone Park / 恩賜箱根公園</a></strong> — <strong>selected for 16 Nov after cruise to Hakone-machi</strong>; second scenic candidate with Lake Ashi and possible Fuji backdrop. Public access, crowd/privacy unknown. <strong>Exact viewpoint not yet selected</strong>.</li>
-<li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Hakone+Shrine+Heiwa+no+Torii" target="_blank" rel="noopener noreferrer" class="map-link">Hakone Shrine lakeside torii</a></strong> — famous photo setting but crowded queues make it less appealing as the primary scenic photo stop.</li>
+<li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B9%96%E5%B0%BB%E5%9C%92%E5%9C%B0" target="_blank" rel="noopener noreferrer" class="map-link">Kojiri Lakeside Park / 湖尻園地</a></strong> — <strong>selected for 16 Nov</strong>, wooded lakeside paths within a short walk from Togendai; first scenic stop before boarding the pirate ship. <a href="https://hakonevc.sunnyday.jp/map/Kojiri%20enchi%20area%20walk.pdf" target="_blank" rel="noopener noreferrer">Kojiri walk map</a>.</li>
+<li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Onshi+Hakone+Park" target="_blank" rel="noopener noreferrer" class="map-link">Onshi-Hakone Park / 恩賜箱根公園</a></strong> — <strong>selected for 16 Nov after cruise to Hakone-machi</strong>; second scenic stop with Lake Ashi and possible Fuji backdrop. Public access, crowd/privacy unknown. <strong>Exact viewpoint not yet selected</strong>.</li>
+<li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Hakone+Shrine+Heiwa+no+Torii" target="_blank" rel="noopener noreferrer" class="map-link">Hakone Shrine lakeside torii</a></strong> — famous photo setting but crowded queues make it less appealing as a primary scenic stop.</li>
 </ul>
 <h3 id="hakone-yuryo-17-nov-confirmed">Hakone Yuryo — 17 Nov, confirmed</h3>
-<p><strong>Confirmed reservation, two adults: Tue 17 November 2026, 13:00–15:00, Kikyo private outdoor bath room</strong>, 120 minutes, room capacity four. <strong>¥12,400 payable at venue</strong>. Booking reference omitted.</p>
-<p><strong>Freepass discount:</strong> Yuryo's <a href="https://www.hakoneyuryo.jp/news/" target="_blank" rel="noopener noreferrer">notices</a> and <a href="https://www.hakonenavi.jp/spot/886" target="_blank" rel="noopener noreferrer">Hakone Navi listing</a> advertise <strong>¥600 off a 120-minute private room</strong> for pass holders. <strong>Not yet applied or guaranteed to this Kikyo booking</strong>. Show a <em>live</em> Hakone Freepass at the reception desk and ask before paying; potential ¥11,800 if granted, else ¥12,400. The reservation service asks for a card hold but says payment is at the venue.</p>
+<p><strong>Reservation, two adults: Tue 17 November 2026, 13:00–15:00, private outdoor bath room</strong>, 120 minutes, room capacity four. <strong>¥12,400 payable at venue</strong>. Confirm the details with the venue if needed.</p>
+<p><strong>Freepass discount:</strong> Yuryo's <a href="https://www.hakoneyuryo.jp/news/" target="_blank" rel="noopener noreferrer">notices</a> and <a href="https://www.hakonenavi.jp/spot/886" target="_blank" rel="noopener noreferrer">Hakone Navi listing</a> advertise <strong>¥600 off a 120-minute private room</strong> for pass holders. <strong>Not yet applied or guaranteed to this booking</strong>. Show a <em>live</em> Hakone Freepass at the reception desk and ask before paying; potential ¥11,800 if granted, else ¥12,400. The booking service says payment is at the venue.</p>
 <p><strong>Morning-to-onsen logistics:</strong> Aim to check out of the Gora ryokan about <strong>09:15–09:30</strong> (formal checkout is <strong>11:00</strong>), ask it to hold suitcases while you make a <em>brief</em> Gora Park visit, then collect bags about 11:00 and take the Tozan train <strong>downhill</strong> to Yumoto (~35–40 minutes plus waiting). Hotel <em>post-checkout</em> luggage hold is <strong>not independently confirmed</strong>; ask at check-in. At Yumoto use <a href="https://www.hakonenavi.jp/international/en/travel_center_hakoneyumoto" target="_blank" rel="noopener noreferrer">Odakyu Sightseeing Service Center temporary storage</a> (size/ID/fee restrictions apply; <strong>retrieve by 18:00</strong>), then <a href="https://hakoneyuryo.jp/english/access/" target="_blank" rel="noopener noreferrer">Yuryo's free shuttle</a> (~3 minutes, roughly every 10–15 minutes). Aim to reach reception <strong>by 12:40–12:45</strong>. Return to the station after the bath, collect suitcases and take ordinary Odakyu back to Shinjuku.</p>
 <p><strong>Important TableCheck venue conditions:</strong> No swimsuits or bathing wrapped in towels. <strong>If not there within 15 minutes without notifying the venue, booking may be cancelled</strong>; being late does not extend usage. Towels/amenities included. Yukata rental for Ichi/Ni room classes (if relevant) is optional ¥100/item. Public bathhouse <strong>not included</strong> (weekday adult ¥1,000 additional). Same-day room changes cannot be accommodated without cancelling/rebooking; don't assume flexible modification. <strong>Within one hour of reservation / no-show: 100% cancellation fee</strong>. Reservations solely for photography in private baths are generally prohibited. Review your booking's exact conditions before modifying.</p>
 <p><strong>Why Tuesday:</strong> no rush for the 15 Nov ryokan dinner; it is on the natural return route. The ryokan offers <strong>three free, non-reservable private natural-spring outdoor baths</strong>, so extra Yuryo is a special two-hour experience rather than a requirement.</p>
@@ -279,14 +294,14 @@
 <h3 id="what-is-still-open">What is still open</h3>
 <ul>
 <li><strong>15 Nov:</strong> Open-Air Museum admission <strong>unbooked</strong>; official <a href="https://www.hakone-oam.or.jp/en/webticket/" target="_blank" rel="noopener noreferrer">advance tickets</a> vs Klook (~S$13/adult seen by traveller). Prioritize hotel check-in and dinner if delayed.</li>
-<li><strong>16 Nov:</strong> <strong>Day order is settled: Owakudani → Kojiri Lakeside Park → pirate ship to Hakone-machi → Onshi-Hakone Park → return to Gora for the included ryokan dinner.</strong> Only exact scenic stops and timing, weather fallback, timed boat/bus connections and assigned hotel dinner sitting (typically 17:15 or 19:45) remain flexible. Aim to leave Onshi ~14:45.</li>
+<li><strong>16 Nov:</strong> <strong>Day order is settled: Owakudani → Kojiri Lakeside Park → pirate ship to Hakone-machi → Onshi-Hakone Park → return to Gora for the included ryokan dinner.</strong> Only exact viewpoints/timing, weather fallback, timed boat/bus connections and assigned hotel dinner sitting (typically 17:15 or 19:45) remain flexible. Aim to leave Onshi ~14:45.</li>
 <li><strong>17 Nov:</strong> <strong>Yuryo 13:00 is already booked</strong>. Gora Park free with Freepass; Craft House walk-in optional and <strong>must yield to 13:00 bath</strong>. Show Freepass and request ¥600 discount before onsite payment.</li>
 <li><strong>For all days:</strong> each traveller uses their own phone with the live Klook Freepass QR (internet required, no screenshots); carry all luggage, <strong>no hotel-to-hotel forwarding</strong>.</li>
 </ul>
-<p>Source: earlier Hakone research from 18 Oct; its earlier onsen date suggestions are <strong>superseded</strong> by the accepted 20 Oct booking.</p>
+<p>Source: trip research notes. Earlier onsen date suggestions are <strong>superseded</strong> by the current booking.</p>
 <h2 id="other-researched-scenic-anchors">Other researched scenic anchors</h2>
 <h3 id="additional-hakone-map-anchors-original-18-oct-research">Additional Hakone map anchors — original 18 Oct research</h3>
-<p><strong>Why go:</strong> Scenery, gardens and seasonal colour. <strong>Time:</strong> 2-night stay; selectively explore. <strong>Status:</strong> Booked base; exact scenic stops still flexible. Rating = subjective fit for this trip, not a public review score.</p>
+<p><strong>Why go:</strong> Scenery, gardens and seasonal colour. <strong>Time:</strong> 2-night stay; selectively explore. <strong>Status:</strong> Accommodation booked; scenic stops still being chosen. Rating = subjective fit for this trip, not a public review score.</p>
 <p><strong>Save these 3 Google Maps anchors (not a required sequence):</strong></p>
 <ul>
 <li><strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Hakone%20Museum%20of%20Art%20Gora%20Kanagawa" target="_blank" rel="noopener noreferrer" class="map-link">Hakone Museum of Art — Shinsenkyo moss/maple garden</a></strong> — The most directly seasonal Gora stop: 200+ maples against a moss garden. Renovation closure is <strong>scheduled through 29 Oct 2026</strong>; partial pre-opening is <strong>planned from 30 Oct</strong> with main galleries not fully reopening until Dec. Recheck the reopened garden shortly before visiting. Check garden access close to visit.</li>
@@ -305,7 +320,7 @@
 
         <footer class="publication-note">
           <p>This is an automatically prepared public-safe adaptation of a private Markdown guide.</p>
-          <p>Source hash cdba69163fc1 · Publisher 628855336918 · Model openrouter/deepseek/deepseek-v4.1-flash-1017#max</p>
+          <p>Source hash cdba69163fc1 · Publisher c27048e84b55 · Model openrouter/deepseek/deepseek-v4.1-flash-1017#max</p>
         </footer>
       </article>
     </main>
@@ -313,10 +328,10 @@
   <script type="application/json" id="publication-metadata">{
   "sourcePath": "knowledge-base/managed/2026-10-20--japan-hakone-field-guide.md",
   "sourceHash": "cdba69163fc1575c72fde0f6a7d4c6ad408ed81480930f3f6ffe135aa0cc7de8",
-  "sourceRevision": "6bd644aff40f444ad0ec05916524136d55282e03",
-  "publisherHash": "628855336918e632a42b3fefc636d5a775117a3c48493ca27eb6e615e5446457",
+  "sourceRevision": "201332560ea2367cc3c0dc0e7d17f8c5189d859b",
+  "publisherHash": "c27048e84b557ea2be6680fb439d11e20d7ba4ff254989197d8bf2ce3376e6b9",
   "model": "openrouter/deepseek/deepseek-v4.1-flash-1017#max",
-  "generatedAt": "2026-10-25T16:48:38.512Z",
+  "generatedAt": "2026-10-27T03:06:24.414Z",
   "usage": {
     "input": null,
     "output": null,
@@ -329,43 +344,47 @@
     "version": 1,
     "reviewed": true,
     "title": null,
-    "description": "Hakone 2026 field guide covering Romancecar and Freepass, a Gora ryokan, onsen, scenic loop, museums and crafts.",
+    "description": "Romancecar and Freepass, Gora ryokan, onsen visit, scenic loop, arrival museum, crafts and baggage notes.",
     "edits": [
       {
         "line": 4,
-        "text": "**Two nights at Tokinoyu Setsugetsuka, Gora**, breakfast + dinner both nights, Shinjuku-origin 3-day Freepass and **11:00 Romancecar on Sun 15 Nov** paid; **Tue 17 Nov 13:00–15:00 Yuryo Kikyo bath confirmed**. **16 Nov circuit is selected: Kojiri Lakeside Park followed by Onshi-Hakone Park, returning for the included hotel dinner**. Open-Air Museum and Craft House are not booked."
+        "text": "**Read alongside the separate trip overview for flights, hotel and planning context.** Two nights at **Tokinoyu Setsugetsuka, Gora**, breakfast + dinner both nights, Shinjuku-origin 3-day Freepass and **11:00 Romancecar on Sun 15 Nov** paid; **Tue 17 Nov 13:00–15:00 Yuryo private bath booked**. Museum, Craft House and optional stops not booked."
       },
       {
         "line": 14,
-        "text": "| **Paid, confirmed** — 3-day Hakone Freepass, Shinjuku origin | **15–17 Nov**, two adults, digital e-tickets (one per smartphone), **S$119** | Booking reference omitted |"
+        "text": "| **Paid, confirmed** — 3-day Hakone Freepass, Shinjuku origin | **15–17 Nov**, two adults, digital e-tickets (one per smartphone), **S$119** | Booking details omitted |"
       },
       {
         "line": 15,
-        "text": "| **Paid, confirmed** — outward Romancecar supplement | **Sun 15 Nov, Hakone No. 13**, **11:00 Shinjuku → 12:25 Hakone-Yumoto**, two seats, **S$20.08**; Freepass supplies the basic rail fare | Booking reference omitted |"
+        "text": "| **Paid, confirmed** — outward Romancecar supplement | **Sun 15 Nov, Hakone No. 13**, **11:00 Shinjuku → 12:25 Hakone-Yumoto**, two seats, **S$20.08** | Booking details omitted |"
       },
       {
         "line": 16,
-        "text": "| **Superseded, cancelled** — wrong-date Romancecar | Earlier booking cancelled; do not use | Booking reference omitted |"
+        "text": ""
       },
       {
         "line": 22,
-        "text": "**Digital use:** **Share pass** with your traveling companion in Klook; each adult activates a separate ticket **15 Nov**, then shows/scans the **live QR** on their own phone at gates, vehicles and discount counters. **Internet is required; screenshots are not valid.** Do not exit between Shinjuku and Odawara on the covered outbound/return Odakyu trip; the round-trip privilege ends if exiting mid-route. Keep the voucher available in the booking account."
+        "text": "**Digital use:** **Share pass** with your travel companion in Klook; each adult activates a separate ticket **15 Nov**, then shows/scans the **live QR** on their own phone at gates, vehicles and discount counters. **Internet is required; screenshots are not valid.** Do not exit between Shinjuku and Odawara on the covered outbound/return Odakyu trip; the round-trip privilege ends if exiting mid-route."
       },
       {
         "line": 29,
-        "text": "| **Mon 16 Nov — settled day route** | **09:00 Gora departure** → cable car / Sounzan / Owakudani → ropeway to Togendai → **Kojiri Lakeside Park (selected)** → **pirate ship Togendai → Hakone-machi** → **Onshi-Hakone Park (selected)** → H-route bus to Kowakidani, train to Gora → **included ryokan dinner**. | Park order and hotel dinner approved **24 Oct**; exact stops and sailing/bus times deliberately flexible. Leave Onshi ~14:45, aim back ~16:15–17:00 to protect a possible 17:15 dinner sitting; actual restaurant seating assigned at hotel check-in. |"
+        "text": "| **Mon 16 Nov — settled day route** | **09:00 Gora departure** → cable car / Sounzan / Owakudani → ropeway to Togendai → **Kojiri Lakeside Park (selected)** → **pirate ship Togendai → Hakone-machi** → **Onshi-Hakone Park (selected)** → H-route bus to Kowakidani, train to Gora → **included ryokan dinner**. | Park order and hotel dinner approved **24 Oct**; exact viewpoints and sailing/bus times deliberately flexible. Leave Onshi ~14:45, aim back ~16:15–17:00 to protect a possible 17:15 dinner sitting; actual restaurant seating assigned at hotel check-in. |"
+      },
+      {
+        "line": 30,
+        "text": "| **Tue 17 Nov — return** | Breakfast, **check out ~09:15–09:30**, short Gora Park and optional brief Craft House walk-in, collect suitcases, descend to Yumoto for storage and shuttle; **Yuryo private bath booked 13:00–15:00**. Ordinary Odakyu train back to Tokyo afterward. | Reach Yuryo **before 13:00**; do not let crafts delay it. Suitcase collection at Yumoto storage **by 18:00**. |"
       },
       {
         "line": 36,
-        "text": "**Committed stops, not reserved time slots.** Two scenic parks on the existing Golden Course loop: Kojiri first near the north end of Lake Ashi, then Onshi at the south end after the sightseeing cruise. Both are free-access parks; the exact viewpoint is **deliberately undecided**, based on on-the-day privacy, visibility and autumn colours. Don't plan a torii photo queue."
+        "text": "**Committed stops, not reserved time slots.** Two scenic parks on the existing Golden Course loop: Kojiri first near the north end of Lake Ashi, then Onshi at the south end after the sightseeing cruise. Both are free-access parks; the exact viewpoint will be chosen on the day based on privacy, visibility and autumn colours. Don't plan a torii photo queue."
       },
       {
         "line": 43,
-        "text": "| **11:15–12:15** | **Kojiri Lakeside Park / Kojiri-enchi (湖尻園地)**, wooded lakeside paths. Walk out from Togendai and back (roughly 5–10 min each direction depending on park area). |"
+        "text": "| **11:15–12:15** | **Kojiri Lakeside Park / Kojiri-enchi (湖尻園地)**, wooded lakeside paths and a scenic viewpoint option. Walk out from Togendai and back (roughly 5–10 min each direction depending on park area). |"
       },
       {
         "line": 45,
-        "text": "| **~13:30–14:45** | Walk ~10–15 minutes from **Hakone-machi Port** to **Onshi-Hakone Park (恩賜箱根公園)**; panorama views. |"
+        "text": "| **~13:30–14:45** | Walk ~10–15 minutes from **Hakone-machi Port** to **Onshi-Hakone Park (恩賜箱根公園)**; panorama views / second scenic viewpoint option. |"
       },
       {
         "line": 57,
@@ -373,36 +392,121 @@
       },
       {
         "line": 60,
-        "text": "- **[Kojiri Lakeside Park / 湖尻園地](https://www.google.com/maps/search/?api=1\u0026query=%E6%B9%96%E5%B0%BB%E5%9C%92%E5%9C%B0)** — **selected for 16 Nov**, wooded lakeside paths within a short walk from Togendai; first scenic candidate before boarding the pirate ship. [Kojiri walk map](https://hakonevc.sunnyday.jp/map/Kojiri%20enchi%20area%20walk.pdf)."
+        "text": "- **[Kojiri Lakeside Park / 湖尻園地](https://www.google.com/maps/search/?api=1\u0026query=%E6%B9%96%E5%B0%BB%E5%9C%92%E5%9C%B0)** — **selected for 16 Nov**, wooded lakeside paths within a short walk from Togendai; first scenic stop before boarding the pirate ship. [Kojiri walk map](https://hakonevc.sunnyday.jp/map/Kojiri%20enchi%20area%20walk.pdf)."
       },
       {
         "line": 61,
-        "text": "- **[Onshi-Hakone Park / 恩賜箱根公園](https://www.google.com/maps/search/?api=1\u0026query=Onshi+Hakone+Park)** — **selected for 16 Nov after cruise to Hakone-machi**; second scenic candidate with Lake Ashi and possible Fuji backdrop. Public access, crowd/privacy unknown. **Exact viewpoint not yet selected**."
+        "text": "- **[Onshi-Hakone Park / 恩賜箱根公園](https://www.google.com/maps/search/?api=1\u0026query=Onshi+Hakone+Park)** — **selected for 16 Nov after cruise to Hakone-machi**; second scenic stop with Lake Ashi and possible Fuji backdrop. Public access, crowd/privacy unknown. **Exact viewpoint not yet selected**."
       },
       {
         "line": 62,
-        "text": "- **[Hakone Shrine lakeside torii](https://www.google.com/maps/search/?api=1\u0026query=Hakone+Shrine+Heiwa+no+Torii)** — famous photo setting but crowded queues make it less appealing as the primary scenic photo stop."
+        "text": "- **[Hakone Shrine lakeside torii](https://www.google.com/maps/search/?api=1\u0026query=Hakone+Shrine+Heiwa+no+Torii)** — famous photo setting but crowded queues make it less appealing as a primary scenic stop."
       },
       {
         "line": 66,
-        "text": "**Confirmed reservation, two adults: Tue 17 November 2026, 13:00–15:00, Kikyo private outdoor bath room**, 120 minutes, room capacity four. **¥12,400 payable at venue**. Booking reference omitted."
+        "text": "**Reservation, two adults: Tue 17 November 2026, 13:00–15:00, private outdoor bath room**, 120 minutes, room capacity four. **¥12,400 payable at venue**. Confirm the details with the venue if needed."
+      },
+      {
+        "line": 68,
+        "text": "**Freepass discount:** Yuryo's [notices](https://www.hakoneyuryo.jp/news/) and [Hakone Navi listing](https://www.hakonenavi.jp/spot/886) advertise **¥600 off a 120-minute private room** for pass holders. **Not yet applied or guaranteed to this booking**. Show a *live* Hakone Freepass at the reception desk and ask before paying; potential ¥11,800 if granted, else ¥12,400. The booking service says payment is at the venue."
       },
       {
         "line": 96,
-        "text": "- **16 Nov:** **Day order is settled: Owakudani → Kojiri Lakeside Park → pirate ship to Hakone-machi → Onshi-Hakone Park → return to Gora for the included ryokan dinner.** Only exact scenic stops and timing, weather fallback, timed boat/bus connections and assigned hotel dinner sitting (typically 17:15 or 19:45) remain flexible. Aim to leave Onshi ~14:45."
+        "text": "- **16 Nov:** **Day order is settled: Owakudani → Kojiri Lakeside Park → pirate ship to Hakone-machi → Onshi-Hakone Park → return to Gora for the included ryokan dinner.** Only exact viewpoints/timing, weather fallback, timed boat/bus connections and assigned hotel dinner sitting (typically 17:15 or 19:45) remain flexible. Aim to leave Onshi ~14:45."
       },
       {
         "line": 100,
-        "text": "Source: earlier Hakone research from 18 Oct; its earlier onsen date suggestions are **superseded** by the accepted 20 Oct booking."
+        "text": "Source: trip research notes. Earlier onsen date suggestions are **superseded** by the current booking."
       },
       {
         "line": 106,
-        "text": "**Why go:** Scenery, gardens and seasonal colour. **Time:** 2-night stay; selectively explore. **Status:** Booked base; exact scenic stops still flexible. Rating = subjective fit for this trip, not a public review score."
+        "text": "**Why go:** Scenery, gardens and seasonal colour. **Time:** 2-night stay; selectively explore. **Status:** Accommodation booked; scenic stops still being chosen. Rating = subjective fit for this trip, not a public review score."
       },
       {
         "line": 113,
         "text": "**Extras / cautions:** [Gora Park](https://www.google.com/maps/search/?api=1\u0026query=Hakone%20Gora%20Park) for an easy garden; [Hakone Shrine](https://www.google.com/maps/search/?api=1\u0026query=Hakone%20Shrine%20Motohakone) remains an optional *non-required* detour; **Lake Ashi is now on the approved 16 Nov route**, with Kojiri and Onshi both selected. The earlier caution about omitting the south lake area has been superseded. Choose the exact viewpoint based on privacy, autumn colour and weather, not just the most photographed torii."
       }
+    ]
+  },
+  "publicTargets": {
+    "2026-10-16--japan-autumn-trip-2026-bookings-and-planning.md": [
+      "content",
+      "open-the-right-guide",
+      "working-dates-only-supplier-bookings-are-fixed",
+      "verified-accommodation-9-of-9-nights",
+      "confirmed-activity-bookings-with-proof",
+      "flight-verification-latest-usable-itinerary",
+      "only-the-decisions-still-worth-making",
+      "evidence-accuracy-and-updates",
+      "publication-metadata"
+    ],
+    "2026-10-20--japan-hakone-field-guide.md": [
+      "content",
+      "hakone-booked-transport-sights-and-day-outline",
+      "confirmed-tickets-and-station-by-station-arrival",
+      "three-day-activity-outline-intentionally-flexible",
+      "monday-16-nov-settled-route-kojiri-then-onshi-and-dinner-at-the-ryokan",
+      "key-places-to-save-on-google-maps",
+      "hakone-yuryo-17-nov-confirmed",
+      "gora-park-craft-house-bracelets-and-keyrings-optional-unbooked",
+      "ryokan-mealbath-details-protect-the-included-value",
+      "what-is-still-open",
+      "other-researched-scenic-anchors",
+      "additional-hakone-map-anchors-original-18-oct-research",
+      "flexible-google-maps-searches",
+      "publication-metadata"
+    ],
+    "2026-10-20--japan-kawagoe-day-guide.md": [
+      "content",
+      "transport-suica-no-additional-sightseeing-rail-pass",
+      "five-classic-saved-stops-with-significance",
+      "relaxed-time-budget",
+      "kawagoe-food-choose-on-the-day",
+      "publication-metadata"
+    ],
+    "2026-10-20--japan-tokyo-discovery-and-seasonal-guide.md": [
+      "content",
+      "two-selected-seasonal-evenings-part-of-the-itinerary",
+      "saturday-14-nov-koishikawa-korakuen-night-garden-18001930",
+      "thursday-19-nov-yebisu-garden-place-christmas-17302000",
+      "full-day-excursions",
+      "mt-takao-9510",
+      "kamakura-enoshima-9010",
+      "tokyo-neighbourhoods-select-dont-complete-them-all",
+      "ebisu-9410",
+      "shinjuku-9310",
+      "shibuya-with-optional-harajuku-omotesando-9210",
+      "ueno-okachimachi-8910",
+      "roppongi-9010",
+      "asakusa-kappabashi-8810",
+      "marunouchi-yurakucho-hibiya-8710",
+      "seasonal-opportunities-and-reality-check-specific-to-1221-nov-2026",
+      "google-maps-discovery-toolkit",
+      "publication-metadata"
+    ],
+    "2026-10-24--kamakura-enoshima-day-guide.md": [
+      "content",
+      "one-line-route-and-how-to-get-there",
+      "recommended-anchors-why-order-and-flexibility",
+      "flexible-workable-sample-timing-not-transport-reservations",
+      "food-and-low-effort-swaps",
+      "publication-metadata"
+    ],
+    "2026-10-24--tokyo-day-by-day-flexible-field-guide.md": [
+      "content",
+      "thursday-12-nov-arrive-narita-easy-roppongi-afternoonevening",
+      "saturday-14-nov-daytime-flexible-koishikawa-garden-evening-selected",
+      "tuesday-17-nov-back-from-hakone-simple-hotel-arrival",
+      "thursday-19-nov-wife-led-shibuya-crossing-shibuya-sky-ebisu-christmas",
+      "friday-20-nov-last-full-day-deliberately-relaxed-by-default",
+      "default-walk-yanaka-nezu-old-tokyo-without-an-exhausting-excursion",
+      "alternative-walk-kagurazaka-very-flexible-especially-after-lunch",
+      "if-you-decide-to-do-mt-takao-after-all-optional-route-and-effort",
+      "other-easy-backup-from-asakusabashi",
+      "nightlife-menu-meaningful-places-not-assigned-obligations",
+      "saturday-21-nov-check-out-and-fly-from-narita-t1",
+      "minimal-pre-trip-reminders-not-a-new-planning-project",
+      "publication-metadata"
     ]
   },
   "enhancement": {
@@ -413,7 +517,7 @@
       "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/LakeAshi_and_MtFuji_Hakone.JPG?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=thumbnail_unscaled",
       "width": 1600,
       "height": 1200,
-      "alt": "Lake Ashi in Hakone, Japan",
+      "alt": "Lake Ashi and mountains in Hakone, Japan",
       "creator": "Kentagon",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

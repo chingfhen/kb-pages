@@ -69,6 +69,26 @@
     .table-wrap { max-width: 100%; margin: 1.5rem 0; overflow-x: auto; border: 1px solid var(--line); border-radius: .75rem; }
     table { width: 100%; border-collapse: collapse; font-size: .92rem; line-height: 1.48; }
     table:has(th:nth-child(4)) { min-width: 32rem; }
+    /* Practical travel tables remain readable labelled cards at any width.
+       Wider screens get two cards per row; compact generic tables are unchanged. */
+    .table-wrap:has(> .mobile-card-table) { border: 0; overflow: visible; }
+      .mobile-card-table, .mobile-card-table tbody, .mobile-card-table tbody tr,
+      .mobile-card-table tbody td, .mobile-card-table tbody th { display: block; width: 100%; min-width: 0; }
+      .mobile-card-table { min-width: 0 !important; }
+      .mobile-card-table thead { position: absolute; width: 1px; height: 1px; padding: 0;
+        overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+      .mobile-card-table tbody tr { margin: 0 0 .85rem; padding: .75rem 1rem;
+        border: 1px solid var(--line); border-radius: .7rem; background: var(--surface); }
+      .mobile-card-table tbody td, .mobile-card-table tbody th { padding: .3rem 0;
+        border: 0; background: transparent; overflow-wrap: anywhere; word-break: normal; }
+      .mobile-card-table tbody [data-label]::before { content: attr(data-label); display: block;
+        margin-bottom: .12rem; color: var(--muted); font-size: .77rem; font-weight: 750; }
+      .mobile-card-table tbody td:first-child, .mobile-card-table tbody th:first-child
+        { color: var(--ink); font-weight: 750; font-size: 1.03rem; }
+    @media (min-width: 66rem) {
+      .mobile-card-table tbody { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+      .mobile-card-table tbody tr { margin: 0; }
+    }
     caption { padding: .7rem .8rem; text-align: left; font-weight: 750; }
     th, td { padding: .72rem .8rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
     th, td { overflow-wrap: normal; word-break: normal; }
@@ -131,7 +151,7 @@
       <p class="description">On-the-day route from Asakusabashi to Kamakura&#39;s Hase temples and coastal Enoden train, then Enoshima Island and return, with significance and weather exits.</p>
       <ul class="meta-list"><li>Created 2026-10-24</li><li>Updated 2026-10-24</li><li>Canonical source: Markdown</li></ul>
     </div>
-  </header><figure class="hero-image"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/S%C5%8Dsh%C5%AB_enoshima_benzaiten_kaicy%C5%8D_sankei_gunsh%C5%AB_no_zu_LCCN2004666340.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="View of Enoshima Island in Kanagawa" width="1600" height="766" loading="lazy" decoding="async" referrerpolicy="no-referrer"><figcaption>Photo: Andō, Hiroshige, 1797-1858, artist · <a href="https://commons.wikimedia.org/wiki/File:S%C5%8Dsh%C5%AB_enoshima_benzaiten_kaicy%C5%8D_sankei_gunsh%C5%AB_no_zu_LCCN2004666340.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://commons.wikimedia.org/wiki/File:S%C5%8Dsh%C5%AB_enoshima_benzaiten_kaicy%C5%8D_sankei_gunsh%C5%AB_no_zu_LCCN2004666340.jpg" target="_blank" rel="noopener noreferrer">Public domain</a></figcaption></figure>
+  </header><figure class="hero-image"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Kamakura_Budda_Daibutsu_front_1885.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="Great Buddha of Kamakura at Kotoku-in" width="1600" height="2133" loading="lazy" decoding="async" referrerpolicy="no-referrer"><figcaption>Photo: Dirk Beyer · <a href="https://commons.wikimedia.org/wiki/File:Kamakura_Budda_Daibutsu_front_1885.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> · <a href="https://commons.wikimedia.org/wiki/File:Kamakura_Budda_Daibutsu_front_1885.jpg" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></figcaption></figure>
   <div class="layout">
     <nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li class="toc-level-2"><a href="#one-line-route-and-how-to-get-there">One-line route and how to get there</a></li><li class="toc-level-2"><a href="#recommended-anchors-why-order-and-flexibility">Recommended anchors: why, order and flexibility</a></li><li class="toc-level-2"><a href="#flexible-workable-sample-timing-not-transport-reservations">Flexible, workable sample timing (not transport reservations)</a></li><li class="toc-level-2"><a href="#food-and-low-effort-swaps">Food and low-effort swaps</a></li></ol></nav>
     <main id="content" tabindex="-1">
@@ -143,7 +163,7 @@
 <p><strong>Outbound train:</strong> From <a href="https://www.google.com/maps/search/?api=1&amp;query=ICI+HOTEL+Asakusabashi" target="_blank" rel="noopener noreferrer" class="map-link">ICI HOTEL Asakusabashi</a> walk to <strong>JR Asakusabashi</strong> (~2 min West Exit). Take JR Chuo-Sobu Local <strong>one stop to Akihabara</strong>, then JR towards <strong>Tokyo Station</strong> and connect to <strong>JR Yokosuka Line bound for Kamakura/Zushi</strong>. A journey via <strong>Shinagawa</strong> can be equally convenient: use Google Maps to choose the lowest-transfer connection available that morning. Target <a href="https://www.google.com/maps/search/?api=1&amp;query=Kamakura+Station" target="_blank" rel="noopener noreferrer" class="map-link">Kamakura Station</a>, allow roughly <strong>75–100 minutes</strong> from hotel with transfers. Suica is fine; <strong>no rail pass booked / required</strong>.</p>
 <p>At Kamakura, transfer from JR to the adjacent <strong>Enoshima Electric Railway (Enoden)</strong> platform; take <strong>Enoden towards Fujisawa</strong> and get off at <a href="https://www.google.com/maps/search/?api=1&amp;query=Hase+Station+Kamakura" target="_blank" rel="noopener noreferrer" class="map-link">Hase Station</a> (<strong>~5 min</strong>). Enoden accepts Suica, and the coastal ride later is an experience in itself. <a href="https://www.enoden.co.jp/en/tourism/access/" target="_blank" rel="noopener noreferrer">Enoden official route/access</a>.</p>
 <h2 id="recommended-anchors-why-order-and-flexibility">Recommended anchors: why, order and flexibility</h2>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table"><table class="mobile-card-table">
 <thead>
 <tr>
 <th scope="col">Anchor (Google Maps)</th>
@@ -153,34 +173,34 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=Hasedera+Kamakura" target="_blank" rel="noopener noreferrer" class="map-link">1. Hasedera / 長谷寺</a></td>
-<td>Beautiful hillside Buddhist temple, statues and landscaped grounds, with coastal views; best temple/nature blend</td>
-<td><strong>Core</strong>, 45–75 min; 5-minute walk from Hase Station; some stairs.</td>
+<td data-label="Anchor (Google Maps)"><a href="https://www.google.com/maps/search/?api=1&amp;query=Hasedera+Kamakura" target="_blank" rel="noopener noreferrer" class="map-link">1. Hasedera / 長谷寺</a></td>
+<td data-label="Why you're going">Beautiful hillside Buddhist temple, statues and landscaped grounds, with coastal views; best temple/nature blend</td>
+<td data-label="What to do / effort"><strong>Core</strong>, 45–75 min; 5-minute walk from Hase Station; some stairs.</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=Kotoku-in+Great+Buddha" target="_blank" rel="noopener noreferrer" class="map-link">2. Kotoku-in Great Buddha / 高徳院</a></td>
-<td>Iconic 11m+ bronze Amida Buddha standing in the open air; a historic symbol of Kamakura</td>
-<td><strong>Core</strong>, 25–45 min; roughly 10 min walk from Hase Station; short stroll from Hasedera.</td>
+<td data-label="Anchor (Google Maps)"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kotoku-in+Great+Buddha" target="_blank" rel="noopener noreferrer" class="map-link">2. Kotoku-in Great Buddha / 高徳院</a></td>
+<td data-label="Why you're going">Iconic 11m+ bronze Amida Buddha standing in the open air; a historic symbol of Kamakura</td>
+<td data-label="What to do / effort"><strong>Core</strong>, 25–45 min; roughly 10 min walk from Hase Station; short stroll from Hasedera.</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=Enoden+Kamakurakoko-mae+Station" target="_blank" rel="noopener noreferrer" class="map-link">3. Enoden coastal train / 江ノ電</a></td>
-<td>Nostalgic small train running past homes and Sagami Bay shoreline; not just transport</td>
-<td><strong>Core</strong> ride from Hase toward <strong>Enoshima</strong> (~20 min). <a href="https://www.google.com/maps/search/?api=1&amp;query=Kamakurakoko-mae+Station" target="_blank" rel="noopener noreferrer" class="map-link">Kamakura-koko-mae Station</a> is an <strong>optional</strong> brief photo stop, not essential; stay off roads/rail crossings.</td>
+<td data-label="Anchor (Google Maps)"><a href="https://www.google.com/maps/search/?api=1&amp;query=Enoden+Kamakurakoko-mae+Station" target="_blank" rel="noopener noreferrer" class="map-link">3. Enoden coastal train / 江ノ電</a></td>
+<td data-label="Why you're going">Nostalgic small train running past homes and Sagami Bay shoreline; not just transport</td>
+<td data-label="What to do / effort"><strong>Core</strong> ride from Hase toward <strong>Enoshima</strong> (~20 min). <a href="https://www.google.com/maps/search/?api=1&amp;query=Kamakurakoko-mae+Station" target="_blank" rel="noopener noreferrer" class="map-link">Kamakura-koko-mae Station</a> is an <strong>optional</strong> brief photo stop, not essential; stay off roads/rail crossings.</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=Enoshima+Island" target="_blank" rel="noopener noreferrer" class="map-link">4. Enoshima Island / 江の島</a></td>
-<td>Seaside shrine island with street food, ocean viewpoints and possible Fuji silhouette in clear skies</td>
-<td><strong>Core if weather/energy cooperate</strong>, 90–150 min. From Enoden <strong>Enoshima Station</strong> walk approximately <strong>15–25 min</strong> including footbridge to the island entrance. Lots of steps uphill.</td>
+<td data-label="Anchor (Google Maps)"><a href="https://www.google.com/maps/search/?api=1&amp;query=Enoshima+Island" target="_blank" rel="noopener noreferrer" class="map-link">4. Enoshima Island / 江の島</a></td>
+<td data-label="Why you're going">Seaside shrine island with street food, ocean viewpoints and possible Fuji silhouette in clear skies</td>
+<td data-label="What to do / effort"><strong>Core if weather/energy cooperate</strong>, 90–150 min. From Enoden <strong>Enoshima Station</strong> walk approximately <strong>15–25 min</strong> including footbridge to the island entrance. Lots of steps uphill.</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=Enoshima+Shrine" target="_blank" rel="noopener noreferrer" class="map-link">5. Enoshima Shrine / 江島神社</a></td>
-<td>Historic sea/island shrine complex with multiple sacred halls across the slope</td>
-<td><strong>Selected within island</strong>, take your time; optional paid <strong>Escar</strong> escalators reduce ascent effort.</td>
+<td data-label="Anchor (Google Maps)"><a href="https://www.google.com/maps/search/?api=1&amp;query=Enoshima+Shrine" target="_blank" rel="noopener noreferrer" class="map-link">5. Enoshima Shrine / 江島神社</a></td>
+<td data-label="Why you're going">Historic sea/island shrine complex with multiple sacred halls across the slope</td>
+<td data-label="What to do / effort"><strong>Selected within island</strong>, take your time; optional paid <strong>Escar</strong> escalators reduce ascent effort.</td>
 </tr>
 <tr>
-<td><a href="https://www.google.com/maps/search/?api=1&amp;query=Enoshima+Sea+Candle" target="_blank" rel="noopener noreferrer" class="map-link">6. Sea Candle / 江の島シーキャンドル</a></td>
-<td>Elevated seaside/lighthouse panorama; best if views are clear and energy good</td>
-<td><strong>Optional paid add-on</strong>, not a required ticket; tower hours normally <strong>09:00–20:00</strong>, check day/event changes.</td>
+<td data-label="Anchor (Google Maps)"><a href="https://www.google.com/maps/search/?api=1&amp;query=Enoshima+Sea+Candle" target="_blank" rel="noopener noreferrer" class="map-link">6. Sea Candle / 江の島シーキャンドル</a></td>
+<td data-label="Why you're going">Elevated seaside/lighthouse panorama; best if views are clear and energy good</td>
+<td data-label="What to do / effort"><strong>Optional paid add-on</strong>, not a required ticket; tower hours normally <strong>09:00–20:00</strong>, check day/event changes.</td>
 </tr>
 </tbody>
 </table>
@@ -233,7 +253,7 @@
 
         <footer class="publication-note">
           <p>This is an automatically prepared public-safe adaptation of a private Markdown guide.</p>
-          <p>Source hash 03b6d41fd382 · Publisher 628855336918 · Model openrouter/deepseek/deepseek-v4.1-flash-1017#max</p>
+          <p>Source hash 03b6d41fd382 · Publisher c27048e84b55 · Model openrouter/deepseek/deepseek-v4.1-flash-1017#max</p>
         </footer>
       </article>
     </main>
@@ -241,10 +261,10 @@
   <script type="application/json" id="publication-metadata">{
   "sourcePath": "knowledge-base/managed/2026-10-24--kamakura-enoshima-day-guide.md",
   "sourceHash": "03b6d41fd3824696d2c52bb9f0113c6aa4e82a4d093d5d77a05355421aa1e7a1",
-  "sourceRevision": "6bd644aff40f444ad0ec05916524136d55282e03",
-  "publisherHash": "628855336918e632a42b3fefc636d5a775117a3c48493ca27eb6e615e5446457",
+  "sourceRevision": "201332560ea2367cc3c0dc0e7d17f8c5189d859b",
+  "publisherHash": "c27048e84b557ea2be6680fb439d11e20d7ba4ff254989197d8bf2ce3376e6b9",
   "model": "openrouter/deepseek/deepseek-v4.1-flash-1017#max",
-  "generatedAt": "2026-10-25T16:50:41.353Z",
+  "generatedAt": "2026-10-27T03:11:46.951Z",
   "usage": {
     "input": null,
     "output": null,
@@ -265,19 +285,100 @@
       }
     ]
   },
+  "publicTargets": {
+    "2026-10-16--japan-autumn-trip-2026-bookings-and-planning.md": [
+      "content",
+      "open-the-right-guide",
+      "working-dates-only-supplier-bookings-are-fixed",
+      "verified-accommodation-9-of-9-nights",
+      "confirmed-activity-bookings-with-proof",
+      "flight-verification-latest-usable-itinerary",
+      "only-the-decisions-still-worth-making",
+      "evidence-accuracy-and-updates",
+      "publication-metadata"
+    ],
+    "2026-10-20--japan-hakone-field-guide.md": [
+      "content",
+      "hakone-booked-transport-sights-and-day-outline",
+      "confirmed-tickets-and-station-by-station-arrival",
+      "three-day-activity-outline-intentionally-flexible",
+      "monday-16-nov-settled-route-kojiri-then-onshi-and-dinner-at-the-ryokan",
+      "key-places-to-save-on-google-maps",
+      "hakone-yuryo-17-nov-confirmed",
+      "gora-park-craft-house-bracelets-and-keyrings-optional-unbooked",
+      "ryokan-mealbath-details-protect-the-included-value",
+      "what-is-still-open",
+      "other-researched-scenic-anchors",
+      "additional-hakone-map-anchors-original-18-oct-research",
+      "flexible-google-maps-searches",
+      "publication-metadata"
+    ],
+    "2026-10-20--japan-kawagoe-day-guide.md": [
+      "content",
+      "transport-suica-no-additional-sightseeing-rail-pass",
+      "five-classic-saved-stops-with-significance",
+      "relaxed-time-budget",
+      "kawagoe-food-choose-on-the-day",
+      "publication-metadata"
+    ],
+    "2026-10-20--japan-tokyo-discovery-and-seasonal-guide.md": [
+      "content",
+      "two-selected-seasonal-evenings-part-of-the-itinerary",
+      "saturday-14-nov-koishikawa-korakuen-night-garden-18001930",
+      "thursday-19-nov-yebisu-garden-place-christmas-17302000",
+      "full-day-excursions",
+      "mt-takao-9510",
+      "kamakura-enoshima-9010",
+      "tokyo-neighbourhoods-select-dont-complete-them-all",
+      "ebisu-9410",
+      "shinjuku-9310",
+      "shibuya-with-optional-harajuku-omotesando-9210",
+      "ueno-okachimachi-8910",
+      "roppongi-9010",
+      "asakusa-kappabashi-8810",
+      "marunouchi-yurakucho-hibiya-8710",
+      "seasonal-opportunities-and-reality-check-specific-to-1221-nov-2026",
+      "google-maps-discovery-toolkit",
+      "publication-metadata"
+    ],
+    "2026-10-24--kamakura-enoshima-day-guide.md": [
+      "content",
+      "one-line-route-and-how-to-get-there",
+      "recommended-anchors-why-order-and-flexibility",
+      "flexible-workable-sample-timing-not-transport-reservations",
+      "food-and-low-effort-swaps",
+      "publication-metadata"
+    ],
+    "2026-10-24--tokyo-day-by-day-flexible-field-guide.md": [
+      "content",
+      "thursday-12-nov-arrive-narita-easy-roppongi-afternoonevening",
+      "saturday-14-nov-daytime-flexible-koishikawa-garden-evening-selected",
+      "tuesday-17-nov-back-from-hakone-simple-hotel-arrival",
+      "thursday-19-nov-wife-led-shibuya-crossing-shibuya-sky-ebisu-christmas",
+      "friday-20-nov-last-full-day-deliberately-relaxed-by-default",
+      "default-walk-yanaka-nezu-old-tokyo-without-an-exhausting-excursion",
+      "alternative-walk-kagurazaka-very-flexible-especially-after-lunch",
+      "if-you-decide-to-do-mt-takao-after-all-optional-route-and-effort",
+      "other-easy-backup-from-asakusabashi",
+      "nightlife-menu-meaningful-places-not-assigned-obligations",
+      "saturday-21-nov-check-out-and-fly-from-narita-t1",
+      "minimal-pre-trip-reminders-not-a-new-planning-project",
+      "publication-metadata"
+    ]
+  },
   "enhancement": {
     "theme": "maple",
     "heroImage": {
-      "commonsSearch": "Enoshima Island Kanagawa",
-      "commonsFileName": "File:Sōshū enoshima benzaiten kaicyō sankei gunshū no zu LCCN2004666340.jpg",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/S%C5%8Dsh%C5%AB_enoshima_benzaiten_kaicy%C5%8D_sankei_gunsh%C5%AB_no_zu_LCCN2004666340.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=thumbnail_unscaled",
+      "commonsSearch": "Kotoku-in Great Buddha Kamakura",
+      "commonsFileName": "File:Kamakura Budda Daibutsu front 1885.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Kamakura_Budda_Daibutsu_front_1885.jpg?utm_source=commons.wikimedia.org\u0026utm_campaign=imageinfo\u0026utm_content=thumbnail_unscaled",
       "width": 1600,
-      "height": 766,
-      "alt": "View of Enoshima Island in Kanagawa",
-      "creator": "Andō, Hiroshige, 1797-1858, artist",
-      "license": "Public domain",
-      "licenseUrl": "https://commons.wikimedia.org/wiki/File:S%C5%8Dsh%C5%AB_enoshima_benzaiten_kaicy%C5%8D_sankei_gunsh%C5%AB_no_zu_LCCN2004666340.jpg",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:S%C5%8Dsh%C5%AB_enoshima_benzaiten_kaicy%C5%8D_sankei_gunsh%C5%AB_no_zu_LCCN2004666340.jpg"
+      "height": 2133,
+      "alt": "Great Buddha of Kamakura at Kotoku-in",
+      "creator": "Dirk Beyer",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Kamakura_Budda_Daibutsu_front_1885.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kamakura_Budda_Daibutsu_front_1885.jpg"
     },
     "sections": []
   }
